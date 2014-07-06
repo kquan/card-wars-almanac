@@ -8,7 +8,7 @@ public abstract class AbstractCornCreature extends AbstractCreatureCard {
     private static final String TAG = AbstractCornCreature.class.getSimpleName();
     
     protected AbstractCornCreature(String name, int cost, Rarity rarity) {
-        super(name, cost, Faction.Corn, rarity);
+        super(name, cost, Faction.CornFields, rarity);
     }
 
 }

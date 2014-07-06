@@ -2,6 +2,8 @@ package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
+import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
+import com.kevinquan.cwa.model.creatures.corn.TravelinFarmer;
 
 public class CornCardStore extends AbstractCardStore {
 
@@ -12,6 +14,8 @@ public class CornCardStore extends AbstractCardStore {
     protected void init() {
         addCard(new Cornball());
         addCard(new EthanAllfire());
+        addCard(new TravelinFarmer());
+        addCard(new HuskerKnight());
     }
 
 }

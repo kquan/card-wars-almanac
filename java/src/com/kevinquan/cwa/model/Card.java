@@ -4,11 +4,11 @@ package com.kevinquan.cwa.model;
 public interface Card {
     
     public enum Faction {
-        Corn,
-        Blue,
-        Nice,
-        Swamp,
-        Sandy,
+        CornFields,
+        BluePlains,
+        NiceLands,
+        UselessSwamp,
+        SandyLands,
         Rainbow,
         ;
     }
@@ -16,6 +16,9 @@ public interface Card {
     public enum Rarity {
         Cool,
         Nice,
+        ThreeStars,
+        FourStars,
+        FiveStars,
         ;
     }
 
