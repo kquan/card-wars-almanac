@@ -19,8 +19,7 @@ public abstract class AbstractCardStore implements CardStore {
     protected abstract void init();
     
     protected void addCard(Card card) {
-        // TODO: How to handle Gold cards
-        mCards.put(card.getName(), card);
+        mCards.put(card.getId(), card);
     }
     
     @Override

@@ -48,5 +48,10 @@ public abstract class AbstractCard implements Card {
     public Rarity getRarity() {
         return mRarity;
     }
+    
+    @Override 
+    public String getId() {
+        return mName+"|"+(mRarity != null ? mRarity.toString() : "");
+    }
 
 }

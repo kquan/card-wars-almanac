@@ -22,6 +22,7 @@ public interface Card {
         ;
     }
 
+    String getId();
     String getName();
     
     int getCost();
