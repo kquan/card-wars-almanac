@@ -16,9 +16,9 @@ public interface Card {
     public enum Rarity {
         Cool,
         Nice,
-        ThreeStars,
-        FourStars,
-        FiveStars,
+        Rare,
+        VeryRare,
+        AlgebraicRare,
         ;
     }
 

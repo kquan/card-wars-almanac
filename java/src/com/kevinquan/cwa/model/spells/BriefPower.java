@@ -6,7 +6,7 @@ public class BriefPower extends AbstractSpellCard {
     private static final String TAG = BriefPower.class.getSimpleName();
     
     public BriefPower() {
-        super("Brief Power", 1, Rarity.FiveStars);
+        super("Brief Power", 1, Rarity.AlgebraicRare);
         mDescription = "Every card cast this turn costs 1 less Magic point";
     }
 
