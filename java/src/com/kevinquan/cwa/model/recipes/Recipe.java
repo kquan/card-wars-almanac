@@ -39,13 +39,23 @@ public class Recipe {
     protected List<Ingredient> mIngredients;
     protected Card mResult;
 
-    public Recipe() {
+    protected Recipe() {
         mIngredients = new ArrayList<Ingredient>();
     }
     
     public Recipe(Card card1, Card card2, int cost, Card result) {
         this();
         addIngredient(card1).addIngredient(card2).setCost(cost).setResult(result);
+    }
+    
+    public Recipe(Card card1, Card card2, Card card3, int cost, Card result) {
+        this();
+        addIngredient(card1).addIngredient(card2).addIngredient(card3).setCost(cost).setResult(result);
+    }
+    
+    public Recipe(int cost, Card result) {
+        this();
+        setCost(cost).setResult(result);
     }
     
     public boolean uses(Card ingredient) {

@@ -1,7 +1,9 @@
 package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
+import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
 import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
+import com.kevinquan.cwa.model.creatures.swamp.TeethLeaf;
 import com.kevinquan.cwa.model.creatures.swamp.WanderingBaldMan;
 
 public class SwampCardStore extends AbstractCardStore {
@@ -11,9 +13,11 @@ public class SwampCardStore extends AbstractCardStore {
 
     @Override
     protected void init() {
-        addCard(new WanderingBaldMan());
-        addCard(new OrangeSlimey());
         addCard(new GrayEyebat());
+        addCard(new MaceStump());
+        addCard(new OrangeSlimey());
+        addCard(new TeethLeaf());
+        addCard(new WanderingBaldMan());
     }
 
 }
