@@ -17,4 +17,9 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
     public String getFloopDescription() {
         return getDescription();
     }
+
+    @Override
+    public String getId() {
+        return super.getId()+(mIsGold ? "|GOLD" : "");
+    }
 }

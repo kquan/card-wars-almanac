@@ -1,10 +1,21 @@
 package com.kevinquan.cwa.model;
 
-
 public class MasterCardStore extends AbstractCardStore {
 
     @SuppressWarnings("unused")
     private static final String TAG = MasterCardStore.class.getSimpleName();
+    
+    private static class MasterCardStoreHolder {
+        private static final MasterCardStore INSTANCE = new MasterCardStore();
+    }
+    
+    public static MasterCardStore getInstance() {
+        return MasterCardStoreHolder.INSTANCE;
+    }
+    
+    private MasterCardStore() {
+        super();
+    }
 
     @Override
     protected void init() {

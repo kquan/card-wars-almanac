@@ -29,11 +29,11 @@ public abstract class AbstractCardStore implements CardStore {
         return cardList;
     }
     
-    public Card getCardByName(String name) {
-        if (name == null || name.trim().isEmpty()) {
+    public Card getCardById(String id) {
+        if (id == null || id.trim().isEmpty()) {
             return null;
         }
-        return mCards.get(name);
+        return mCards.get(id);
     }
 
 }
