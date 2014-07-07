@@ -8,7 +8,7 @@ public abstract class AbstractSandyCreature extends AbstractCreatureCard {
     private static final String TAG = AbstractSandyCreature.class.getSimpleName();
     
     protected AbstractSandyCreature(String name, int cost, Rarity rarity) {
-        super(name, cost, Faction.NiceLands, rarity);
+        super(name, cost, Faction.SandyLands, rarity);
     }
 
 }
