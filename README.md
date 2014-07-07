@@ -13,7 +13,7 @@ This library can then be used for reference or other purposes
 Credits & Contact
 =================
 
-card-wars-almanac is made by [Kevin Quan](mailto:kevin.quan+github@gmail.com)
+card-wars-almanac is maintained by [Kevin Quan](mailto:kevin.quan+github@gmail.com)
 
 License
 -------
