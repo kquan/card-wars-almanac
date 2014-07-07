@@ -8,7 +8,7 @@ Specifically, the goals are to include:
 * Complete crafting list
 * Level drops
 
-This library can then be used for reference or other purposes 
+This library can then be used for reference or perhaps some other interesting purposes that you can think of 
 
 Credits & Contact
 =================
