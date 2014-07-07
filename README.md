@@ -1,12 +1,14 @@
 card-wars-almanac
 =================
-card-wars-almanac attempts to codify the assets from  [Card Wars: Adventure Time](https://play.google.com/store/apps/details?id=com.turner.cardwars)
+card-wars-almanac attempts to codify the assets from  [Card Wars - Adventure Time](https://play.google.com/store/apps/details?id=com.turner.cardwars), a game for iOS and Android
 
 Specifically, the goals are to include:
 * Complete card list (Heroes, Creatures, Buildings, Spells)
 * Complete level & quest list
 * Complete crafting list
 * Level drops
+
+This library can then be used for reference or other purposes 
 
 Credits & Contact
 =================
