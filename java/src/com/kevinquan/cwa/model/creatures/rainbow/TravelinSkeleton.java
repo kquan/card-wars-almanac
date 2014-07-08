@@ -7,7 +7,7 @@ public class TravelinSkeleton extends AbstractRainbowCreature {
     
     public TravelinSkeleton() {
         super("Travelin' Skeleton", 1, Rarity.Cool);
-        mDescription = "Deal 4 Damage to a rando mcreature, including your own";
+        mDescription = "Deal 4 Damage to a random creature, including your own";
     }
 
     @Override public int getInitialAttack() { return 2; }

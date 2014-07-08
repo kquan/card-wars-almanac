@@ -72,4 +72,12 @@ public class LevelStore {
                     .addQuest(2, Quest.LANDSCAPES_FOUR_DIFFERENT));
         addLevel(new Level(24, 3, Hero.ASH, 8, Area.Forest));
     }
+    
+    public Level getLevel(int levelNumber) {
+        if (levelNumber > 0 && levelNumber < mLevels.size()) {
+            // Level 1 is at index 0
+            return mLevels.get(levelNumber-1);
+        }
+        return null;
+    }
 }
