@@ -60,7 +60,7 @@ public class Recipe {
     
     public boolean uses(Card ingredient) {
         for (Ingredient component : mIngredients) {
-            if (component.getCard().getClass().isInstance(ingredient.getClass())) {
+            if (component.getCard().getClass().isInstance(ingredient)) {
                 return true;
             }
         }

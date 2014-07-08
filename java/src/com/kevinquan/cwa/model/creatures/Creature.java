@@ -8,4 +8,6 @@ public interface Creature extends Card {
     int getInitialDefense();
     
     int getFloopCost();
+    
+    boolean isGold();
 }

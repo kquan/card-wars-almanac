@@ -22,4 +22,9 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
     public String getId() {
         return super.getId()+(mIsGold ? "|GOLD" : "");
     }
+    
+    @Override
+    public boolean isGold() {
+        return mIsGold;
+    }
 }
