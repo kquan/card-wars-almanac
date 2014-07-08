@@ -20,6 +20,7 @@ import com.kevinquan.cwa.model.spells.GrapeButt;
 import com.kevinquan.cwa.model.spells.PsychicTempest;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.Teleport;
+import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
 import com.kevinquan.cwa.model.spells.UfoAbduction;
 import com.kevinquan.cwa.model.spells.Volcano;
 import com.kevinquan.cwa.model.spells.WizardMigrane;
@@ -59,6 +60,7 @@ public class RainbowCardStore extends AbstractCardStore {
         addCard(new PsychicTempest());
         addCard(new StrawberryButt());
         addCard(new Teleport());
+        addCard(new TomeOfAnkhs());
         addCard(new UfoAbduction());
         addCard(new Volcano());
         addCard(new WizardMigrane());

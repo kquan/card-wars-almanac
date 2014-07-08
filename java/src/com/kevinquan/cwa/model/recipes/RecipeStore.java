@@ -15,6 +15,7 @@ import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
 import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
 import com.kevinquan.cwa.model.creatures.nice.FairyShepard;
 import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
+import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
@@ -40,8 +41,10 @@ import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
 import com.kevinquan.cwa.model.spells.CrystalBall;
 import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
 import com.kevinquan.cwa.model.spells.GrapeButt;
+import com.kevinquan.cwa.model.spells.PsychicTempest;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.Teleport;
+import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
 import com.kevinquan.cwa.model.spells.UfoAbduction;
 import com.kevinquan.cwa.model.spells.WizardMigrane;
 import com.kevinquan.cwa.model.spells.WoadBlood;
@@ -93,6 +96,8 @@ public class RecipeStore {
         addRecipe(new Recipe(1000, new GrapeButt()).addIngredient(new StrawberryButt()).addIngredient(new GrapeSlimey(), 2).addIngredient(new WizardMigrane()));
         addRecipe(new Recipe(new WanderingBaldMan(), new FountainOfForgiveness(), new BoneWand(), 1700, new GreenMerman()));
         addRecipe(new Recipe(new WizardMigrane(), new BoneWand(), new HeavenlyGazer(), 2300, new EvilEye()));
+        addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), new Teleport(), 3800, new PsychicTempest()));
+        addRecipe(new Recipe(new TomeOfAnkhs(), new WizardMigrane(), new WanderingBaldMan(), 3300, new AncientScholar()));
     }
     
     public List<Recipe> getRecipesThatUse(Card card) {

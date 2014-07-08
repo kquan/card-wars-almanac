@@ -70,7 +70,12 @@ public class LevelStore {
                     .addQuest(2, Quest.NICE_ONLY));
         addLevel(new Level(23, 2, Hero.ASH, 8, Area.Forest)
                     .addQuest(2, Quest.LANDSCAPES_FOUR_DIFFERENT));
-        addLevel(new Level(24, 3, Hero.ASH, 8, Area.Forest));
+        addLevel(new Level(24, 3, Hero.ASH, 8, Area.Forest)
+                    .addQuest(2, Quest.PLAINS_ONLY));
+        
+        addLevel(new Level(25, 2, Hero.RICARDIO, 9, Area.Forest)
+                    .addQuest(2, Quest.CORN_ONLY));
+        addLevel(new Level(26, 2, Hero.RICARDIO, 9, Area.Forest));
     }
     
     public Level getLevel(int levelNumber) {

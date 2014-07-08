@@ -18,6 +18,7 @@ public class Hero {
     public static final Hero LADY_RAINICORN = new Hero("Lady Rainicorn", 3, "Choose a creature and fully heal it");
     public static final Hero LUMPY_SPACE_PRINCESS = new Hero("Lumpy Space Princess", 3, "Fully heal all of your Plains creatures");
     public static final Hero ASH = new Hero("Ash", 4, "Return any card from the Discard Pile back to your hand");
+    public static final Hero RICARDIO = new Hero("Ricardio", 3, "Draw 1 card");
     
     protected static Hashtable<String, Hero> ALL_HEROES;
     
@@ -32,6 +33,7 @@ public class Hero {
         ALL_HEROES.put(LADY_RAINICORN.getName(), LADY_RAINICORN);
         ALL_HEROES.put(LUMPY_SPACE_PRINCESS.getName(), LUMPY_SPACE_PRINCESS);
         ALL_HEROES.put(ASH.getName(), ASH);
+        ALL_HEROES.put(RICARDIO.getName(), RICARDIO);
     }
     
     public static List<Hero> getAllHeroes() {

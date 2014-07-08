@@ -1,5 +1,6 @@
 package com.kevinquan.cwa.model;
 
+import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.CoolDog;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
@@ -13,11 +14,15 @@ public class PlainsCardStore extends AbstractCardStore {
 
     @Override
     protected void init() {
-        addCard(new HeavenlyGazer());
+        // Cool cards
         addCard(new CoolDog());
         addCard(new GrapeSlimey());
+        addCard(new HeavenlyGazer());
         addCard(new Poultrygeist());
         addCard(new WoadicTimeWalker());
+        
+        // Nice cards
+        addCard(new AncientScholar());
     }
 
 }
