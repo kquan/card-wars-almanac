@@ -15,6 +15,7 @@ import com.kevinquan.cwa.model.creatures.nice.NicelandsEyeBat;
 import com.kevinquan.cwa.model.creatures.nice.SnakeMint;
 import com.kevinquan.cwa.model.creatures.nice.SnuggleTree;
 import com.kevinquan.cwa.model.creatures.nice.SoftEyeling;
+import com.kevinquan.cwa.model.creatures.nice.TravelinWizard;
 
 public class NiceCardStore extends AbstractCardStore {
 
@@ -35,6 +36,9 @@ public class NiceCardStore extends AbstractCardStore {
         addCard(new FatGoat());
         addCard(new NicelandsEyeBat());
         addCard(new SnakeMint());
+        
+        // Very Rare cards
+        addCard(new TravelinWizard());
         
         // Gold
         addCard(new GoldAngelHeart());

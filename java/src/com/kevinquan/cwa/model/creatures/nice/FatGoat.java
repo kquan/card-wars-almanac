@@ -7,7 +7,7 @@ public class FatGoat extends AbstractNiceCreature {
     
     public FatGoat() {
         super("Fat Goat", 2, Rarity.Nice);
-        mDescription = "Heal adjacent creature 4 points"; // Check
+        mDescription = "Heal adjacent creatures 4 points";
     }
 
     @Override public int getInitialAttack() { return 5; }

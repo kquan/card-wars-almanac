@@ -19,6 +19,7 @@ import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
 import com.kevinquan.cwa.model.creatures.plains.WoadicTimeWalker;
+import com.kevinquan.cwa.model.creatures.rainbow.EvilEye;
 import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
 import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
 import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
@@ -29,12 +30,15 @@ import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
 import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
 import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
+import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
 import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
 import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
 import com.kevinquan.cwa.model.creatures.swamp.TeethLeaf;
 import com.kevinquan.cwa.model.creatures.swamp.WanderingBaldMan;
+import com.kevinquan.cwa.model.spells.BoneWand;
 import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
 import com.kevinquan.cwa.model.spells.CrystalBall;
+import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
 import com.kevinquan.cwa.model.spells.GrapeButt;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.Teleport;
@@ -87,6 +91,8 @@ public class RecipeStore {
         addRecipe(new Recipe(new BurningHand(), new UfoAbduction(), 900, new TravelinSkeleton()));
         addRecipe(new Recipe(new WoadicTimeWalker(), new MsMummy(), 925, new OrdinaryNinja()));
         addRecipe(new Recipe(1000, new GrapeButt()).addIngredient(new StrawberryButt()).addIngredient(new GrapeSlimey(), 2).addIngredient(new WizardMigrane()));
+        addRecipe(new Recipe(new WanderingBaldMan(), new FountainOfForgiveness(), new BoneWand(), 1700, new GreenMerman()));
+        addRecipe(new Recipe(new WizardMigrane(), new BoneWand(), new HeavenlyGazer(), 2300, new EvilEye()));
     }
     
     public List<Recipe> getRecipesThatUse(Card card) {

@@ -66,6 +66,10 @@ public class LevelStore {
                     .addQuest(2, Quest.LANDSCAPES_THREE_DIFFERENT));
         addLevel(new Level(21, 3, Hero.LUMPY_SPACE_PRINCESS, 7, Area.Forest)
                     .addQuest(2, Quest.NO_SPELLS));
-        addLevel(new Level(22, 2, Hero.ASH, 8, Area.Forest));
+        addLevel(new Level(22, 2, Hero.ASH, 8, Area.Forest)
+                    .addQuest(2, Quest.NICE_ONLY));
+        addLevel(new Level(23, 2, Hero.ASH, 8, Area.Forest)
+                    .addQuest(2, Quest.LANDSCAPES_FOUR_DIFFERENT));
+        addLevel(new Level(24, 3, Hero.ASH, 8, Area.Forest));
     }
 }
