@@ -14,12 +14,22 @@ public interface Card {
     }
     
     public enum Rarity {
-        Cool,
-        Nice,
-        Rare,
-        VeryRare,
-        AlgebraicRare,
+        Cool(1),
+        Nice(2),
+        Rare(3),
+        VeryRare(4),
+        AlgebraicRare(5),
         ;
+        
+        protected int mNumberOfStars;
+        
+        private Rarity(int stars) {
+            mNumberOfStars = stars;
+        }
+        
+        public int getStars() {
+            return mNumberOfStars;
+        }
     }
 
     String getId();

@@ -1,6 +1,9 @@
 package com.kevinquan.cwa.tests;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Hashtable;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -10,35 +13,12 @@ import com.kevinquan.cwa.Blueprints;
 import com.kevinquan.cwa.NameTranslater;
 import com.kevinquan.cwa.model.Card;
 import com.kevinquan.cwa.model.levels.LevelStore;
+import com.kevinquan.cwa.model.levels.LootDropStore.LootDropDetails;
+import com.kevinquan.cwa.model.levels.LootDropStore.LootDropPriorityComparator;
 import com.kevinquan.java.utils.JSONUtils;
 import com.kevinquan.tests.BaseJUnit4Test;
 
 public class LevelDropsTestCase extends BaseJUnit4Test {
-    
-    protected static class LevelDrop {
-        
-        protected Card mCard;
-        protected double mDropChance;
-        protected double mStaticWeight;
-        
-        public LevelDrop(Card card, double chance, double weight) {
-            mCard = card;
-            mDropChance = chance;
-            mStaticWeight = weight;
-        }
-
-        public Card getCard() {
-            return mCard;
-        }
-
-        public double getDropChance() {
-            return mDropChance;
-        }
-
-        public double getStaticWeight() {
-            return mStaticWeight;
-        }
-    }
 
     @SuppressWarnings("unused")
     private static final String TAG = LevelDropsTestCase.class.getSimpleName();
@@ -55,59 +35,45 @@ public class LevelDropsTestCase extends BaseJUnit4Test {
     }
     
     @Test
-    public void testParseLevelDropsBlueprint() {
-        Hashtable<Integer, Hashtable<String, LevelDrop>> dropData = new Hashtable<Integer, Hashtable<String, LevelDrop>>();
-        int lastLevel = -1;
-        for (int i = 0; i < mBlueprint.length(); i++) {
-            JSONObject data = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
-            int newLevelTest = parseLevel(data);
-            if (newLevelTest != 0) {
-                lastLevel = newLevelTest;
-            }
-            if (lastLevel == -1) {
+    public void generateLoopDropStoreCode() {
+        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLevelDrops();
+        for (int i = 1; i < 120; i++) {
+            Hashtable<String, LootDropDetails> drops = dropData.get(i);
+            if (drops == null || drops.isEmpty()) {
                 continue;
             }
-            double staticWeight = parseStaticWeight(data);
-            if (staticWeight == 0) {
-                continue;
-            }
-            double dropChance = parseDropChance(data);
-            String cardName = JSONUtils.safeGetString(data, Blueprints.FIELD_CARD);
-            Card card = mNameTranslater.getCardByName(cardName);
-            if (card == null) {
-                System.out.println("Could not get card with name "+cardName);
-                continue;
-            }
-            if (!dropData.containsKey(lastLevel)) {
-                Hashtable<String, LevelDrop> drops = new Hashtable<String, LevelDrop>();
-                dropData.put(lastLevel, drops);
-            }
-            Hashtable<String, LevelDrop> drops = dropData.get(lastLevel);
-            LevelDrop drop = new LevelDrop(card, dropChance, staticWeight);
-            if (drops.containsKey(card.getId())) {
-                //System.out.println("L"+lastLevel+": duplicate "+card.getName());
-            } else {
-                drops.put(card.getId(), drop);
-                //System.out.println("L"+lastLevel+": "+card.getName()+" at "+dropChance+" chance on "+staticWeight+" weight");
+            List<LootDropDetails> dropList = new ArrayList<LootDropDetails>();
+            dropList.addAll(drops.values());
+            Collections.sort(dropList, new LootDropPriorityComparator());
+            for (LootDropDetails drop : dropList) {
+                System.out.print("addDropDetails(new LootDropDetails(new ");
+                System.out.print(drop.getCard().getClass().getSimpleName()+"(), ");
+                System.out.print("levelStore.getLevel("+drop.getLevel().getLevelNumber()+"), ");
+                System.out.print(drop.getDropChance()+", ");
+                System.out.print(drop.getStaticWeight());
+                System.out.println("));");
             }
         }
-        
-        // Display
+    }
+    
+    //@Test
+    public void displayParsedLevelDrops() {
+        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLevelDrops();
         for (int i = 1; i < 120; i++) {
-            Hashtable<String, LevelDrop> drops = dropData.get(i);
+            Hashtable<String, LootDropDetails> drops = dropData.get(i);
             if (drops == null || drops.isEmpty()) {
                 System.out.println("No drops for level "+i);
                 continue;
             }
             System.out.print("Level "+i+": ");
-            for (LevelDrop drop : drops.values()) {
+            for (LootDropDetails drop : drops.values()) {
                 System.out.print(drop.getCard().getName()+", ");
             }
             System.out.println();
         }
     }
     
-    public void testDisplayLevelDropsBlueprint() {
+    public void displayLevelDropsBlueprint() {
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject data = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
             String deckId = JSONUtils.safeGetString(data, Blueprints.FIELD_DECK_ID);
@@ -135,7 +101,46 @@ public class LevelDropsTestCase extends BaseJUnit4Test {
             
     }
     
-    protected int parseLevel(JSONObject data) {
+    protected Hashtable<Integer, Hashtable<String, LootDropDetails>> parseLevelDrops() {
+        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = new Hashtable<Integer, Hashtable<String, LootDropDetails>>();
+        int processingLevel = -1;
+        for (int i = 0; i < mBlueprint.length(); i++) {
+            JSONObject data = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
+            int newLevelTest = parseLevelNumber(data);
+            if (newLevelTest != 0) {
+                processingLevel = newLevelTest;
+            }
+            if (processingLevel == -1) {
+                continue;
+            }
+            double staticWeight = parseStaticWeight(data);
+            if (staticWeight == 0) {
+                continue;
+            }
+            double dropChance = parseDropChance(data);
+            String cardName = JSONUtils.safeGetString(data, Blueprints.FIELD_CARD);
+            Card card = mNameTranslater.getCardByName(cardName);
+            if (card == null) {
+                System.out.println("Could not get card with name "+cardName);
+                continue;
+            }
+            if (!dropData.containsKey(processingLevel)) {
+                Hashtable<String, LootDropDetails> drops = new Hashtable<String, LootDropDetails>();
+                dropData.put(processingLevel, drops);
+            }
+            Hashtable<String, LootDropDetails> drops = dropData.get(processingLevel);
+            LootDropDetails drop = new LootDropDetails(card, mLevelStore.getLevel(processingLevel), dropChance, staticWeight);
+            if (drops.containsKey(card.getId())) {
+                //System.out.println("L"+processingLevel+": duplicate "+card.getName());
+            } else {
+                drops.put(card.getId(), drop);
+                //System.out.println("L"+processingLevel+": "+card.getName()+" at "+dropChance+" chance on "+staticWeight+" weight");
+            }
+        }
+        return dropData;
+    }
+    
+    protected int parseLevelNumber(JSONObject data) {
         String deckId = JSONUtils.safeGetString(data, Blueprints.FIELD_DECK_ID);
         if (deckId != null && !deckId.trim().isEmpty() && deckId.startsWith("Quest")) {
             String levelNumber = deckId.replaceAll("Quest", "").replaceAll("_Deck","");
