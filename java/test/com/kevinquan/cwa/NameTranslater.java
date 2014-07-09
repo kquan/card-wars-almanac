@@ -54,11 +54,18 @@ import com.kevinquan.cwa.model.levels.Quest;
 import com.kevinquan.cwa.model.spells.BoneWand;
 import com.kevinquan.cwa.model.spells.BriefPower;
 import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
+import com.kevinquan.cwa.model.spells.CornScepter;
 import com.kevinquan.cwa.model.spells.CrystalBall;
 import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
+import com.kevinquan.cwa.model.spells.GrapeButt;
+import com.kevinquan.cwa.model.spells.PsychicTempest;
 import com.kevinquan.cwa.model.spells.PumaClaw;
+import com.kevinquan.cwa.model.spells.ScrollOfFreshBreath;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
+import com.kevinquan.cwa.model.spells.SuperHug;
+import com.kevinquan.cwa.model.spells.Teleport;
 import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
+import com.kevinquan.cwa.model.spells.UfoAbduction;
 import com.kevinquan.cwa.model.spells.Volcano;
 import com.kevinquan.cwa.model.spells.WizardMigrane;
 import com.kevinquan.cwa.model.spells.WoadBlood;
@@ -154,17 +161,51 @@ public class NameTranslater {
         mCards.put("Creature_Pig", new ThePig());
         
         // Spells
+//        mCards.put("Spell_BananaButt", new );
         mCards.put("Spell_BoneWand", new BoneWand());
         mCards.put("Spell_BriefPower", new BriefPower());
-        mCards.put("Spell_CrystalBall", new CrystalBall());
+//        mCards.put("Spell_BubblegumButt", new );
         mCards.put("Spell_CerebralBloodstorm", new CerebralBloodstorm());
-        mCards.put("Spell_FountainOfForgiveness", new FountainOfForgiveness());
-        mCards.put("Spell_PumaClaw", new PumaClaw());
-        mCards.put("Spell_StrawberryButt", new StrawberryButt());
-        mCards.put("Spell_Volcano", new Volcano());
-        mCards.put("Spell_TomeOfAnkhs", new TomeOfAnkhs());
-        mCards.put("Spell_Migraine", new WizardMigrane());
+//        mCards.put("Spell_ClairvoyantDaggerStorm", new );
+        mCards.put("Spell_CornScepter", new CornScepter());
+//        mCards.put("Spell_CoughSyrup", new );
+        mCards.put("Spell_CrystalBall", new CrystalBall());
+//        mCards.put("Spell_DarkPortal", new );
+//        mCards.put("Spell_DoorOfStrength", new );
         mCards.put("Spell_ElfBlood", new WoadBlood());
+//        mCards.put("Spell_FallingStar", new );
+//        mCards.put("Spell_FieldOfNightmares", new );
+        mCards.put("Spell_FountainOfForgiveness", new FountainOfForgiveness());
+        mCards.put("Spell_GrapeButt", new GrapeButt());
+//        mCards.put("Spell_HotDogRain", new );
+        mCards.put("Spell_Migraine", new WizardMigrane());
+//        mCards.put("Spell_PieStorm", new );
+//        mCards.put("Spell_PortalToNowhere", new );
+        mCards.put("Spell_PsychicTempest", new PsychicTempest());
+        mCards.put("Spell_PumaClaw", new PumaClaw());
+//        mCards.put("Spell_ScrollOfBadBreath", new );
+        mCards.put("Spell_ScrollOfFreshBreath", new ScrollOfFreshBreath());
+//        mCards.put("Spell_SkullJuice", new );
+//        mCards.put("Spell_SnakeEyeRing", new );
+//        mCards.put("Spell_SpiritTorch", new );
+        mCards.put("Spell_StrawberryButt", new StrawberryButt());
+        mCards.put("Spell_SuperHug", new SuperHug());
+        mCards.put("Spell_Teleport", new Teleport());
+//        mCards.put("Spell_ThroneOfDoom", new );
+//        mCards.put("Spell_ThroneOfGloom", new );
+        mCards.put("Spell_TomeOfAnkhs", new TomeOfAnkhs());
+        mCards.put("Spell_UFOabduction", new UfoAbduction());
+//        mCards.put("Spell_UltimateMagicHands", new );
+//        mCards.put("Spell_UnemptyCoffin", new );
+        mCards.put("Spell_Volcano", new Volcano());
+//        mCards.put("Spell_WitchWay", new );
+//        mCards.put("Spell_WizardRawk", new );
+//        mCards.put("Spell_ZazosMagicSeeds", new );
+//        mCards.put("Spell_TaxReduction", new );
+//        mCards.put("Spell_IncredibleEgg", new );
+//        mCards.put("Spell_KungFuPower", new );
+//        mCards.put("Spell_SubliminalStrength", new );
+       
         
     }
     

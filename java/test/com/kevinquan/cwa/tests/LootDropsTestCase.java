@@ -12,6 +12,7 @@ import org.junit.Test;
 import com.kevinquan.cwa.Blueprints;
 import com.kevinquan.cwa.NameTranslater;
 import com.kevinquan.cwa.model.Card;
+import com.kevinquan.cwa.model.levels.Level;
 import com.kevinquan.cwa.model.levels.LevelStore;
 import com.kevinquan.cwa.model.levels.LootDropStore.LootDropDetails;
 import com.kevinquan.cwa.model.levels.LootDropStore.LootDropPriorityComparator;
@@ -37,7 +38,7 @@ public class LootDropsTestCase extends BaseJUnit4Test {
     @Test
     public void generateLoopDropStoreCode() {
         Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
-        for (int i = 1; i < 120; i++) {
+        for (int i = 1; i < Level.MAXIMUM_LEVEL; i++) {
             Hashtable<String, LootDropDetails> drops = dropData.get(i);
             if (drops == null || drops.isEmpty()) {
                 continue;
@@ -96,7 +97,6 @@ public class LootDropsTestCase extends BaseJUnit4Test {
             
             System.out.print(" ["+staticWeight*dropChance+"%, "+dropChance+" chance, "+staticWeight+" weight]");
             System.out.println();
-            if (i > 1000) break;
         }
             
     }

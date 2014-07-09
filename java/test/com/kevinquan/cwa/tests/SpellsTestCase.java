@@ -32,11 +32,11 @@ public class SpellsTestCase extends BaseJUnit4Test {
     }
     
     @Test
-    public void testBuildingBlueprint() {
+    public void testSpellsBlueprint() {
         //assertThat("Incorrect spells count", mBlueprint.length(), is(mNameTranslater.getCardCount("Spell_")));
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject spell = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
-            String spellName = JSONUtils.safeGetString(spell, Blueprints.FIELD_ID); 
+            String spellName = JSONUtils.safeGetString(spell, Blueprints.FIELD_ID);
             Card spellCard = mNameTranslater.getCardByName(spellName);
             assertThat("Could not retrieve spell "+spellName, spellCard, notNullValue());
             assertThat("Incorrect cost for "+spellName, JSONUtils.safeGetInt(spell, Blueprints.FIELD_COST, Integer.MAX_VALUE), is(spellCard.getCost()));
