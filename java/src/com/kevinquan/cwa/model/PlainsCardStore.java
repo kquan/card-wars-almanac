@@ -2,6 +2,7 @@ package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.CoolDog;
+import com.kevinquan.cwa.model.creatures.plains.DragonClaw;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
@@ -23,6 +24,7 @@ public class PlainsCardStore extends AbstractCardStore {
         
         // Nice cards
         addCard(new AncientScholar());
+        addCard(new DragonClaw());
     }
 
 }

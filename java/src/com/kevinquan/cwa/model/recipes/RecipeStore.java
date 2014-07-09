@@ -17,6 +17,7 @@ import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
 import com.kevinquan.cwa.model.creatures.nice.FairyShepard;
 import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
 import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
+import com.kevinquan.cwa.model.creatures.plains.DragonClaw;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
@@ -45,6 +46,7 @@ import com.kevinquan.cwa.model.spells.CrystalBall;
 import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
 import com.kevinquan.cwa.model.spells.GrapeButt;
 import com.kevinquan.cwa.model.spells.PsychicTempest;
+import com.kevinquan.cwa.model.spells.PumaClaw;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.Teleport;
 import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
@@ -103,6 +105,7 @@ public class RecipeStore {
         addRecipe(new Recipe(new TomeOfAnkhs(), new WizardMigrane(), new WanderingBaldMan(), 3300, new AncientScholar()));
         addRecipe(new Recipe(4500, new LimeSlimey()).addIngredient(new GrapeSlimey(), 3).addIngredient(new TomeOfAnkhs()).addIngredient(new Teleport()));
         addRecipe(new Recipe(5000, new Sandsnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()));
+        addRecipe(new Recipe(new BurningHand(), new PumaClaw(), 5500, new DragonClaw()).addIngredient(new GrapeSlimey(), 3));
     }
     
     public List<Recipe> getRecipesThatUse(Card card) {

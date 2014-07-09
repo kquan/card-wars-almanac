@@ -33,6 +33,7 @@ public class BuildingsTestCase extends BaseJUnit4Test {
     
     @Test
     public void testBuildingBlueprint() {
+        assertThat("Incorrect building count", mBlueprint.length(), is(mNameTranslater.getCardCount("Building_")));
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject building = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
             String buildingName = JSONUtils.safeGetString(building, Blueprints.FIELD_ID); 

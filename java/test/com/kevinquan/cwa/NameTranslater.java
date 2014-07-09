@@ -8,9 +8,27 @@ import com.kevinquan.cwa.model.Card;
 import com.kevinquan.cwa.model.Card.Faction;
 import com.kevinquan.cwa.model.Card.Rarity;
 import com.kevinquan.cwa.model.buildings.AstralFortress;
+import com.kevinquan.cwa.model.buildings.CaveOfSolitude;
 import com.kevinquan.cwa.model.buildings.ComfyCave;
+import com.kevinquan.cwa.model.buildings.CornCastle;
 import com.kevinquan.cwa.model.buildings.CornDome;
+import com.kevinquan.cwa.model.buildings.CornParthenon;
+import com.kevinquan.cwa.model.buildings.Mausoleum;
+import com.kevinquan.cwa.model.buildings.NicelandsTower;
+import com.kevinquan.cwa.model.buildings.ObelisxOfVengence;
+import com.kevinquan.cwa.model.buildings.PalaceOfBone;
+import com.kevinquan.cwa.model.buildings.PuffyCastle;
+import com.kevinquan.cwa.model.buildings.Pyramidia;
 import com.kevinquan.cwa.model.buildings.SandCastle;
+import com.kevinquan.cwa.model.buildings.SandPyramid;
+import com.kevinquan.cwa.model.buildings.SandSphinx;
+import com.kevinquan.cwa.model.buildings.SchoolHouse;
+import com.kevinquan.cwa.model.buildings.ShadowPyramid;
+import com.kevinquan.cwa.model.buildings.SiloOfTruth;
+import com.kevinquan.cwa.model.buildings.SpiritTower;
+import com.kevinquan.cwa.model.buildings.Stonehenge;
+import com.kevinquan.cwa.model.buildings.SunPyramid;
+import com.kevinquan.cwa.model.buildings.WoadMobileHome;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
 import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
@@ -24,6 +42,7 @@ import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.rainbow.Mouthball;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
+import com.kevinquan.cwa.model.creatures.sandy.BeachMum;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
@@ -37,6 +56,7 @@ import com.kevinquan.cwa.model.spells.BriefPower;
 import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
 import com.kevinquan.cwa.model.spells.CrystalBall;
 import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
+import com.kevinquan.cwa.model.spells.PumaClaw;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
 import com.kevinquan.cwa.model.spells.Volcano;
@@ -72,29 +92,29 @@ public class NameTranslater {
     
     protected void initCards() {
         mCards.put("Building_BlueCastle", new AstralFortress());
+        mCards.put("Building_CaveOfSolitude", new CaveOfSolitude());
         mCards.put("Building_ComfyCave", new ComfyCave());
+        mCards.put("Building_ElfTeePee", new WoadMobileHome());
+        mCards.put("Building_NicelandsTower", new NicelandsTower());
+        mCards.put("Building_Obelisx", new ObelisxOfVengence());
+        mCards.put("Building_PalaceOfBone", new PalaceOfBone());
+        mCards.put("Building_PuffyCastle", new PuffyCastle());
+        mCards.put("Building_Pyramidia", new Pyramidia());
+        mCards.put("Building_RedCastle", new CornCastle());
         mCards.put("Building_RedDome", new CornDome());
+        mCards.put("Building_RedParthenon", new CornParthenon());
         mCards.put("Building_SandCastle", new SandCastle());
-        /*
-        mCards.put("Building_CaveOfSolitude", new );
-        mCards.put("Building_ElfTeePee", new );
-        mCards.put("Building_NicelandsTower", new );
-        mCards.put("Building_Obelisx", new );
-        mCards.put("Building_PalaceOfBone", new );
-        mCards.put("Building_PuffyCastle", new );
-        mCards.put("Building_Pyramidia", new );
-        mCards.put("Building_RedCastle", new );
-        mCards.put("Building_RedParthenon", new );
-        mCards.put("Building_SandPyramid", new );
-        mCards.put("Building_SchoolHouse", new );
-        mCards.put("Building_SiloOfTruth", new );
-        mCards.put("Building_Sphinx", new );
-        mCards.put("Building_SpiritTower", new );
-        mCards.put("Building_Stonehenge", new );
-        mCards.put("Building_ShadowPyramid", new );
-        mCards.put("Building_Mausoleum", new );
-        mCards.put("Building_SunPyramid", new );
+        mCards.put("Building_SandPyramid", new SandPyramid());
+        mCards.put("Building_SchoolHouse", new SchoolHouse());
+        mCards.put("Building_SiloOfTruth", new SiloOfTruth());
+        mCards.put("Building_Sphinx", new SandSphinx());
+        mCards.put("Building_SpiritTower", new SpiritTower());
+        mCards.put("Building_Stonehenge", new Stonehenge());
+        mCards.put("Building_ShadowPyramid", new ShadowPyramid());
+        mCards.put("Building_Mausoleum", new Mausoleum());
+        mCards.put("Building_SunPyramid", new SunPyramid());
 
+        /*     
         mCards.put("", new );
         mCards.put("", new );
         mCards.put("", new );
@@ -122,6 +142,7 @@ public class NameTranslater {
         mCards.put("Creature_SkeletalHand", new BurningHand());
         mCards.put("Creature_CactusBall", new GreenCactaball());
         mCards.put("Creature_MsMummy", new MsMummy());
+        mCards.put("Creature_BeachMum", new BeachMum());
         
         // Swamp
         mCards.put("Creature_WanderingBaldMan", new WanderingBaldMan());
@@ -138,12 +159,23 @@ public class NameTranslater {
         mCards.put("Spell_CrystalBall", new CrystalBall());
         mCards.put("Spell_CerebralBloodstorm", new CerebralBloodstorm());
         mCards.put("Spell_FountainOfForgiveness", new FountainOfForgiveness());
+        mCards.put("Spell_PumaClaw", new PumaClaw());
         mCards.put("Spell_StrawberryButt", new StrawberryButt());
         mCards.put("Spell_Volcano", new Volcano());
         mCards.put("Spell_TomeOfAnkhs", new TomeOfAnkhs());
         mCards.put("Spell_Migraine", new WizardMigrane());
         mCards.put("Spell_ElfBlood", new WoadBlood());
         
+    }
+    
+    public int getCardCount(String prefix) {
+        int count = 0;
+        for (String key : mCards.keySet()) {
+            if (key.startsWith(prefix)) {
+                count++;
+            }
+        }
+        return count;
     }
     
     public Card getCardByName(String name) {

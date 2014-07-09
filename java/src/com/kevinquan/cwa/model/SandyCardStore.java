@@ -1,5 +1,6 @@
 package com.kevinquan.cwa.model;
 
+import com.kevinquan.cwa.model.creatures.sandy.BeachMum;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
 import com.kevinquan.cwa.model.creatures.sandy.LimeSlimey;
@@ -23,6 +24,7 @@ public class SandyCardStore extends AbstractCardStore {
         addCard(new SandEyebat());
         
         // Nice cards
+        addCard(new BeachMum());
         addCard(new LimeSlimey());
         addCard(new Sandsnake());
     }
