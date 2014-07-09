@@ -6,6 +6,7 @@ public interface Blueprints {
     public static final String RECIPES = "db_Fusion.json";
     public static final String LEVELS = "db_Quest.json";
     public static final String BUILDINGS = "db_Buildings.json";
+    public static final String SPELLS = "db_Spells.json";
     public static final String LEVEL_DROPS = "db_Decks.json";
     
     public static final String FIELD_ID = "ID";
