@@ -39,7 +39,7 @@ public class LevelsTestCase extends BaseJUnit4Test {
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject level = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
             int levelNumber = JSONUtils.safeGetInt(level, Blueprints.FIELD_LEVEL_NUMBER, 0);
-            if (levelNumber > 200) {
+            if (levelNumber > Level.MAXIMUM_LEVEL) {
                 // "Special" levels
                 continue;
             }

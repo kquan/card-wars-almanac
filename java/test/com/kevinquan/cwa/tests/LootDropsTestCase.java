@@ -18,10 +18,10 @@ import com.kevinquan.cwa.model.levels.LootDropStore.LootDropPriorityComparator;
 import com.kevinquan.java.utils.JSONUtils;
 import com.kevinquan.tests.BaseJUnit4Test;
 
-public class LevelDropsTestCase extends BaseJUnit4Test {
+public class LootDropsTestCase extends BaseJUnit4Test {
 
     @SuppressWarnings("unused")
-    private static final String TAG = LevelDropsTestCase.class.getSimpleName();
+    private static final String TAG = LootDropsTestCase.class.getSimpleName();
     
     protected NameTranslater mNameTranslater;
     protected JSONArray mBlueprint; 
@@ -36,7 +36,7 @@ public class LevelDropsTestCase extends BaseJUnit4Test {
     
     @Test
     public void generateLoopDropStoreCode() {
-        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLevelDrops();
+        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
         for (int i = 1; i < 120; i++) {
             Hashtable<String, LootDropDetails> drops = dropData.get(i);
             if (drops == null || drops.isEmpty()) {
@@ -57,8 +57,8 @@ public class LevelDropsTestCase extends BaseJUnit4Test {
     }
     
     //@Test
-    public void displayParsedLevelDrops() {
-        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLevelDrops();
+    public void displayParsedLootDrops() {
+        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
         for (int i = 1; i < 120; i++) {
             Hashtable<String, LootDropDetails> drops = dropData.get(i);
             if (drops == null || drops.isEmpty()) {
@@ -73,7 +73,7 @@ public class LevelDropsTestCase extends BaseJUnit4Test {
         }
     }
     
-    public void displayLevelDropsBlueprint() {
+    public void displayLootDropsBlueprint() {
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject data = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
             String deckId = JSONUtils.safeGetString(data, Blueprints.FIELD_DECK_ID);
@@ -101,7 +101,7 @@ public class LevelDropsTestCase extends BaseJUnit4Test {
             
     }
     
-    protected Hashtable<Integer, Hashtable<String, LootDropDetails>> parseLevelDrops() {
+    protected Hashtable<Integer, Hashtable<String, LootDropDetails>> parseLootDrops() {
         Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = new Hashtable<Integer, Hashtable<String, LootDropDetails>>();
         int processingLevel = -1;
         for (int i = 0; i < mBlueprint.length(); i++) {

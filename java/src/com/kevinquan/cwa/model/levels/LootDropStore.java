@@ -125,6 +125,22 @@ public class LootDropStore {
         mLevelIndex.get(levelNumber).add(details);
     }
     
+    public List<LootDropDetails> getDropsFor(Card card) {
+        List<LootDropDetails> result = new ArrayList<LootDropDetails>();
+        if (card != null && mCardIndex.containsKey(card.getId())) {
+            result.addAll(mCardIndex.get(card.getId()));
+        }
+        return result;
+    }
+    
+    public List<LootDropDetails> getDropsFor(int levelNumber) {
+        List<LootDropDetails> result = new ArrayList<LootDropDetails>();
+        if (levelNumber > 0 && levelNumber < Level.MAXIMUM_LEVEL && mLevelIndex.containsKey(levelNumber)) {
+            result.addAll(mLevelIndex.get(levelNumber));
+        }
+        return result;        
+    }
+    
     protected void init() {
         LevelStore levelStore = LevelStore.getInstance();
         addDropDetails(new LootDropDetails(new CornDome(), levelStore.getLevel(1), 0.0, 100.0));

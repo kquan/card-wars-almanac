@@ -6,7 +6,7 @@ public class SnakeMint extends AbstractNiceCreature {
     private static final String TAG = SnakeMint.class.getSimpleName();
     
     public SnakeMint() {
-        super("Fat Goat", 2, Rarity.Nice);
+        super("Snake Mint", 2, Rarity.Nice);
         mDescription = "Deal 2 Damage to creature in opposing lane and heal this creature 4 points";
     }
 

@@ -35,6 +35,7 @@ public class Level {
     private static final String TAG = Level.class.getSimpleName();
     
     protected static final int MAXIMUM_NUMBER_OF_QUESTS = 3;
+    public static final int MAXIMUM_LEVEL = 120;
     
     protected int mLevelNumber;
     protected int mCost;
