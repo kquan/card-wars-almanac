@@ -2,9 +2,11 @@ package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
+import com.kevinquan.cwa.model.creatures.sandy.LimeSlimey;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
 import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
 import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
+import com.kevinquan.cwa.model.creatures.sandy.Sandsnake;
 
 public class SandyCardStore extends AbstractCardStore {
 
@@ -13,11 +15,16 @@ public class SandyCardStore extends AbstractCardStore {
 
     @Override
     protected void init() {
+        // Cool cards
         addCard(new BurningHand());
         addCard(new GreenCactaball());
         addCard(new MsMummy());
         addCard(new SandAngel());
         addCard(new SandEyebat());
+        
+        // Nice cards
+        addCard(new LimeSlimey());
+        addCard(new Sandsnake());
     }
 
 }

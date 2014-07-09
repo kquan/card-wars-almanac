@@ -19,6 +19,19 @@ public class Hero {
     public static final Hero LUMPY_SPACE_PRINCESS = new Hero("Lumpy Space Princess", 3, "Fully heal all of your Plains creatures");
     public static final Hero ASH = new Hero("Ash", 4, "Return any card from the Discard Pile back to your hand");
     public static final Hero RICARDIO = new Hero("Ricardio", 3, "Draw 1 card");
+    public static final Hero DR_DONUT = new Hero("Dr Donut", 5, "Return any Creature from the Discard Pile back to your hand");
+    
+    public static final Hero EARL_OF_LEMONGRAB = new Hero("Earl of Lemongrab", 3, ""); // Check
+    public static final Hero ICE_KING = new Hero("Ice King", 4, ""); // Check
+    public static final Hero HUNSON_ABADEER = new Hero("Hunson Abadeer", 4, ""); // Check
+    public static final Hero GUNTER = new Hero("Gunter", 3, ""); // Check
+    public static final Hero FINN_DOCTOR = new Hero("Finn Doctor", 3, ""); // Check
+    public static final Hero FINN_PAJAMA = new Hero("Finn Pajama", 3, ""); // Check
+    public static final Hero MAGIC_MAN = new Hero("Magic Man", 2, ""); // Check
+    public static final Hero PEPPERMING_BUTLER = new Hero("Peppermint Butler", 2, ""); // Check
+    public static final Hero CINAMON_BUNN = new Hero("Cinamon Bunn", 3, ""); // Check
+    public static final Hero BANANA_GUARD = new Hero("Banana Guard", 3, ""); // Check
+    
     
     protected static Hashtable<String, Hero> ALL_HEROES;
     
@@ -34,6 +47,7 @@ public class Hero {
         ALL_HEROES.put(LUMPY_SPACE_PRINCESS.getName(), LUMPY_SPACE_PRINCESS);
         ALL_HEROES.put(ASH.getName(), ASH);
         ALL_HEROES.put(RICARDIO.getName(), RICARDIO);
+        ALL_HEROES.put(DR_DONUT.getName(), DR_DONUT);
     }
     
     public static List<Hero> getAllHeroes() {

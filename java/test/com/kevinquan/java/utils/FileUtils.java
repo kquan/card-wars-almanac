@@ -1,4 +1,4 @@
-package com.kevinquan.utils;
+package com.kevinquan.java.utils;
 
 import java.io.BufferedReader;
 import java.io.File;

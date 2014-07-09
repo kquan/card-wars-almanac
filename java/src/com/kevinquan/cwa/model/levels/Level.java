@@ -75,6 +75,13 @@ public class Level {
         return orderedQuests;
     }
     
+    public Quest getQuest(int questNumber) {
+        if (questNumber <= 0 || questNumber > MAXIMUM_NUMBER_OF_QUESTS) {
+            return null;
+        }
+        return mQuests.get(questNumber);
+    }
+    
     public Level addQuest(int questNumber, Quest quest) {
         if (questNumber == 0) {
             throw new RuntimeException("Quest number must start at 1");

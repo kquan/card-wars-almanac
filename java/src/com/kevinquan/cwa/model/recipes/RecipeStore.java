@@ -10,6 +10,7 @@ import com.kevinquan.cwa.model.buildings.SandCastle;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
 import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
+import com.kevinquan.cwa.model.creatures.corn.HuskerWorm;
 import com.kevinquan.cwa.model.creatures.corn.TravelinFarmer;
 import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
 import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
@@ -27,9 +28,11 @@ import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
+import com.kevinquan.cwa.model.creatures.sandy.LimeSlimey;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
 import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
 import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
+import com.kevinquan.cwa.model.creatures.sandy.Sandsnake;
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
 import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
@@ -98,6 +101,8 @@ public class RecipeStore {
         addRecipe(new Recipe(new WizardMigrane(), new BoneWand(), new HeavenlyGazer(), 2300, new EvilEye()));
         addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), new Teleport(), 3800, new PsychicTempest()));
         addRecipe(new Recipe(new TomeOfAnkhs(), new WizardMigrane(), new WanderingBaldMan(), 3300, new AncientScholar()));
+        addRecipe(new Recipe(4500, new LimeSlimey()).addIngredient(new GrapeSlimey(), 3).addIngredient(new TomeOfAnkhs()).addIngredient(new Teleport()));
+        addRecipe(new Recipe(5000, new Sandsnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()));
     }
     
     public List<Recipe> getRecipesThatUse(Card card) {

@@ -24,6 +24,7 @@ public interface Card {
 
     String getId();
     String getName();
+    String getDescription();
     
     int getCost();
     Faction getFaction();

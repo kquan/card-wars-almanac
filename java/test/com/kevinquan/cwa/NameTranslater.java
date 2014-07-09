@@ -2,7 +2,18 @@ package com.kevinquan.cwa;
 
 import java.util.Hashtable;
 
+import org.json.JSONObject;
+
+import com.kevinquan.cwa.model.Card;
+import com.kevinquan.cwa.model.Card.Faction;
+import com.kevinquan.cwa.model.Card.Rarity;
+import com.kevinquan.cwa.model.buildings.AstralFortress;
+import com.kevinquan.cwa.model.buildings.ComfyCave;
+import com.kevinquan.cwa.model.buildings.CornDome;
+import com.kevinquan.cwa.model.buildings.SandCastle;
+import com.kevinquan.cwa.model.hero.Hero;
 import com.kevinquan.cwa.model.levels.Quest;
+import com.kevinquan.java.utils.JSONUtils;
 
 public class NameTranslater {
 
@@ -18,10 +29,81 @@ public class NameTranslater {
     }
     
     protected Hashtable<String, Quest> mQuestConditions;
+    protected Hashtable<String, Hero> mHeroes;
+    protected Hashtable<String, Card> mCards;
     
     private NameTranslater() {
         mQuestConditions = new Hashtable<String, Quest>();
         initQuests();
+        mHeroes = new Hashtable<String, Hero>();
+        initHeroes();
+        mCards = new Hashtable<String, Card>();
+        initCards();
+    }
+    
+    protected void initCards() {
+        mCards.put("Building_BlueCastle", new AstralFortress());
+        mCards.put("Building_ComfyCave", new ComfyCave());
+        mCards.put("Building_RedDome", new CornDome());
+        mCards.put("Building_SandCastle", new SandCastle());
+        /*
+        mCards.put("Building_CaveOfSolitude", new );
+        mCards.put("Building_ElfTeePee", new );
+        mCards.put("Building_NicelandsTower", new );
+        mCards.put("Building_Obelisx", new );
+        mCards.put("Building_PalaceOfBone", new );
+        mCards.put("Building_PuffyCastle", new );
+        mCards.put("Building_Pyramidia", new );
+        mCards.put("Building_RedCastle", new );
+        mCards.put("Building_RedParthenon", new );
+        mCards.put("Building_SandPyramid", new );
+        mCards.put("Building_SchoolHouse", new );
+        mCards.put("Building_SiloOfTruth", new );
+        mCards.put("Building_Sphinx", new );
+        mCards.put("Building_SpiritTower", new );
+        mCards.put("Building_Stonehenge", new );
+        mCards.put("Building_ShadowPyramid", new );
+        mCards.put("Building_Mausoleum", new );
+        mCards.put("Building_SunPyramid", new );
+        */
+    }
+    
+    public Card getCardByName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            return null;
+        }
+        return mCards.get(name);
+    }
+    
+    protected void initHeroes() {
+        mHeroes.put("Finn", Hero.FINN);
+        mHeroes.put("BMO", Hero.BMO);
+        mHeroes.put("Marceline", Hero.MARCELINE);
+        mHeroes.put("PrincessBubblegum", Hero.PRINCESS_BUBBLEGUM);
+        mHeroes.put("FlamePrincess", Hero.FLAME_PRINCESS);
+        mHeroes.put("LadyRainicorn", Hero.LADY_RAINICORN);
+        mHeroes.put("LumpySpacePrincess", Hero.LUMPY_SPACE_PRINCESS);
+        mHeroes.put("Ash", Hero.ASH);
+        mHeroes.put("RicardioHeartGuy", Hero.RICARDIO);
+        mHeroes.put("DrDonut", Hero.DR_DONUT);
+        
+        mHeroes.put("EarlOfLemongrab", Hero.EARL_OF_LEMONGRAB);
+        mHeroes.put("IceKing", Hero.ICE_KING);
+        mHeroes.put("HunsonAbadeer", Hero.HUNSON_ABADEER);
+        mHeroes.put("Gunter", Hero.GUNTER);
+        mHeroes.put("FinnDoctor", Hero.FINN_DOCTOR);
+        mHeroes.put("FinnPajama", Hero.FINN_PAJAMA);
+        mHeroes.put("MagicMan", Hero.MAGIC_MAN);
+        mHeroes.put("PeppermintButler", Hero.PEPPERMING_BUTLER);
+        mHeroes.put("CinamonBunn", Hero.CINAMON_BUNN);
+        mHeroes.put("BananaGuard", Hero.BANANA_GUARD);
+    }
+    
+    public Hero getHeroByName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            return null;
+        }
+        return mHeroes.get(name);
     }
     
     protected void initQuests() {
@@ -86,5 +168,31 @@ public class NameTranslater {
     
     public int getQuestCount() {
         return mQuestConditions.values().size();
+    }
+    
+    public static Rarity getRarity(JSONObject object) {
+        if (object == null) {
+            return null;
+        }
+        switch (JSONUtils.safeGetInt(object, Blueprints.FIELD_RARITY, 0)) {
+            case 1: return Rarity.Cool;
+            case 2: return Rarity.Nice;
+            case 3: return Rarity.Rare;
+            case 4: return Rarity.VeryRare;
+            case 5: return Rarity.AlgebraicRare;
+            default: return null;
+        }
+    }
+    
+    public static Faction getFaction(JSONObject object) {
+        if (object == null) {
+            return null;
+        }
+        String faction = JSONUtils.safeGetString(object, Blueprints.FIELD_FACTION);
+        if ("Universal".equalsIgnoreCase(faction)) {
+            return Faction.Rainbow;
+        }
+        // TODO: Add other factions
+        return null;
     }
 }
