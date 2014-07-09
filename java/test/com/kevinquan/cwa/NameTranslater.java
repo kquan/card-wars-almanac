@@ -11,8 +11,37 @@ import com.kevinquan.cwa.model.buildings.AstralFortress;
 import com.kevinquan.cwa.model.buildings.ComfyCave;
 import com.kevinquan.cwa.model.buildings.CornDome;
 import com.kevinquan.cwa.model.buildings.SandCastle;
+import com.kevinquan.cwa.model.creatures.corn.Cornball;
+import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
+import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
+import com.kevinquan.cwa.model.creatures.nice.FatGoat;
+import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
+import com.kevinquan.cwa.model.creatures.nice.GoldAngelHeart;
+import com.kevinquan.cwa.model.creatures.nice.GoldFatGoat;
+import com.kevinquan.cwa.model.creatures.nice.SoftEyeling;
+import com.kevinquan.cwa.model.creatures.plains.CoolDog;
+import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
+import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
+import com.kevinquan.cwa.model.creatures.rainbow.Mouthball;
+import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
+import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
+import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
+import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
+import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
+import com.kevinquan.cwa.model.creatures.swamp.TeethLeaf;
+import com.kevinquan.cwa.model.creatures.swamp.WanderingBaldMan;
 import com.kevinquan.cwa.model.hero.Hero;
 import com.kevinquan.cwa.model.levels.Quest;
+import com.kevinquan.cwa.model.spells.BoneWand;
+import com.kevinquan.cwa.model.spells.BriefPower;
+import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
+import com.kevinquan.cwa.model.spells.CrystalBall;
+import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
+import com.kevinquan.cwa.model.spells.StrawberryButt;
+import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
+import com.kevinquan.cwa.model.spells.Volcano;
+import com.kevinquan.cwa.model.spells.WizardMigrane;
+import com.kevinquan.cwa.model.spells.WoadBlood;
 import com.kevinquan.java.utils.JSONUtils;
 
 public class NameTranslater {
@@ -65,7 +94,56 @@ public class NameTranslater {
         mCards.put("Building_ShadowPyramid", new );
         mCards.put("Building_Mausoleum", new );
         mCards.put("Building_SunPyramid", new );
+
+        mCards.put("", new );
+        mCards.put("", new );
+        mCards.put("", new );
+        mCards.put("", new );
         */
+        
+        // Corn
+        mCards.put("Creature_Cornball", new Cornball());
+        mCards.put("Creature_BurningBush", new EthanAllfire());
+        
+        // Plains
+        mCards.put("Creature_AngelEye", new HeavenlyGazer());
+        mCards.put("Creature_CoolDog", new CoolDog());
+        mCards.put("Creature_GrapeSlimey", new GrapeSlimey());
+        
+        // Nice
+        mCards.put("Creature_AngelHeart", new AngelHeart());
+        mCards.put("Creature_GL_AngelHeart", new GoldAngelHeart());
+        mCards.put("Creature_Flufflapillar", new Fluffapillar());
+        mCards.put("Creature_SoftEyeling", new SoftEyeling());
+        mCards.put("Creature_FatGoat", new FatGoat());
+        mCards.put("Creature_GL_FatGoat", new GoldFatGoat());
+        
+        // Sandy
+        mCards.put("Creature_SkeletalHand", new BurningHand());
+        mCards.put("Creature_CactusBall", new GreenCactaball());
+        mCards.put("Creature_MsMummy", new MsMummy());
+        
+        // Swamp
+        mCards.put("Creature_WanderingBaldMan", new WanderingBaldMan());
+        mCards.put("Creature_OrangeSlimey", new OrangeSlimey());
+        mCards.put("Creature_TeethLeaf", new TeethLeaf());
+        
+        // Rainbow
+        mCards.put("Creature_Mouthball", new Mouthball());
+        mCards.put("Creature_Pig", new ThePig());
+        
+        // Spells
+        mCards.put("Spell_BoneWand", new BoneWand());
+        mCards.put("Spell_BriefPower", new BriefPower());
+        mCards.put("Spell_CrystalBall", new CrystalBall());
+        mCards.put("Spell_CerebralBloodstorm", new CerebralBloodstorm());
+        mCards.put("Spell_FountainOfForgiveness", new FountainOfForgiveness());
+        mCards.put("Spell_StrawberryButt", new StrawberryButt());
+        mCards.put("Spell_Volcano", new Volcano());
+        mCards.put("Spell_TomeOfAnkhs", new TomeOfAnkhs());
+        mCards.put("Spell_Migraine", new WizardMigrane());
+        mCards.put("Spell_ElfBlood", new WoadBlood());
+        
     }
     
     public Card getCardByName(String name) {
