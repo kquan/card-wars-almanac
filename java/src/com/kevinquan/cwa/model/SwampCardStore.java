@@ -2,6 +2,7 @@ package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
+import com.kevinquan.cwa.model.creatures.swamp.HotEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
 import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
 import com.kevinquan.cwa.model.creatures.swamp.TeethLeaf;
@@ -23,6 +24,7 @@ public class SwampCardStore extends AbstractCardStore {
         
         // Nice cards
         addCard(new GreenMerman());
+        addCard(new HotEyebat());
     }
 
 }

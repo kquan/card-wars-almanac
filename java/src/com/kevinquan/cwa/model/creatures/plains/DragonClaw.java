@@ -6,7 +6,7 @@ public class DragonClaw extends AbstractPlainsCreature {
     private static final String TAG = DragonClaw.class.getSimpleName();
     
     public DragonClaw() {
-        super("Ancient Scholar", 2, Rarity.Nice);
+        super("Dragon Claw", 2, Rarity.Nice);
         mDescription = "Return a Building from the Discard Pile to your hand";
     }
 
