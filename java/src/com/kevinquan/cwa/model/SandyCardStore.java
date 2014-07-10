@@ -4,6 +4,7 @@ import com.kevinquan.cwa.model.creatures.sandy.BeachMum;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
 import com.kevinquan.cwa.model.creatures.sandy.LimeSlimey;
+import com.kevinquan.cwa.model.creatures.sandy.MayonaiseAngel;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
 import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
 import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
@@ -26,6 +27,7 @@ public class SandyCardStore extends AbstractCardStore {
         // Nice cards
         addCard(new BeachMum());
         addCard(new LimeSlimey());
+        addCard(new MayonaiseAngel());
         addCard(new Sandsnake());
     }
 

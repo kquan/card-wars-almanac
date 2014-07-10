@@ -7,7 +7,7 @@ public class WoadMobileHome extends AbstractBuildingCard {
     
     public WoadMobileHome() {
         super("Woad Mobile Home", 1, Rarity.Nice);
-        mDescription = "Creature in this lane gets +3 Defense for each of your creatures on the field"; // Check
+        mDescription = "Creature in this lane gets +3 Defense for each of your creatures on the field";
     }
 
 }

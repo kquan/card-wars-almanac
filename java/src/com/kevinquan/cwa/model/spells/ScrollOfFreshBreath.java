@@ -7,7 +7,7 @@ public class ScrollOfFreshBreath extends AbstractSpellCard {
     
     public ScrollOfFreshBreath() {
         super("Scroll of Fresh Breath", 1, Rarity.Nice);
-        mDescription = "Return a Building card from the Discard Pile to your hand"; // Check
+        mDescription = "Return a Building card from the Discard Pile to your hand";
     }
 
 }

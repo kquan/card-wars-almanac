@@ -27,9 +27,11 @@ import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
 import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
 import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
+import com.kevinquan.cwa.model.creatures.rainbow.WhiteNinja;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
 import com.kevinquan.cwa.model.creatures.sandy.LimeSlimey;
+import com.kevinquan.cwa.model.creatures.sandy.MayonaiseAngel;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
 import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
 import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
@@ -47,6 +49,7 @@ import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
 import com.kevinquan.cwa.model.spells.GrapeButt;
 import com.kevinquan.cwa.model.spells.PsychicTempest;
 import com.kevinquan.cwa.model.spells.PumaClaw;
+import com.kevinquan.cwa.model.spells.ScrollOfFreshBreath;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.Teleport;
 import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
@@ -106,6 +109,8 @@ public class RecipeStore {
         addRecipe(new Recipe(4500, new LimeSlimey()).addIngredient(new GrapeSlimey(), 3).addIngredient(new TomeOfAnkhs()).addIngredient(new Teleport()));
         addRecipe(new Recipe(5000, new Sandsnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()));
         addRecipe(new Recipe(new BurningHand(), new PumaClaw(), 5500, new DragonClaw()).addIngredient(new GrapeSlimey(), 3));
+        addRecipe(new Recipe(6100, new WhiteNinja()).addIngredient(new OrdinaryNinja()).addIngredient(new Fluffapillar(), 3).addIngredient(new ScrollOfFreshBreath()));
+        addRecipe(new Recipe(2000, new MayonaiseAngel()).addIngredient(new SandAngel()).addIngredient(new Fluffapillar(), 3).addIngredient(new FountainOfForgiveness(), 2));
     }
     
     public List<Recipe> getRecipesThatUse(Card card) {

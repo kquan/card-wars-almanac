@@ -25,6 +25,7 @@ import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
 import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
+import com.kevinquan.cwa.model.creatures.rainbow.WhiteNinja;
 import com.kevinquan.cwa.model.spells.BoneWand;
 import com.kevinquan.cwa.model.spells.BriefPower;
 import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
@@ -61,6 +62,7 @@ public class RainbowCardStore extends AbstractCardStore {
         
         // Nice cards
         addCard(new EvilEye());
+        addCard(new WhiteNinja());
         
         // Buildings
         addCard(new AstralFortress());
