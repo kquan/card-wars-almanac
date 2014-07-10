@@ -30,6 +30,7 @@ public class LootDropsTestCase extends BaseJUnit4Test {
     
     @Override
     public void setUp() {
+        super.setUp();
         mBlueprint = readBlueprint(Blueprints.LEVEL_DROPS);
         mNameTranslater = NameTranslater.getInstance();
         mLevelStore = LevelStore.getInstance();

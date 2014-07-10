@@ -26,6 +26,7 @@ public class SpellsTestCase extends BaseJUnit4Test {
     
     @Override
     public void setUp() {
+        super.setUp();
         mBlueprint = readBlueprint(Blueprints.SPELLS);
         mNameTranslater = NameTranslater.getInstance();
         mLevelStore = LevelStore.getInstance();

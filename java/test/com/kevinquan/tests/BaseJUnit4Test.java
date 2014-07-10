@@ -29,6 +29,7 @@ public class BaseJUnit4Test {
         if (!blueprintsRoot.exists() && !blueprintsRoot.isDirectory()) {
             fail("Blueprints root could not be found.");
         }
+        mNameTranslater = NameTranslater.getInstance();
     }
     
     @After

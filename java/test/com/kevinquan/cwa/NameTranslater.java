@@ -227,6 +227,7 @@ public class NameTranslater {
     }
     
     protected void initHeroes() {
+        mHeroes.put("Jake", Hero.JAKE);
         mHeroes.put("Finn", Hero.FINN);
         mHeroes.put("BMO", Hero.BMO);
         mHeroes.put("Marceline", Hero.MARCELINE);
@@ -245,7 +246,7 @@ public class NameTranslater {
         mHeroes.put("FinnDoctor", Hero.FINN_DOCTOR);
         mHeroes.put("FinnPajama", Hero.FINN_PAJAMA);
         mHeroes.put("MagicMan", Hero.MAGIC_MAN);
-        mHeroes.put("PeppermintButler", Hero.PEPPERMING_BUTLER);
+        mHeroes.put("PeppermintButler", Hero.PEPPERMINT_BUTLER);
         mHeroes.put("CinamonBunn", Hero.CINAMON_BUNN);
         mHeroes.put("BananaGuard", Hero.BANANA_GUARD);
     }
@@ -344,6 +345,187 @@ public class NameTranslater {
             return Faction.Rainbow;
         }
         // TODO: Add other factions
+        return null;
+    }
+    
+    public static String getArea(JSONObject object) {
+        if (object == null) {
+            return null;
+        }
+        String blueprintArea = JSONUtils.safeGetString(object, "LevelName");
+        if ("!!LEVEL_TREEHOUSE".equalsIgnoreCase(blueprintArea)) {
+            return "Area.Treehouse";
+        } else if ("!!LEVEL_PICNIC".equalsIgnoreCase(blueprintArea)) {
+            return "Area.Forest";
+        } else if ("!!LEVEL_CANDY".equalsIgnoreCase(blueprintArea)) {
+            return "Area.CandyKingdom";
+        } else if ("!!LEVEL_BEACH".equalsIgnoreCase(blueprintArea)) {
+            return "Area.Beach";
+        } else if ("!!LEVEL_CAVE".equalsIgnoreCase(blueprintArea)) {
+            return "Area.MarcelineCave";
+        } else if ("!!LEVEL_ICE".equalsIgnoreCase(blueprintArea)) {
+            return "Area.IceKingdom";
+        } else if ("!!LEVEL_SAND".equalsIgnoreCase(blueprintArea)) {
+            return "Area.Desert";
+        } else if ("!!LEVEL_DARKFOREST".equalsIgnoreCase(blueprintArea)) {
+            return "Area.DarkForest";
+        }
+        return null;
+    }
+    
+    public static String getOpponent(JSONObject object) {
+        if (object == null) {
+            return null;
+        }
+        String opponent = JSONUtils.safeGetString(object, Blueprints.FIELD_OPPONENT);
+        if ("Finn".equalsIgnoreCase(opponent)) {
+            return "Hero.FINN";
+        } else if ("BMO".equalsIgnoreCase(opponent)) {
+            return "Hero.BMO";
+        } else if ("Marceline".equalsIgnoreCase(opponent)) {
+            return "Hero.MARCELINE";
+        } else if ("PrincessBubblegum".equalsIgnoreCase(opponent)) {
+            return "Hero.PRINCESS_BUBBLEGUM";
+        } else if ("FlamePrincess".equalsIgnoreCase(opponent)) {
+            return "Hero.FLAME_PRINCESS";
+        } else if ("LadyRainicorn".equalsIgnoreCase(opponent)) {
+            return "Hero.LADY_RAINICORN";
+        } else if ("LumpySpacePrincess".equalsIgnoreCase(opponent)) {
+            return "Hero.LUMPY_SPACE_PRINCESS";
+        } else if ("Ash".equalsIgnoreCase(opponent)) {
+            return "Hero.ASH";
+        } else if ("RicardioHeartGuy".equalsIgnoreCase(opponent)) {
+            return "Hero.RICARDIO";
+        } else if ("DrDonut".equalsIgnoreCase(opponent)) {
+            return "Hero.DR_DONUT";
+        } else if ("EarlOfLemongrab".equalsIgnoreCase(opponent)) {
+            return "Hero.EARL_OF_LEMONGRAB";
+        } else if ("HunsonAbadeer".equalsIgnoreCase(opponent)) {
+            return "Hero.HUNSON_ABADEER";
+        } else if ("Jake".equalsIgnoreCase(opponent)) {
+            return "Hero.JAKE";
+        } else if ("Gunter".equalsIgnoreCase(opponent)) {
+            return "Hero.GUNTER";
+        } else if ("IceKing".equalsIgnoreCase(opponent)) {
+            return "Hero.ICE_KING";
+        } else if ("FinnDoctor".equalsIgnoreCase(opponent)) {
+            return "Hero.FINN_DOCTOR";
+        } else if ("MagicMan".equalsIgnoreCase(opponent)) {
+            return "Hero.MAGIC_MAN";
+        } else if ("FinnPajama".equalsIgnoreCase(opponent)) {
+            return "Hero.FINN_PAJAMA";
+        } else if ("PeppermintButler".equalsIgnoreCase(opponent)) {
+            return "Hero.PEPPERMINT_BUTLER";
+        }
+        // No Cinamon Bunn or Banana Guard
+        return null;
+    }
+    
+    public static String getQuest(JSONObject object, String questKey) {
+        if (object == null) {
+            return null;
+        }
+        String condition = JSONUtils.safeGetString(object, questKey);
+        if ("JustWin".equalsIgnoreCase(condition)) {
+            return "Quest.DEFAULT_FIRST_QUEST";
+        } else if ("Forbid_Corn".equalsIgnoreCase(condition)) {
+            return "Quest.CORN_FORBIDDEN";
+        } else if ("Forbid_Plains".equalsIgnoreCase(condition)) {
+            return "Quest.PLAINS_FORBIDDEN";
+        } else if ("Forbid_Swamp".equalsIgnoreCase(condition)) {
+            return "Quest.SWAMP_FORBIDDEN";
+        } else if ("Forbid_Cotton".equalsIgnoreCase(condition)) {
+            return "Quest.NICE_FORBIDDEN";
+        } else if ("Forbid_Sand".equalsIgnoreCase(condition)) {
+            return "Quest.SANDY_FORBIDDEN";
+        } else if ("Forbid_Universal".equalsIgnoreCase(condition)) {
+            return "Quest.RAINBOW_FORBIDDEN";
+        } else if ("Only_Corn".equalsIgnoreCase(condition)) {
+            return "Quest.CORN_ONLY";
+        } else if ("Only_Plains".equalsIgnoreCase(condition)) {
+            return "Quest.PLAINS_ONLY";
+        } else if ("Only_Swamp".equalsIgnoreCase(condition)) {
+            return "Quest.SWAMP_ONLY";
+        } else if ("Only_Cotton".equalsIgnoreCase(condition)) {
+            return "Quest.NICE_ONLY";
+        } else if ("Only_Sand".equalsIgnoreCase(condition)) {
+            return "Quest.SANDY_ONLY";
+        } else if ("Only_Universal".equalsIgnoreCase(condition)) {
+            return "Quest.RAINBOW_ONLY";
+        } else if ("FastWin3".equalsIgnoreCase(condition)) {
+            return "Quest.WIN_IN_3_TURNS";
+        } else if ("FastWin5".equalsIgnoreCase(condition)) {
+            return "Quest.WIN_IN_5_TURNS";
+        } else if ("FastWin7".equalsIgnoreCase(condition)) {
+            return "Quest.WIN_IN_7_TURNS";
+        } else if ("FastWin10".equalsIgnoreCase(condition)) {
+            return "Quest.WIN_IN_10_TURNS";
+        } else if ("Forbid_Spells".equalsIgnoreCase(condition)) {
+            return "Quest.NO_SPELLS";
+        } else if ("Forbid_Creatures".equalsIgnoreCase(condition)) {
+            return "Quest.NO_CREATURES";
+        } else if ("Forbid_Buildings".equalsIgnoreCase(condition)) {
+            return "Quest.NO_BUILDINGS";
+        } else if ("Only_Spells".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_SPELLS";
+        } else if ("Only_Creatures".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_CREATURES";
+        } else if ("Defeat2".equalsIgnoreCase(condition)) {
+            return "Quest.DEFEAT_2_CREATURES";
+        } else if ("Defeat5".equalsIgnoreCase(condition)) {
+            return "Quest.DEFEAT_5_CREATURES";
+        // this is a typo in the blueprint
+        } else if ("Deafeat10".equalsIgnoreCase(condition)) {
+            return "Quest.DEFEAT_10_CREATURES"; 
+        } else if ("Defeat15".equalsIgnoreCase(condition)) {
+            return "Quest.DEFEAT_15_CREATURES";
+        } else if ("Defeat20".equalsIgnoreCase(condition)) {
+            return "Quest.DEFEAT_20_CREATURES";
+        } else if ("Defeat25".equalsIgnoreCase(condition)) { 
+            return "Quest.DEFEAT_25_CREATURES";
+        } else if ("Only0PointCards".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_0_POINT_CARDS";
+        } else if ("Only1PointCards".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_1_POINT_CARDS";
+        } else if ("Only2PointCards".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_2_POINT_CARDS";
+        } else if ("Only3PointCards".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_3_POINT_CARDS";
+        } else if ("Only10Points".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_10_POINTS";
+        } else if ("Only15Points".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_15_POINTS";
+        } else if ("Only20Points".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_20_POINTS";
+        } else if ("Only25Points".equalsIgnoreCase(condition)) {
+            return "Quest.ONLY_25_POINTS";
+        } else if ("Only5HP".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_5HP_MAX";
+        } else if ("Only10HP".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_10HP_MAX";
+        } else if ("Only25HP".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_25HP_MAX";
+        } else if ("Only50HP".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_50HP_MAX";
+        } else if ("Only100HP".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_100HP_MAX";
+        } else if ("OnlyLose2Creatures".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_2_CREATURES_MAX";
+        } else if ("OnlyLose3Creatures".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_3_CREATURES_MAX";
+        } else if ("OnlyLose5Creatures".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_5_CREATURES_MAX";
+        } else if ("OnlyLose10Creatures".equalsIgnoreCase(condition)) {
+            return "Quest.LOSE_10_CREATURES_MAX";
+        } else if ("Landscapes_Four".equalsIgnoreCase(condition)) {
+            return "Quest.LANDSCAPES_FOUR_DIFFERENT";
+        } else if ("Landscapes_Three".equalsIgnoreCase(condition)) {
+            return "Quest.LANDSCAPES_THREE_DIFFERENT";
+        } else if ("Landscapes_Two".equalsIgnoreCase(condition)) {
+            return "Quest.LANDSCAPES_TWO_DIFFERENT";
+        } else if ("MaxCost30".equalsIgnoreCase(condition)) {
+            return "Quest.COST_30_MAX";
+        }
         return null;
     }
 }

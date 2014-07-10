@@ -22,6 +22,7 @@ public class QuestsTestCase extends BaseJUnit4Test {
     
     @Override
     public void setUp() {
+        super.setUp();
         mBlueprint = readBlueprint(Blueprints.QUESTS);
     }
     

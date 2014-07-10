@@ -28,7 +28,7 @@ public class Hero {
     public static final Hero FINN_DOCTOR = new Hero("Finn Doctor", 3, ""); // Check
     public static final Hero FINN_PAJAMA = new Hero("Finn Pajama", 3, ""); // Check
     public static final Hero MAGIC_MAN = new Hero("Magic Man", 2, ""); // Check
-    public static final Hero PEPPERMING_BUTLER = new Hero("Peppermint Butler", 2, ""); // Check
+    public static final Hero PEPPERMINT_BUTLER = new Hero("Peppermint Butler", 2, ""); // Check
     public static final Hero CINAMON_BUNN = new Hero("Cinamon Bunn", 3, ""); // Check
     public static final Hero BANANA_GUARD = new Hero("Banana Guard", 3, ""); // Check
     

@@ -22,12 +22,12 @@ public class LevelsTestCase extends BaseJUnit4Test {
     @SuppressWarnings("unused")
     private static final String TAG = LevelsTestCase.class.getSimpleName();
     
-    protected NameTranslater mNameTranslater;
     protected JSONArray mBlueprint; 
     protected LevelStore mLevelStore;
     
     @Override
     public void setUp() {
+        super.setUp();
         mBlueprint = readBlueprint(Blueprints.LEVELS);
         mLevelStore = LevelStore.getInstance();
     }
@@ -43,11 +43,6 @@ public class LevelsTestCase extends BaseJUnit4Test {
                 // "Special" levels
                 continue;
             }
-            // Temporary, as not all levels are modeled yet
-            if (levelNumber >= mLevelStore.getCount()) {
-                System.out.println("Level is greater than known value: "+levelNumber);
-                continue;
-            }
             Level modelLevel = mLevelStore.getLevel(levelNumber);
             assertThat("Could not retrieve level "+levelNumber, modelLevel, notNullValue());
             String opponent = JSONUtils.safeGetString(level, Blueprints.FIELD_OPPONENT);
@@ -60,6 +55,21 @@ public class LevelsTestCase extends BaseJUnit4Test {
             assertThat("Incorrect quest2 for level "+levelNumber, quest2, is(modelLevel.getQuest(2)));
             Quest quest3 = mNameTranslater.getQuestByName(JSONUtils.safeGetString(level, Blueprints.FIELD_QUEST3));
             assertThat("Incorrect quest3 for level "+levelNumber, quest3, is(modelLevel.getQuest(3)));
+        }
+        
+    }
+    
+    public void generateLevelsCode() {
+        for (int i = 0; i < mBlueprint.length(); i++) {
+            JSONObject level = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
+            int levelNumber = JSONUtils.safeGetInt(level, Blueprints.FIELD_LEVEL_NUMBER, 0);
+            if (levelNumber > Level.MAXIMUM_LEVEL) {
+                // "Special" levels
+                continue;
+            }
+            System.out.println("addLevel(new Level("+levelNumber+", "+JSONUtils.safeGetInt(level, "Stamina", -1)+", "+NameTranslater.getOpponent(level)+", "+JSONUtils.safeGetInt(level, "LeaderLevel", -1)+", "+NameTranslater.getArea(level)+")");
+            System.out.println("\t\t\t\t.addQuest(2, "+NameTranslater.getQuest(level, Blueprints.FIELD_QUEST2)+")");
+            System.out.println("\t\t\t\t.addQuest(3, "+NameTranslater.getQuest(level, Blueprints.FIELD_QUEST3)+"));");
         }
     }
 

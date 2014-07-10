@@ -26,6 +26,7 @@ public class BuildingsTestCase extends BaseJUnit4Test {
     
     @Override
     public void setUp() {
+        super.setUp();
         mBlueprint = readBlueprint(Blueprints.BUILDINGS);
         mNameTranslater = NameTranslater.getInstance();
         mLevelStore = LevelStore.getInstance();
