@@ -405,4 +405,10 @@ public class LevelStore {
     public int getCount() {
         return mLevels.size();
     }
+    
+    public List<Level> getAllLevels() {
+        List<Level> shallowCopy = new ArrayList<Level>();
+        shallowCopy.addAll(mLevels);
+        return shallowCopy;
+    }
 }
