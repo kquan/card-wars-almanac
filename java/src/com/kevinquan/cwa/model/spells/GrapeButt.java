@@ -6,7 +6,7 @@ public class GrapeButt extends AbstractSpellCard {
     private static final String TAG = GrapeButt.class.getSimpleName();
     
     public GrapeButt() {
-        super("Grape Butt", 3, Rarity.Nice);
+        super("Grape Butt", 1, Rarity.Nice);
         mDescription = "Destroy one of your buildings and draw 1 card";
     }
 

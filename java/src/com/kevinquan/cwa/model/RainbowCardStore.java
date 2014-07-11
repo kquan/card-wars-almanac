@@ -27,24 +27,46 @@ import com.kevinquan.cwa.model.creatures.rainbow.ThePickler;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
 import com.kevinquan.cwa.model.creatures.rainbow.WhiteNinja;
+import com.kevinquan.cwa.model.spells.BananaButt;
 import com.kevinquan.cwa.model.spells.BoneWand;
 import com.kevinquan.cwa.model.spells.BriefPower;
+import com.kevinquan.cwa.model.spells.BubblegumButt;
 import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
+import com.kevinquan.cwa.model.spells.ClairvoyantDaggerstorm;
 import com.kevinquan.cwa.model.spells.CornScepter;
+import com.kevinquan.cwa.model.spells.CoughSyrup;
 import com.kevinquan.cwa.model.spells.CrystalBall;
+import com.kevinquan.cwa.model.spells.DarkPortal;
+import com.kevinquan.cwa.model.spells.DoorOfStrength;
+import com.kevinquan.cwa.model.spells.FallingStar;
+import com.kevinquan.cwa.model.spells.FieldOfNightmares;
 import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
 import com.kevinquan.cwa.model.spells.GrapeButt;
+import com.kevinquan.cwa.model.spells.HotDogRain;
+import com.kevinquan.cwa.model.spells.PieStorm;
+import com.kevinquan.cwa.model.spells.PortalToNowhere;
 import com.kevinquan.cwa.model.spells.PsychicTempest;
 import com.kevinquan.cwa.model.spells.PumaClaw;
+import com.kevinquan.cwa.model.spells.ScrollOfBadBreath;
 import com.kevinquan.cwa.model.spells.ScrollOfFreshBreath;
+import com.kevinquan.cwa.model.spells.SkullJuice;
+import com.kevinquan.cwa.model.spells.SnakeEyeRing;
+import com.kevinquan.cwa.model.spells.SpiritTorch;
 import com.kevinquan.cwa.model.spells.StrawberryButt;
 import com.kevinquan.cwa.model.spells.SuperHug;
 import com.kevinquan.cwa.model.spells.Teleport;
+import com.kevinquan.cwa.model.spells.ThroneOfDoom;
+import com.kevinquan.cwa.model.spells.ThroneOfGloom;
 import com.kevinquan.cwa.model.spells.TomeOfAnkhs;
 import com.kevinquan.cwa.model.spells.UfoAbduction;
+import com.kevinquan.cwa.model.spells.UltimateMagicHands;
+import com.kevinquan.cwa.model.spells.UnemptyCoffin;
 import com.kevinquan.cwa.model.spells.Volcano;
+import com.kevinquan.cwa.model.spells.WitchWay;
 import com.kevinquan.cwa.model.spells.WizardMigrane;
+import com.kevinquan.cwa.model.spells.WizardRawk;
 import com.kevinquan.cwa.model.spells.WoadBlood;
+import com.kevinquan.cwa.model.spells.ZaZosMagicSeeds;
 
 public class RainbowCardStore extends AbstractCardStore {
 
@@ -89,24 +111,46 @@ public class RainbowCardStore extends AbstractCardStore {
         addCard(new WoadMobileHome());
         
         // Spells
+        addCard(new BananaButt());
         addCard(new BoneWand());
         addCard(new BriefPower());
+        addCard(new BubblegumButt());
         addCard(new CerebralBloodstorm());
+        addCard(new ClairvoyantDaggerstorm());
         addCard(new CornScepter());
+        addCard(new CoughSyrup());
         addCard(new CrystalBall());
+        addCard(new DarkPortal());
+        addCard(new DoorOfStrength());
+        addCard(new FallingStar());
+        addCard(new FieldOfNightmares());
         addCard(new FountainOfForgiveness());
         addCard(new GrapeButt());
-        addCard(new PumaClaw());
-        addCard(new ScrollOfFreshBreath());
+        addCard(new HotDogRain());
+        addCard(new PieStorm());
+        addCard(new PortalToNowhere());
         addCard(new PsychicTempest());
+        addCard(new PumaClaw());
+        addCard(new ScrollOfBadBreath());
+        addCard(new ScrollOfFreshBreath());
+        addCard(new SkullJuice());
+        addCard(new SnakeEyeRing());
+        addCard(new SpiritTorch());
         addCard(new StrawberryButt());
         addCard(new SuperHug());
         addCard(new Teleport());
+        addCard(new ThroneOfDoom());
+        addCard(new ThroneOfGloom());
         addCard(new TomeOfAnkhs());
         addCard(new UfoAbduction());
+        addCard(new UltimateMagicHands());
+        addCard(new UnemptyCoffin());
         addCard(new Volcano());
+        addCard(new WitchWay());
         addCard(new WizardMigrane());
+        addCard(new WizardRawk());
         addCard(new WoadBlood());
+        addCard(new ZaZosMagicSeeds());
     }
 
 }
