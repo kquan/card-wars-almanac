@@ -16,11 +16,17 @@
 package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
+import com.kevinquan.cwa.model.creatures.corn.CornDog;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
+import com.kevinquan.cwa.model.creatures.corn.GoldCornball;
+import com.kevinquan.cwa.model.creatures.corn.GoldEthanAllfire;
+import com.kevinquan.cwa.model.creatures.corn.GoldHuskerWorm;
+import com.kevinquan.cwa.model.creatures.corn.GoldTravelinFarmer;
 import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
 import com.kevinquan.cwa.model.creatures.corn.HuskerWorm;
 import com.kevinquan.cwa.model.creatures.corn.TravelinFarmer;
+import com.kevinquan.cwa.model.creatures.corn.WallOfEars;
 
 public class CornCardStore extends AbstractCardStore {
 
@@ -38,6 +44,14 @@ public class CornCardStore extends AbstractCardStore {
         
         // Nice cards
         addCard(new ArcherDan());
+        addCard(new CornDog());
+        addCard(new WallOfEars());
+        
+        // Gold cards
+        addCard(new GoldCornball());
+        addCard(new GoldEthanAllfire());
+        addCard(new GoldHuskerWorm());
+        addCard(new GoldTravelinFarmer());        
     }
 
 }
