@@ -12,5 +12,6 @@ import org.junit.runners.Suite;
 	LevelsTestCase.class,
 	QuestsTestCase.class,
 	LootDropsTestCase.class,
+	RecipesTestCase.class,
 })
 public class AllTests extends TestSuite {}

@@ -7,6 +7,7 @@ import com.kevinquan.cwa.model.Card;
 import com.kevinquan.cwa.model.buildings.AstralFortress;
 import com.kevinquan.cwa.model.buildings.CornDome;
 import com.kevinquan.cwa.model.buildings.SandCastle;
+import com.kevinquan.cwa.model.buildings.WoadMobileHome;
 import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
@@ -38,7 +39,7 @@ import com.kevinquan.cwa.model.creatures.sandy.MayonaiseAngel;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
 import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
 import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
-import com.kevinquan.cwa.model.creatures.sandy.Sandsnake;
+import com.kevinquan.cwa.model.creatures.sandy.SandSnake;
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
 import com.kevinquan.cwa.model.creatures.swamp.HotEyebat;
@@ -111,10 +112,11 @@ public class RecipeStore {
         addRecipe(new Recipe(new WanderingBaldMan(), new FountainOfForgiveness(), new BoneWand(), 1700, new GreenMerman()));
         addRecipe(new Recipe(new WizardMigrane(), new BoneWand(), new HeavenlyGazer(), 2300, new EvilEye()));
         addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), new Teleport(), 3800, new PsychicTempest()));
-        addRecipe(new Recipe(new TomeOfAnkhs(), new WizardMigrane(), new WanderingBaldMan(), 3300, new AncientScholar()));
+        addRecipe(new Recipe(3300, new AncientScholar()).addIngredient(new TomeOfAnkhs(), 3).addIngredient(new WizardMigrane(), 3).addIngredient(new WanderingBaldMan()));
         addRecipe(new Recipe(4500, new LimeSlimey()).addIngredient(new GrapeSlimey(), 3).addIngredient(new TomeOfAnkhs()).addIngredient(new Teleport()));
-        addRecipe(new Recipe(5000, new Sandsnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()));
+        addRecipe(new Recipe(5000, new SandSnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()));
         addRecipe(new Recipe(new BurningHand(), new PumaClaw(), 5500, new DragonClaw()).addIngredient(new GrapeSlimey(), 3));
+        addRecipe(new Recipe(6000, new WoadMobileHome()).addIngredient(new CornDome()).addIngredient(new WoadicTimeWalker(), 2).addIngredient(new PumaClaw()));
         addRecipe(new Recipe(6100, new WhiteNinja()).addIngredient(new OrdinaryNinja()).addIngredient(new Fluffapillar(), 3).addIngredient(new ScrollOfFreshBreath()));
         addRecipe(new Recipe(2000, new MayonaiseAngel()).addIngredient(new SandAngel()).addIngredient(new Fluffapillar(), 3).addIngredient(new FountainOfForgiveness(), 2));
         addRecipe(new Recipe(6300, new ArcherDan()).addIngredient(new TravelinFarmer()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()));
@@ -141,5 +143,9 @@ public class RecipeStore {
             }
         }
         return recipes;
+    }
+    
+    public int getCount() {
+        return mRecipies.size();
     }
 }

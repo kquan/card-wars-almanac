@@ -29,23 +29,50 @@ import com.kevinquan.cwa.model.buildings.SpiritTower;
 import com.kevinquan.cwa.model.buildings.Stonehenge;
 import com.kevinquan.cwa.model.buildings.SunPyramid;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
+import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
+import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
+import com.kevinquan.cwa.model.creatures.corn.HuskerWorm;
+import com.kevinquan.cwa.model.creatures.corn.TravelinFarmer;
 import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
+import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
+import com.kevinquan.cwa.model.creatures.nice.FairyShepard;
 import com.kevinquan.cwa.model.creatures.nice.FatGoat;
 import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
 import com.kevinquan.cwa.model.creatures.nice.GoldAngelHeart;
 import com.kevinquan.cwa.model.creatures.nice.GoldFatGoat;
+import com.kevinquan.cwa.model.creatures.nice.NicelandsEyeBat;
 import com.kevinquan.cwa.model.creatures.nice.SoftEyeling;
+import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
+import com.kevinquan.cwa.model.creatures.plains.Axey;
 import com.kevinquan.cwa.model.creatures.plains.CoolDog;
+import com.kevinquan.cwa.model.creatures.plains.DragonClaw;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
+import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
+import com.kevinquan.cwa.model.creatures.plains.WoadicTimeWalker;
+import com.kevinquan.cwa.model.creatures.rainbow.EvilEye;
+import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
 import com.kevinquan.cwa.model.creatures.rainbow.Mouthball;
+import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
+import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
+import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
+import com.kevinquan.cwa.model.creatures.rainbow.WhiteNinja;
 import com.kevinquan.cwa.model.creatures.sandy.BeachMum;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
+import com.kevinquan.cwa.model.creatures.sandy.LimeSlimey;
+import com.kevinquan.cwa.model.creatures.sandy.MayonaiseAngel;
 import com.kevinquan.cwa.model.creatures.sandy.MsMummy;
+import com.kevinquan.cwa.model.creatures.sandy.SandAngel;
+import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
+import com.kevinquan.cwa.model.creatures.sandy.SandSnake;
+import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
+import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
+import com.kevinquan.cwa.model.creatures.swamp.HotEyebat;
+import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
 import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
 import com.kevinquan.cwa.model.creatures.swamp.TeethLeaf;
 import com.kevinquan.cwa.model.creatures.swamp.WanderingBaldMan;
@@ -131,34 +158,61 @@ public class NameTranslater {
         // Corn
         mCards.put("Creature_Cornball", new Cornball());
         mCards.put("Creature_BurningBush", new EthanAllfire());
+        mCards.put("Creature_HuskerKnight", new HuskerKnight());
+        mCards.put("Creature_CornWorm", new HuskerWorm());
+        mCards.put("Creature_CareCrow", new TravelinFarmer());
+        mCards.put("Creature_ArcherDan", new ArcherDan());
         
         // Plains
         mCards.put("Creature_AngelEye", new HeavenlyGazer());
         mCards.put("Creature_CoolDog", new CoolDog());
         mCards.put("Creature_GrapeSlimey", new GrapeSlimey());
+        mCards.put("Creature_Poultrygeist", new Poultrygeist());
+        mCards.put("Creature_ManowarElf", new WoadicTimeWalker());
+        mCards.put("Creature_AncientScholar", new AncientScholar());
+        mCards.put("Creature_Axey", new Axey());
+        mCards.put("Creature_DragonClaw", new DragonClaw());
         
         // Nice
         mCards.put("Creature_AngelHeart", new AngelHeart());
         mCards.put("Creature_GL_AngelHeart", new GoldAngelHeart());
+        mCards.put("Creature_BlueberryDjini", new BlueberryDjini());
+        mCards.put("Creature_FairyShepard", new FairyShepard());
         mCards.put("Creature_Flufflapillar", new Fluffapillar());
         mCards.put("Creature_SoftEyeling", new SoftEyeling());
         mCards.put("Creature_FatGoat", new FatGoat());
         mCards.put("Creature_GL_FatGoat", new GoldFatGoat());
+        mCards.put("Creature_CottonEyeBat", new NicelandsEyeBat());
         
         // Sandy
         mCards.put("Creature_SkeletalHand", new BurningHand());
         mCards.put("Creature_CactusBall", new GreenCactaball());
         mCards.put("Creature_MsMummy", new MsMummy());
+        mCards.put("Creature_AngelOfSand", new SandAngel());
         mCards.put("Creature_BeachMum", new BeachMum());
+        mCards.put("Creature_SandEyeBat", new SandEyebat());
+        mCards.put("Creature_LimeSlimey", new LimeSlimey());
+        mCards.put("Creature_AngelOfVanilla", new MayonaiseAngel());
+        mCards.put("Creature_SandSnake", new SandSnake());
         
         // Swamp
         mCards.put("Creature_WanderingBaldMan", new WanderingBaldMan());
+        mCards.put("Creature_GrayEyeBat", new GrayEyebat());
         mCards.put("Creature_OrangeSlimey", new OrangeSlimey());
+        mCards.put("Creature_SpikedMaceStump", new MaceStump());
         mCards.put("Creature_TeethLeaf", new TeethLeaf());
+        mCards.put("Creature_GreenMerman", new GreenMerman());
+        mCards.put("Creature_HotEyeBat", new HotEyebat());
         
         // Rainbow
         mCards.put("Creature_Mouthball", new Mouthball());
+        mCards.put("Creature_SugarImp", new ImprovedSugarImp());
+        mCards.put("Creature_Ninja", new OrdinaryNinja());
+        mCards.put("Creature_IceIceBaby", new NiceIceBaby());
         mCards.put("Creature_Pig", new ThePig());
+        mCards.put("Creature_TravelinSkeleton", new TravelinSkeleton());
+        mCards.put("Creature_DevilEye", new EvilEye());
+        mCards.put("Creature_WhiteNinja", new WhiteNinja());
         
         // Spells
 //        mCards.put("Spell_BananaButt", new );

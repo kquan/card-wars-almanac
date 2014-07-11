@@ -27,5 +27,18 @@ public interface Blueprints {
     public static final String FIELD_CARD = "Cards";
     public static final String FIELD_CHANCE = "DropChance";
     public static final String FIELD_WEIGHT = "StaticWeight";
+    
+    // Recipes
+    public static final String FIELD_RESULT_CARD = "Card_ID";
+    public static final String FIELD_RECIPE_CARD1 = "C1_Name";
+    public static final String FIELD_RECIPE_CARD1_COUNT = "C1_Count";
+    public static final String FIELD_RECIPE_CARD2 = "C2_Name";
+    public static final String FIELD_RECIPE_CARD2_COUNT = "C2_Count";
+    public static final String FIELD_RECIPE_CARD3 = "C3_Name";
+    public static final String FIELD_RECIPE_CARD3_COUNT = "C3_Count";
+    public static final String FIELD_RECIPE_CARD4 = "C4_Name";
+    public static final String FIELD_RECIPE_CARD4_COUNT = "C4_Count";
+    public static final String FIELD_RECIPE_CARD5 = "C5_Name";
+    public static final String FIELD_RECIPE_CARD5_COUNT = "C5_Count";
 }
 

@@ -1,12 +1,12 @@
 package com.kevinquan.cwa.model.creatures.sandy;
 
-public class Sandsnake extends AbstractSandyCreature {
+public class SandSnake extends AbstractSandyCreature {
 
     @SuppressWarnings("unused")
-    private static final String TAG = Sandsnake.class.getSimpleName();
+    private static final String TAG = SandSnake.class.getSimpleName();
     
-    public Sandsnake() {
-        super(Sandsnake.class.getSimpleName(), 2, Rarity.Nice);
+    public SandSnake() {
+        super(SandSnake.class.getSimpleName(), 2, Rarity.Nice);
         mDescription = "Lower the Defense of creature in the opposite lane by 5";
     }
 
