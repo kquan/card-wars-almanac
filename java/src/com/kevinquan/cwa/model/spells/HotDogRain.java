@@ -22,7 +22,7 @@ public class HotDogRain extends AbstractSpellCard {
     
     public HotDogRain() {
         super("Hot Dog Rain", 1, Rarity.Rare);
-        mDescription = "Opponent cannot summon Buildings next turn"; // Check
+        mDescription = "Opponent cannot summon Buildings next turn";
     }
 
 }
