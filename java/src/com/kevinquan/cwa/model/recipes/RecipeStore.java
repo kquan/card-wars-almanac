@@ -23,6 +23,7 @@ import com.kevinquan.cwa.model.buildings.AstralFortress;
 import com.kevinquan.cwa.model.buildings.CornDome;
 import com.kevinquan.cwa.model.buildings.SandCastle;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
+import com.kevinquan.cwa.model.creatures.Creature;
 import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
@@ -110,6 +111,10 @@ public class RecipeStore {
     
     public List<Recipe> getRecipesThatUse(Card card) {
         List<Recipe> recipes = new ArrayList<Recipe>();
+        if (card instanceof Creature && ((Creature)card).isGold()) {
+            // Can't use gold cards
+            return recipes; 
+        }
         for (Recipe recipe : mRecipies) {
             if (recipe.uses(card)) {
                 recipes.add(recipe);
@@ -120,6 +125,10 @@ public class RecipeStore {
     
     public List<Recipe> getRecipeThatCreates(Card card) {
         List<Recipe> recipes = new ArrayList<Recipe>();
+        if (card instanceof Creature && ((Creature)card).isGold()) {
+            // Can't use gold cards
+            return recipes; 
+        }
         for (Recipe recipe : mRecipies) {
             if (recipe.getResult().getClass().isInstance(card)) {
                 recipes.add(recipe);
