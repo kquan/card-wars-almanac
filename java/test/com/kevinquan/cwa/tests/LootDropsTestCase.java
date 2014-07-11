@@ -1,5 +1,9 @@
 package com.kevinquan.cwa.tests;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertThat;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Hashtable;
@@ -14,6 +18,7 @@ import com.kevinquan.cwa.NameTranslater;
 import com.kevinquan.cwa.model.Card;
 import com.kevinquan.cwa.model.levels.Level;
 import com.kevinquan.cwa.model.levels.LevelStore;
+import com.kevinquan.cwa.model.levels.LootDropStore;
 import com.kevinquan.cwa.model.levels.LootDropStore.LootDropDetails;
 import com.kevinquan.cwa.model.levels.LootDropStore.LootDropPriorityComparator;
 import com.kevinquan.java.utils.JSONUtils;
@@ -27,6 +32,7 @@ public class LootDropsTestCase extends BaseJUnit4Test {
     protected NameTranslater mNameTranslater;
     protected JSONArray mBlueprint; 
     protected LevelStore mLevelStore;
+    protected LootDropStore mLootStore;
     
     @Override
     public void setUp() {
@@ -34,9 +40,26 @@ public class LootDropsTestCase extends BaseJUnit4Test {
         mBlueprint = readBlueprint(Blueprints.LEVEL_DROPS);
         mNameTranslater = NameTranslater.getInstance();
         mLevelStore = LevelStore.getInstance();
+        mLootStore = LootDropStore.getInstance();
     }
     
     @Test
+    public void testLoopDropBlueprint() {
+        Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
+        for (int i = 1; i < Level.MAXIMUM_LEVEL; i++) {
+            Hashtable<String, LootDropDetails> drops = dropData.get(i);
+            List<LootDropDetails> expectedDrops = mLootStore.getDropsFor(i);
+            assertThat("Incorrect number of drops for level "+i, drops.size(), is(expectedDrops.size()));
+            for (LootDropDetails expectedDrop : expectedDrops) {
+                LootDropDetails blueprintDrop = drops.get(expectedDrop.getCard().getId());
+                assertThat("No loot details found for "+expectedDrop.getCard()+" on level "+i, blueprintDrop, notNullValue());
+                assertThat("Incorrect drop chance for "+expectedDrop.getCard()+" on level "+i, blueprintDrop.getDropChance(), is(expectedDrop.getDropChance()));
+                assertThat("Incorrect static weight for "+expectedDrop.getCard()+" on level "+i, blueprintDrop.getStaticWeight(), is(expectedDrop.getStaticWeight()));
+            }
+        }
+    }
+    
+    //@Test
     public void generateLoopDropStoreCode() {
         Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
         for (int i = 1; i < Level.MAXIMUM_LEVEL; i++) {
@@ -122,6 +145,7 @@ public class LootDropsTestCase extends BaseJUnit4Test {
             String cardName = JSONUtils.safeGetString(data, Blueprints.FIELD_CARD);
             Card card = mNameTranslater.getCardByName(cardName);
             if (card == null) {
+                // TODO: This should fail the test once we have all creatures
                 System.out.println("Could not get card with name "+cardName);
                 continue;
             }
