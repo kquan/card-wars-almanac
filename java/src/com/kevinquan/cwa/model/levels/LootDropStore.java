@@ -1,3 +1,18 @@
+/*
+ * Copyright 2014 Kevin Quan (kevin.quan@gmail.com)
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.kevinquan.cwa.model.levels;
 
 import java.util.ArrayList;
@@ -62,6 +77,37 @@ import com.kevinquan.cwa.model.spells.WoadBlood;
 
 public class LootDropStore {
     
+    public static class LootDropDetails {
+        
+        protected Level mLevel;
+        protected Card mCard;
+        protected double mDropChance;
+        protected double mStaticWeight;
+        
+        public LootDropDetails(Card card, Level level, double chance, double weight) {
+            mCard = card;
+            mLevel = level;
+            mDropChance = chance;
+            mStaticWeight = weight;
+        }
+
+        public Card getCard() {
+            return mCard;
+        }
+
+        public double getDropChance() {
+            return mDropChance;
+        }
+        
+        public Level getLevel() {
+            return mLevel;
+        }
+
+        public double getStaticWeight() {
+            return mStaticWeight;
+        }
+    }
+    
     public static class LootDropPriorityComparator implements Comparator<LootDropDetails> {
 
         @Override
@@ -83,44 +129,13 @@ public class LootDropStore {
         }
         
     }
-    
-    public static class LootDropDetails {
-        
-        protected Level mLevel;
-        protected Card mCard;
-        protected double mDropChance;
-        protected double mStaticWeight;
-        
-        public LootDropDetails(Card card, Level level, double chance, double weight) {
-            mCard = card;
-            mLevel = level;
-            mDropChance = chance;
-            mStaticWeight = weight;
-        }
 
-        public Level getLevel() {
-            return mLevel;
-        }
-
-        public Card getCard() {
-            return mCard;
-        }
-        
-        public double getDropChance() {
-            return mDropChance;
-        }
-
-        public double getStaticWeight() {
-            return mStaticWeight;
-        }
-    }
-
-    @SuppressWarnings("unused")
-    private static final String TAG = LootDropStore.class.getSimpleName();
-    
     private static class LootDropStoreHolder {
         private static final LootDropStore INSTANCE = new LootDropStore();
     }
+    
+    @SuppressWarnings("unused")
+    private static final String TAG = LootDropStore.class.getSimpleName();
     
     public static LootDropStore getInstance() {
         return LootDropStoreHolder.INSTANCE;

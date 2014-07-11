@@ -1,3 +1,18 @@
+/*
+ * Copyright 2014 Kevin Quan (kevin.quan@gmail.com)
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.kevinquan.cwa.model.levels;
 
 import java.util.ArrayList;
@@ -8,12 +23,12 @@ import com.kevinquan.cwa.model.levels.Level.Area;
 
 public class LevelStore {
 
-    @SuppressWarnings("unused")
-    private static final String TAG = LevelStore.class.getSimpleName();
-
     private static class LevelStoreHolder {
         private static final LevelStore INSTANCE = new LevelStore();
     }
+
+    @SuppressWarnings("unused")
+    private static final String TAG = LevelStore.class.getSimpleName();
     
     public static LevelStore getInstance() {
         return LevelStoreHolder.INSTANCE;
@@ -29,6 +44,24 @@ public class LevelStore {
     protected LevelStore addLevel(Level level) {
         mLevels.add(level);
         return this;
+    }
+    
+    public List<Level> getAllLevels() {
+        List<Level> shallowCopy = new ArrayList<Level>();
+        shallowCopy.addAll(mLevels);
+        return shallowCopy;
+    }
+    
+    public int getCount() {
+        return mLevels.size();
+    }
+    
+    public Level getLevel(int levelNumber) {
+        if (levelNumber > 0 && levelNumber < mLevels.size()+1) {
+            // Level 1 is at index 0
+            return mLevels.get(levelNumber-1);
+        }
+        return null;
     }
     
     protected void init() {       
@@ -392,23 +425,5 @@ public class LevelStore {
         addLevel(new Level(120, 9, Hero.PEPPERMINT_BUTLER, 36, Area.DarkForest)
                 .addQuest(2, Quest.NICE_ONLY)
                 .addQuest(3, Quest.LANDSCAPES_FOUR_DIFFERENT));
-    }
-    
-    public Level getLevel(int levelNumber) {
-        if (levelNumber > 0 && levelNumber < mLevels.size()+1) {
-            // Level 1 is at index 0
-            return mLevels.get(levelNumber-1);
-        }
-        return null;
-    }
-    
-    public int getCount() {
-        return mLevels.size();
-    }
-    
-    public List<Level> getAllLevels() {
-        List<Level> shallowCopy = new ArrayList<Level>();
-        shallowCopy.addAll(mLevels);
-        return shallowCopy;
     }
 }

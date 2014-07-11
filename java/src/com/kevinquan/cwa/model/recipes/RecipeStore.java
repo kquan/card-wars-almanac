@@ -1,3 +1,18 @@
+/*
+ * Copyright 2014 Kevin Quan (kevin.quan@gmail.com)
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.kevinquan.cwa.model.recipes;
 
 import java.util.ArrayList;
@@ -66,12 +81,12 @@ import com.kevinquan.cwa.model.spells.WoadBlood;
 
 public class RecipeStore {
 
-    @SuppressWarnings("unused")
-    private static final String TAG = RecipeStore.class.getSimpleName();
-
     private static class RecipeStoreHolder {
         private static final RecipeStore INSTANCE = new RecipeStore();
     }
+
+    @SuppressWarnings("unused")
+    private static final String TAG = RecipeStore.class.getSimpleName();
     
     public static RecipeStore getInstance() {
         return RecipeStoreHolder.INSTANCE;
@@ -87,6 +102,30 @@ public class RecipeStore {
     protected RecipeStore addRecipe(Recipe recipe) {
         mRecipies.add(recipe);
         return this;
+    }
+    
+    public int getCount() {
+        return mRecipies.size();
+    }
+    
+    public List<Recipe> getRecipesThatUse(Card card) {
+        List<Recipe> recipes = new ArrayList<Recipe>();
+        for (Recipe recipe : mRecipies) {
+            if (recipe.uses(card)) {
+                recipes.add(recipe);
+            }
+        }
+        return recipes;
+    }
+    
+    public List<Recipe> getRecipeThatCreates(Card card) {
+        List<Recipe> recipes = new ArrayList<Recipe>();
+        for (Recipe recipe : mRecipies) {
+            if (recipe.getResult().getClass().isInstance(card)) {
+                recipes.add(recipe);
+            }
+        }
+        return recipes;
     }
     
     protected void init() {
@@ -123,29 +162,5 @@ public class RecipeStore {
         addRecipe(new Recipe(6100, new Axey()).addIngredient(new MaceStump(), 3).addIngredient(new TeethLeaf(), 3).addIngredient(new BoneWand()));
         addRecipe(new Recipe(7000, new NicelandsEyeBat()).addIngredient(new GrayEyebat()).addIngredient(new SandEyebat()).addIngredient(new SuperHug(), 2));
         addRecipe(new Recipe(7500, new HotEyebat()).addIngredient(new NicelandsEyeBat()).addIngredient(new HeavenlyGazer()).addIngredient(new EthanAllfire(), 3));
-    }
-    
-    public List<Recipe> getRecipesThatUse(Card card) {
-        List<Recipe> recipes = new ArrayList<Recipe>();
-        for (Recipe recipe : mRecipies) {
-            if (recipe.uses(card)) {
-                recipes.add(recipe);
-            }
-        }
-        return recipes;
-    }
-    
-    public List<Recipe> getRecipeThatCreates(Card card) {
-        List<Recipe> recipes = new ArrayList<Recipe>();
-        for (Recipe recipe : mRecipies) {
-            if (recipe.getResult().getClass().isInstance(card)) {
-                recipes.add(recipe);
-            }
-        }
-        return recipes;
-    }
-    
-    public int getCount() {
-        return mRecipies.size();
     }
 }
