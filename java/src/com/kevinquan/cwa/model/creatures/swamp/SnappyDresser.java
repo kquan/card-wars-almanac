@@ -13,16 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kevinquan.cwa.model.spells;
+package com.kevinquan.cwa.model.creatures.swamp;
 
-public class BubblegumButt extends AbstractSpellCard {
+public class SnappyDresser extends AbstractSwampCreature {
 
     @SuppressWarnings("unused")
-    private static final String TAG = BubblegumButt.class.getSimpleName();
+    private static final String TAG = SnappyDresser.class.getSimpleName();
     
-    public BubblegumButt() {
-        super("Bubblegum Butt", 5, Rarity.Rare);
-        mDescription = "Draw 3 cards";
+    public SnappyDresser() {
+        super("Snappy Dresser", 2, Rarity.Nice);
+        mDescription = "Deal 2 Damage to creature in opposing lane for each of your different landscapes";
     }
+
+    @Override public int getInitialAttack() { return 4; }
+    @Override public int getInitialDefense() { return 14; }
+    @Override public int getFloopCost() { return 1; }
 
 }

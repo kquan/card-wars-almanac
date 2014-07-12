@@ -58,6 +58,8 @@ import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
 import com.kevinquan.cwa.model.creatures.nice.GoldAngelHeart;
 import com.kevinquan.cwa.model.creatures.nice.GoldFatGoat;
 import com.kevinquan.cwa.model.creatures.nice.NicelandsEyeBat;
+import com.kevinquan.cwa.model.creatures.nice.SnakeMint;
+import com.kevinquan.cwa.model.creatures.nice.SnuggleTree;
 import com.kevinquan.cwa.model.creatures.nice.SoftEyeling;
 import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.Axey;
@@ -68,10 +70,12 @@ import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
 import com.kevinquan.cwa.model.creatures.plains.WoadicTimeWalker;
 import com.kevinquan.cwa.model.creatures.rainbow.EvilEye;
+import com.kevinquan.cwa.model.creatures.rainbow.GreenSnakey;
 import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
 import com.kevinquan.cwa.model.creatures.rainbow.Mouthball;
 import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
 import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
+import com.kevinquan.cwa.model.creatures.rainbow.PeachDjini;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
 import com.kevinquan.cwa.model.creatures.rainbow.WhiteNinja;
@@ -86,6 +90,7 @@ import com.kevinquan.cwa.model.creatures.sandy.SandEyebat;
 import com.kevinquan.cwa.model.creatures.sandy.SandSnake;
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
+import com.kevinquan.cwa.model.creatures.swamp.Herculeye;
 import com.kevinquan.cwa.model.creatures.swamp.HotEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
 import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
@@ -224,6 +229,8 @@ public class NameTranslater {
         mCards.put("Creature_FatGoat", new FatGoat());
         mCards.put("Creature_GL_FatGoat", new GoldFatGoat());
         mCards.put("Creature_CottonEyeBat", new NicelandsEyeBat());
+        mCards.put("Creature_SnakeMint", new SnakeMint());
+        mCards.put("Creature_SnuggleTree", new SnuggleTree());
         
         // Sandy
         mCards.put("Creature_SkeletalHand", new BurningHand());
@@ -243,6 +250,7 @@ public class NameTranslater {
         mCards.put("Creature_SpikedMaceStump", new MaceStump());
         mCards.put("Creature_TeethLeaf", new TeethLeaf());
         mCards.put("Creature_GreenMerman", new GreenMerman());
+        mCards.put("Creature_Herculeye", new Herculeye());
         mCards.put("Creature_HotEyeBat", new HotEyebat());
         
         // Rainbow
@@ -253,6 +261,8 @@ public class NameTranslater {
         mCards.put("Creature_Pig", new ThePig());
         mCards.put("Creature_TravelinSkeleton", new TravelinSkeleton());
         mCards.put("Creature_DevilEye", new EvilEye());
+        mCards.put("Creature_GreenSnakey", new GreenSnakey());
+        mCards.put("Creature_PeachDjini", new PeachDjini());
         mCards.put("Creature_WhiteNinja", new WhiteNinja());
         
         // Spells

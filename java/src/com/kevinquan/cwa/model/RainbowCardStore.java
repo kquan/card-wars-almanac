@@ -34,10 +34,12 @@ import com.kevinquan.cwa.model.buildings.SiloOfTruth;
 import com.kevinquan.cwa.model.buildings.SpiritTower;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
 import com.kevinquan.cwa.model.creatures.rainbow.EvilEye;
+import com.kevinquan.cwa.model.creatures.rainbow.GreenSnakey;
 import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
 import com.kevinquan.cwa.model.creatures.rainbow.Mouthball;
 import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
 import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
+import com.kevinquan.cwa.model.creatures.rainbow.PeachDjini;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePickler;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
@@ -100,6 +102,8 @@ public class RainbowCardStore extends AbstractCardStore {
         
         // Nice cards
         addCard(new EvilEye());
+        addCard(new GreenSnakey());
+        addCard(new PeachDjini());
         addCard(new WhiteNinja());
         
         // Very Rare cards

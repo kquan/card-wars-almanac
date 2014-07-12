@@ -74,7 +74,7 @@ public class LootDropsTestCase extends BaseJUnit4Test {
         }
     }
     
-    //@Test
+    @Test
     public void generateLoopDropStoreCode() {
         Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
         for (int i = 1; i < Level.MAXIMUM_LEVEL; i++) {

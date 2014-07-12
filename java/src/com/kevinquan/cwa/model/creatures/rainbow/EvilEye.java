@@ -21,7 +21,7 @@ public class EvilEye extends AbstractRainbowCreature {
     private static final String TAG = EvilEye.class.getSimpleName();
     
     public EvilEye() {
-        super("Evil Eye", 1, Rarity.Nice);
+        super("Evil Eye", 2, Rarity.Nice);
         mDescription = "Lower the Attack of the creature in the opposing lane by 4";
     }
 

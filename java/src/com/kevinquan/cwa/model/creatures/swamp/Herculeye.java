@@ -13,16 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kevinquan.cwa.model.spells;
+package com.kevinquan.cwa.model.creatures.swamp;
 
-public class BubblegumButt extends AbstractSpellCard {
+public class Herculeye extends AbstractSwampCreature {
 
     @SuppressWarnings("unused")
-    private static final String TAG = BubblegumButt.class.getSimpleName();
+    private static final String TAG = Herculeye.class.getSimpleName();
     
-    public BubblegumButt() {
-        super("Bubblegum Butt", 5, Rarity.Rare);
-        mDescription = "Draw 3 cards";
+    public Herculeye() {
+        super(Herculeye.class.getSimpleName(), 2, Rarity.Nice);
+        mDescription = "Deal 2 Damage for each card in your hand to the creature in the opposing lane";
     }
+
+    @Override public int getInitialAttack() { return 11; }
+    @Override public int getInitialDefense() { return 9; }
+    @Override public int getFloopCost() { return 1; }
 
 }

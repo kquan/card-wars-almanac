@@ -13,16 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kevinquan.cwa.model.spells;
+package com.kevinquan.cwa.model.creatures.rainbow;
 
-public class BubblegumButt extends AbstractSpellCard {
+public class PeachDjini extends AbstractRainbowCreature {
 
     @SuppressWarnings("unused")
-    private static final String TAG = BubblegumButt.class.getSimpleName();
+    private static final String TAG = PeachDjini.class.getSimpleName();
     
-    public BubblegumButt() {
-        super("Bubblegum Butt", 5, Rarity.Rare);
-        mDescription = "Draw 3 cards";
+    public PeachDjini() {
+        super("Peach Djini", 2, Rarity.Nice);
+        mDescription = "Choose one of your creatures and heal it 4 points";
     }
+
+    @Override public int getInitialAttack() { return 2; }
+    @Override public int getInitialDefense() { return 8; }
+    @Override public int getFloopCost() { return 1; }
 
 }
