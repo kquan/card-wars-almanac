@@ -26,11 +26,13 @@ import com.kevinquan.cwa.model.buildings.SandCastle;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
 import com.kevinquan.cwa.model.creatures.Creature;
 import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
+import com.kevinquan.cwa.model.creatures.corn.CornDog;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
 import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
 import com.kevinquan.cwa.model.creatures.corn.HuskerWorm;
 import com.kevinquan.cwa.model.creatures.corn.TravelinFarmer;
+import com.kevinquan.cwa.model.creatures.corn.WallOfEars;
 import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
 import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
 import com.kevinquan.cwa.model.creatures.nice.FairyShepard;
@@ -40,6 +42,7 @@ import com.kevinquan.cwa.model.creatures.nice.SnakeMint;
 import com.kevinquan.cwa.model.creatures.nice.SnuggleTree;
 import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.Axey;
+import com.kevinquan.cwa.model.creatures.plains.CoolDog;
 import com.kevinquan.cwa.model.creatures.plains.DragonClaw;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
@@ -182,5 +185,7 @@ public class RecipeStore {
         addRecipe(new Recipe(8700, new SnuggleTree()).addIngredient(new Axey()).addIngredient(new MaceStump(), 2).addIngredient(new SuperHug()));
         addRecipe(new Recipe(new BlueberryDjini(), new FountainOfForgiveness(), new ScrollOfFreshBreath(), 9000, new PeachDjini()));
         addRecipe(new Recipe(new GreenSnakey(), new SandSnake(), new ScrollOfFreshBreath(), 10000, new SnakeMint()));
+        addRecipe(new Recipe(1000, new CornDog()).addIngredient(new CoolDog()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()));
+        addRecipe(new Recipe(9500, new WallOfEars()).addIngredient(new Cornball(),3 ).addIngredient(new HuskerWorm(), 3).addIngredient(new CornScepter()));
     }
 }

@@ -45,11 +45,13 @@ import com.kevinquan.cwa.model.buildings.Stonehenge;
 import com.kevinquan.cwa.model.buildings.SunPyramid;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
 import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
+import com.kevinquan.cwa.model.creatures.corn.CornDog;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
 import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
 import com.kevinquan.cwa.model.creatures.corn.HuskerWorm;
 import com.kevinquan.cwa.model.creatures.corn.TravelinFarmer;
+import com.kevinquan.cwa.model.creatures.corn.WallOfEars;
 import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
 import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
 import com.kevinquan.cwa.model.creatures.nice.FairyShepard;
@@ -208,6 +210,8 @@ public class NameTranslater {
         mCards.put("Creature_CornWorm", new HuskerWorm());
         mCards.put("Creature_CareCrow", new TravelinFarmer());
         mCards.put("Creature_ArcherDan", new ArcherDan());
+        mCards.put("Creature_CornDog", new CornDog());
+        mCards.put("Creature_CornWall", new WallOfEars());
         
         // Plains
         mCards.put("Creature_AngelEye", new HeavenlyGazer());
