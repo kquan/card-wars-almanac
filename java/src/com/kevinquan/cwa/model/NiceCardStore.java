@@ -16,6 +16,7 @@
 package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.nice.AngelHeart;
+import com.kevinquan.cwa.model.creatures.nice.AppleTree;
 import com.kevinquan.cwa.model.creatures.nice.BlueberryDjini;
 import com.kevinquan.cwa.model.creatures.nice.CottonsaurusRex;
 import com.kevinquan.cwa.model.creatures.nice.DetectiveBobby;
@@ -23,6 +24,7 @@ import com.kevinquan.cwa.model.creatures.nice.DogBoy;
 import com.kevinquan.cwa.model.creatures.nice.FairyShepard;
 import com.kevinquan.cwa.model.creatures.nice.FarmerTom;
 import com.kevinquan.cwa.model.creatures.nice.FatGoat;
+import com.kevinquan.cwa.model.creatures.nice.Fatapillar;
 import com.kevinquan.cwa.model.creatures.nice.Fluffantry;
 import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
 import com.kevinquan.cwa.model.creatures.nice.GoldAngelHeart;
@@ -39,6 +41,7 @@ import com.kevinquan.cwa.model.creatures.nice.GoldSoftEyeling;
 import com.kevinquan.cwa.model.creatures.nice.GoldTheCow;
 import com.kevinquan.cwa.model.creatures.nice.GoodKingWonderful;
 import com.kevinquan.cwa.model.creatures.nice.MotherFluffBucket;
+import com.kevinquan.cwa.model.creatures.nice.NicelandsCutie;
 import com.kevinquan.cwa.model.creatures.nice.NicelandsEyeBat;
 import com.kevinquan.cwa.model.creatures.nice.SackOPain;
 import com.kevinquan.cwa.model.creatures.nice.SgtMushroom;
@@ -82,10 +85,13 @@ public class NiceCardStore extends AbstractCardStore {
         addCard(new TravelinWizard());
         
         // Algebraic Rare cards
+        addCard(new AppleTree());
         addCard(new CottonsaurusRex());
+        addCard(new Fatapillar());
         addCard(new Fluffantry());
         addCard(new GoodKingWonderful());
         addCard(new MotherFluffBucket());
+        addCard(new NicelandsCutie());
         
         // Gold
         addCard(new GoldAngelHeart());
