@@ -33,13 +33,41 @@ import com.kevinquan.cwa.model.buildings.SchoolHouse;
 import com.kevinquan.cwa.model.buildings.SiloOfTruth;
 import com.kevinquan.cwa.model.buildings.SpiritTower;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
+import com.kevinquan.cwa.model.creatures.rainbow.BigFoot;
+import com.kevinquan.cwa.model.creatures.rainbow.BrainGooey;
+import com.kevinquan.cwa.model.creatures.rainbow.DetectiveSally;
+import com.kevinquan.cwa.model.creatures.rainbow.DroolingDude;
+import com.kevinquan.cwa.model.creatures.rainbow.Earl;
 import com.kevinquan.cwa.model.creatures.rainbow.EvilEye;
+import com.kevinquan.cwa.model.creatures.rainbow.FisherFish;
+import com.kevinquan.cwa.model.creatures.rainbow.FreezyJ;
+import com.kevinquan.cwa.model.creatures.rainbow.FutureScholar;
+import com.kevinquan.cwa.model.creatures.rainbow.GhostNinja;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldBrainGooey;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldDroolingDude;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldEvilEye;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldFisherFish;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldFreezyJ;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldGreenSnakey;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldMouthball;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldPeachDjini;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldPhyllis;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldPorcelainGuardian;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldQuadurai;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldThePickler;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldThePig;
+import com.kevinquan.cwa.model.creatures.rainbow.GoldWhiteNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.GreenSnakey;
+import com.kevinquan.cwa.model.creatures.rainbow.IcePaladin;
 import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
 import com.kevinquan.cwa.model.creatures.rainbow.Mouthball;
 import com.kevinquan.cwa.model.creatures.rainbow.NiceIceBaby;
 import com.kevinquan.cwa.model.creatures.rainbow.OrdinaryNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.PeachDjini;
+import com.kevinquan.cwa.model.creatures.rainbow.Phyllis;
+import com.kevinquan.cwa.model.creatures.rainbow.PorcelainGuardian;
+import com.kevinquan.cwa.model.creatures.rainbow.Quadurai;
+import com.kevinquan.cwa.model.creatures.rainbow.TheMariachi;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePickler;
 import com.kevinquan.cwa.model.creatures.rainbow.ThePig;
 import com.kevinquan.cwa.model.creatures.rainbow.TravelinSkeleton;
@@ -102,12 +130,46 @@ public class RainbowCardStore extends AbstractCardStore {
         
         // Nice cards
         addCard(new EvilEye());
+        addCard(new FreezyJ());
         addCard(new GreenSnakey());
         addCard(new PeachDjini());
         addCard(new WhiteNinja());
         
+        // Rare cards
+        addCard(new BigFoot());
+        addCard(new Earl());
+        addCard(new FutureScholar());
+        addCard(new GhostNinja());
+        addCard(new IcePaladin());
+        
         // Very Rare cards
+        addCard(new DetectiveSally());
+        addCard(new Phyllis());
+        addCard(new Quadurai());
         addCard(new ThePickler());
+        
+        // Algebraic rare cards
+        addCard(new BrainGooey());
+        addCard(new DroolingDude());
+        addCard(new FisherFish());
+        addCard(new PorcelainGuardian());
+        addCard(new TheMariachi());
+        
+        // Gold cards
+        addCard(new GoldMouthball());
+        addCard(new GoldThePig());
+        addCard(new GoldEvilEye());
+        addCard(new GoldFreezyJ());
+        addCard(new GoldGreenSnakey());
+        addCard(new GoldPeachDjini());
+        addCard(new GoldWhiteNinja());
+        addCard(new GoldPhyllis());
+        addCard(new GoldQuadurai());
+        addCard(new GoldThePickler());
+        addCard(new GoldBrainGooey());
+        addCard(new GoldDroolingDude());
+        addCard(new GoldFisherFish());
+        addCard(new GoldPorcelainGuardian());
         
         // Buildings
         addCard(new AstralFortress());
