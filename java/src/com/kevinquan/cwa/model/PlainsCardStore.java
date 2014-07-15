@@ -17,12 +17,38 @@ package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.plains.AncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.Axey;
+import com.kevinquan.cwa.model.creatures.plains.CameraDude;
 import com.kevinquan.cwa.model.creatures.plains.CoolDog;
+import com.kevinquan.cwa.model.creatures.plains.DiamondDan;
 import com.kevinquan.cwa.model.creatures.plains.DragonClaw;
+import com.kevinquan.cwa.model.creatures.plains.DragonFoot;
+import com.kevinquan.cwa.model.creatures.plains.EmbarrassingBard;
+import com.kevinquan.cwa.model.creatures.plains.GhostHag;
+import com.kevinquan.cwa.model.creatures.plains.GoldAncientScholar;
+import com.kevinquan.cwa.model.creatures.plains.GoldCoolDog;
+import com.kevinquan.cwa.model.creatures.plains.GoldDiamondDan;
+import com.kevinquan.cwa.model.creatures.plains.GoldGhostHag;
+import com.kevinquan.cwa.model.creatures.plains.GoldGrapeSlimey;
+import com.kevinquan.cwa.model.creatures.plains.GoldHeavenlyGazer;
+import com.kevinquan.cwa.model.creatures.plains.GoldPsionicArchitect;
+import com.kevinquan.cwa.model.creatures.plains.GoldPunkCat;
+import com.kevinquan.cwa.model.creatures.plains.GoldStruzannJinn;
+import com.kevinquan.cwa.model.creatures.plains.GoldWoadicTimeWalker;
+import com.kevinquan.cwa.model.creatures.plains.GoldXLargeSpiritSoldier;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
+import com.kevinquan.cwa.model.creatures.plains.Heifergeist;
+import com.kevinquan.cwa.model.creatures.plains.InfiniteFigure;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
+import com.kevinquan.cwa.model.creatures.plains.PsionicArchitect;
+import com.kevinquan.cwa.model.creatures.plains.PunkCat;
+import com.kevinquan.cwa.model.creatures.plains.StruzannJinn;
+import com.kevinquan.cwa.model.creatures.plains.TemporalWisp;
+import com.kevinquan.cwa.model.creatures.plains.TimmyMagicEyes;
+import com.kevinquan.cwa.model.creatures.plains.WoadicChief;
+import com.kevinquan.cwa.model.creatures.plains.WoadicMarauder;
 import com.kevinquan.cwa.model.creatures.plains.WoadicTimeWalker;
+import com.kevinquan.cwa.model.creatures.plains.XLargeSpiritSoldier;
 
 public class PlainsCardStore extends AbstractCardStore {
 
@@ -42,6 +68,41 @@ public class PlainsCardStore extends AbstractCardStore {
         addCard(new AncientScholar());
         addCard(new Axey());
         addCard(new DragonClaw());
+        
+        // Rare cards
+        addCard(new Heifergeist());
+        addCard(new PsionicArchitect());
+        addCard(new PunkCat());
+        addCard(new TemporalWisp());
+        
+        // Very rare cards
+        addCard(new DragonFoot());
+        addCard(new StruzannJinn());
+        addCard(new WoadicMarauder());
+        
+        // Algebraic rare cards
+        addCard(new CameraDude());
+        addCard(new DiamondDan());
+        addCard(new EmbarrassingBard());
+        addCard(new GhostHag());
+        addCard(new InfiniteFigure());
+        addCard(new TimmyMagicEyes());
+        addCard(new WoadicChief());
+        addCard(new XLargeSpiritSoldier());
+        
+        // Gold cards
+        addCard(new GoldCoolDog());
+        addCard(new GoldGrapeSlimey());
+        addCard(new GoldHeavenlyGazer());
+        addCard(new GoldWoadicTimeWalker());
+        addCard(new GoldAncientScholar());
+        addCard(new GoldPsionicArchitect());
+        addCard(new GoldPunkCat());
+        addCard(new GoldStruzannJinn());
+        addCard(new GoldWoadicTimeWalker());
+        addCard(new GoldDiamondDan());
+        addCard(new GoldGhostHag());
+        addCard(new GoldXLargeSpiritSoldier());
     }
 
 }
