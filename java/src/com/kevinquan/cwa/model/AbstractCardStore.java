@@ -33,7 +33,7 @@ public abstract class AbstractCardStore implements CardStore {
     
     protected void addCard(Card card) {
         if (mCards.containsKey(card.getId())) {
-            System.err.println("Card store already contains "+card.getId());
+            System.err.println("Card store already contains "+card.getId()+" as "+mCards.get(card.getId()));
         }
         mCards.put(card.getId(), card);
     }

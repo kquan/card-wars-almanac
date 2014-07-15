@@ -27,6 +27,7 @@ import com.kevinquan.cwa.model.creatures.plains.GhostHag;
 import com.kevinquan.cwa.model.creatures.plains.GoldAncientScholar;
 import com.kevinquan.cwa.model.creatures.plains.GoldCoolDog;
 import com.kevinquan.cwa.model.creatures.plains.GoldDiamondDan;
+import com.kevinquan.cwa.model.creatures.plains.GoldDragonFoot;
 import com.kevinquan.cwa.model.creatures.plains.GoldGhostHag;
 import com.kevinquan.cwa.model.creatures.plains.GoldGrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.GoldHeavenlyGazer;
@@ -98,8 +99,8 @@ public class PlainsCardStore extends AbstractCardStore {
         addCard(new GoldAncientScholar());
         addCard(new GoldPsionicArchitect());
         addCard(new GoldPunkCat());
+        addCard(new GoldDragonFoot());
         addCard(new GoldStruzannJinn());
-        addCard(new GoldWoadicTimeWalker());
         addCard(new GoldDiamondDan());
         addCard(new GoldGhostHag());
         addCard(new GoldXLargeSpiritSoldier());

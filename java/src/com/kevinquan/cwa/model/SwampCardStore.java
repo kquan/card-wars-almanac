@@ -23,6 +23,7 @@ import com.kevinquan.cwa.model.creatures.swamp.DrDeath;
 import com.kevinquan.cwa.model.creatures.swamp.EyeGuy;
 import com.kevinquan.cwa.model.creatures.swamp.GoldChestBuster;
 import com.kevinquan.cwa.model.creatures.swamp.GoldDarkAngel;
+import com.kevinquan.cwa.model.creatures.swamp.GoldDaveyBear;
 import com.kevinquan.cwa.model.creatures.swamp.GoldDrDeath;
 import com.kevinquan.cwa.model.creatures.swamp.GoldGrayEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GoldHerculeye;
@@ -107,7 +108,7 @@ public class SwampCardStore extends AbstractCardStore {
         addCard(new GoldChestBuster());
         addCard(new GoldDarkAngel());
         addCard(new GoldSteakChop());
-        addCard(new DaveyBear());
+        addCard(new GoldDaveyBear());
         addCard(new GoldDrDeath());
         addCard(new GoldImmortalMaizeWalker());
         addCard(new GoldRainbowBarfer());
