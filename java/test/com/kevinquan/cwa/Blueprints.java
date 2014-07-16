@@ -20,6 +20,7 @@ public interface Blueprints {
     public static final String QUESTS = "db_QuestConditions.json";
     public static final String RECIPES = "db_Fusion.json";
     public static final String LEVELS = "db_Quest.json";
+    public static final String CREATURES = "db_Creatures.json";
     public static final String BUILDINGS = "db_Buildings.json";
     public static final String SPELLS = "db_Spells.json";
     public static final String LEVEL_DROPS = "db_Decks.json";
@@ -28,6 +29,11 @@ public interface Blueprints {
     public static final String FIELD_FACTION = "Faction";
     public static final String FIELD_RARITY = "Rarity";
     public static final String FIELD_COST = "Cost";
+    
+    // Creatures
+    public static final String FIELD_ATTACK = "ATK";
+    public static final String FIELD_DEFENSE = "DEF";
+    public static final String FIELD_FLOOP_COST = "FloopCost";
     
     // Levels
     public static final String FIELD_LEVEL_NUMBER = "QuestID";

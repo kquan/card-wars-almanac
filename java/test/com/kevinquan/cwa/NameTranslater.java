@@ -450,6 +450,17 @@ public class NameTranslater {
         String faction = JSONUtils.safeGetString(object, Blueprints.FIELD_FACTION);
         if ("Universal".equalsIgnoreCase(faction)) {
             return Faction.Rainbow;
+        } else if ("Plains".equalsIgnoreCase(faction)) {
+            return Faction.BluePlains;
+        } else if ("Corn".equalsIgnoreCase(faction)) {
+            return Faction.CornFields;
+        } else if ("Cotton".equalsIgnoreCase(faction)) {
+            return Faction.NiceLands;
+        } else if ("Sand".equalsIgnoreCase(faction)) {
+            return Faction.SandyLands;
+        } else if ("Swamp".equalsIgnoreCase(faction)) {
+            return Faction.UselessSwamp;
+
         }
         // TODO: Add other factions
         return null;

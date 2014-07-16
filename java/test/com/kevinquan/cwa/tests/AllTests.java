@@ -22,6 +22,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses ({
+    CreaturesTestCase.class,
     BuildingsTestCase.class,
     SpellsTestCase.class,
 	LevelsTestCase.class,
