@@ -25,8 +25,10 @@ public class Sandwitch extends AbstractSandyCreature {
         mDescription = "+9 Defense to a random creature on the field, including your opponents"; // Check
     }
 
-    @Override public int getInitialAttack() { return 25; }
-    @Override public int getInitialDefense() { return 10; }
+    @Override public int getBaseAttack() { return 25; }
+    @Override public int getBaseDefense() { return 10; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 37; }
+    @Override public int getBaseGoldDefense() { return 15; }
 }

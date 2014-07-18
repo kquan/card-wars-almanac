@@ -25,19 +25,6 @@ import com.kevinquan.cwa.model.creatures.corn.Cornball;
 import com.kevinquan.cwa.model.creatures.corn.EthanAllfire;
 import com.kevinquan.cwa.model.creatures.corn.FieldReaper;
 import com.kevinquan.cwa.model.creatures.corn.FieldStalker;
-import com.kevinquan.cwa.model.creatures.corn.GoldArcherDan;
-import com.kevinquan.cwa.model.creatures.corn.GoldCornDog;
-import com.kevinquan.cwa.model.creatures.corn.GoldCornRonin;
-import com.kevinquan.cwa.model.creatures.corn.GoldCornball;
-import com.kevinquan.cwa.model.creatures.corn.GoldEthanAllfire;
-import com.kevinquan.cwa.model.creatures.corn.GoldFieldStalker;
-import com.kevinquan.cwa.model.creatures.corn.GoldHuskerGiant;
-import com.kevinquan.cwa.model.creatures.corn.GoldHuskerWorm;
-import com.kevinquan.cwa.model.creatures.corn.GoldLegionOfEarlings;
-import com.kevinquan.cwa.model.creatures.corn.GoldPatchyThePumpkin;
-import com.kevinquan.cwa.model.creatures.corn.GoldTheSludger;
-import com.kevinquan.cwa.model.creatures.corn.GoldTravelinFarmer;
-import com.kevinquan.cwa.model.creatures.corn.GoldWallOfEars;
 import com.kevinquan.cwa.model.creatures.corn.HuskerGiant;
 import com.kevinquan.cwa.model.creatures.corn.HuskerKnight;
 import com.kevinquan.cwa.model.creatures.corn.HuskerWorm;
@@ -89,21 +76,6 @@ public class CornCardStore extends AbstractCardStore {
         addCard(new LogKnight());
         addCard(new SunKing());
         addCard(new YellowGnome());
-        
-        // Gold cards
-        addCard(new GoldCornball());
-        addCard(new GoldEthanAllfire());
-        addCard(new GoldHuskerWorm());
-        addCard(new GoldTravelinFarmer());
-        addCard(new GoldArcherDan());
-        addCard(new GoldCornDog());
-        addCard(new GoldWallOfEars());
-        addCard(new GoldCornRonin());
-        addCard(new GoldPatchyThePumpkin());
-        addCard(new GoldTheSludger());
-        addCard(new GoldFieldStalker());
-        addCard(new GoldHuskerGiant());
-        addCard(new GoldLegionOfEarlings());
     }
 
 }

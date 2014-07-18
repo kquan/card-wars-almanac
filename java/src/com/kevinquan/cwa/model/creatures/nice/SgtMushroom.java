@@ -25,8 +25,10 @@ public class SgtMushroom extends AbstractNiceCreature {
         mDescription = "Choose an opposing creature.  Deal 4 Damage to it and heal this creature 6 points"; // Check
     }
 
-    @Override public int getInitialAttack() { return 26; }
-    @Override public int getInitialDefense() { return 14; }
+    @Override public int getBaseAttack() { return 26; }
+    @Override public int getBaseDefense() { return 14; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 39; }
+    @Override public int getBaseGoldDefense() { return 21; }
 }

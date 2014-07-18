@@ -21,21 +21,6 @@ import com.kevinquan.cwa.model.creatures.swamp.DarkAngel;
 import com.kevinquan.cwa.model.creatures.swamp.DaveyBear;
 import com.kevinquan.cwa.model.creatures.swamp.DrDeath;
 import com.kevinquan.cwa.model.creatures.swamp.EyeGuy;
-import com.kevinquan.cwa.model.creatures.swamp.GoldChestBuster;
-import com.kevinquan.cwa.model.creatures.swamp.GoldDarkAngel;
-import com.kevinquan.cwa.model.creatures.swamp.GoldDaveyBear;
-import com.kevinquan.cwa.model.creatures.swamp.GoldDrDeath;
-import com.kevinquan.cwa.model.creatures.swamp.GoldGrayEyebat;
-import com.kevinquan.cwa.model.creatures.swamp.GoldHerculeye;
-import com.kevinquan.cwa.model.creatures.swamp.GoldImmortalMaizeWalker;
-import com.kevinquan.cwa.model.creatures.swamp.GoldOrangeSlimey;
-import com.kevinquan.cwa.model.creatures.swamp.GoldRainbowBarfer;
-import com.kevinquan.cwa.model.creatures.swamp.GoldRecordThug;
-import com.kevinquan.cwa.model.creatures.swamp.GoldSnappyDresser;
-import com.kevinquan.cwa.model.creatures.swamp.GoldSteakChop;
-import com.kevinquan.cwa.model.creatures.swamp.GoldTeethLeaf;
-import com.kevinquan.cwa.model.creatures.swamp.GoldTreeOfUnderneath;
-import com.kevinquan.cwa.model.creatures.swamp.GoldWanderingBaldMan;
 import com.kevinquan.cwa.model.creatures.swamp.GrayEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.GreenMermaid;
 import com.kevinquan.cwa.model.creatures.swamp.GreenMerman;
@@ -95,23 +80,6 @@ public class SwampCardStore extends AbstractCardStore {
         addCard(new ImmortalMaizeWalker());
         addCard(new MarkyMark());
         addCard(new RainbowBarfer());
-        
-        // Gold cards
-        addCard(new GoldGrayEyebat());
-        addCard(new GoldOrangeSlimey());
-        addCard(new GoldTeethLeaf());
-        addCard(new GoldWanderingBaldMan());
-        addCard(new GoldHerculeye());
-        addCard(new GoldSnappyDresser());
-        addCard(new GoldRecordThug());
-        addCard(new GoldTreeOfUnderneath());
-        addCard(new GoldChestBuster());
-        addCard(new GoldDarkAngel());
-        addCard(new GoldSteakChop());
-        addCard(new GoldDaveyBear());
-        addCard(new GoldDrDeath());
-        addCard(new GoldImmortalMaizeWalker());
-        addCard(new GoldRainbowBarfer());
     }
 
 }

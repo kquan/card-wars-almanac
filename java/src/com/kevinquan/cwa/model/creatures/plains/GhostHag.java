@@ -21,12 +21,14 @@ public class GhostHag extends AbstractPlainsCreature {
     private static final String TAG = GhostHag.class.getSimpleName();
     
     public GhostHag() {
-        super("Ghost Hag", 5, Rarity.AlgebraicRare);
+        super("Ghost Hag", 4, Rarity.VeryRare);
         mDescription = "Choose a friendly creature and negate all Damage, Defense, and Attack modifiers on it"; // Check
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 28; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 28; }
     @Override public int getFloopCost() { return 3; } // Check
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 42; }
 }

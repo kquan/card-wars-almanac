@@ -25,8 +25,10 @@ public class MamaSpider extends AbstractSwampCreature {
         mDescription = "For every 2 cards in your Discard Pile, deal 4 Damage to creature in opposing lane"; // Check
     }
 
-    @Override public int getInitialAttack() { return 19; }
-    @Override public int getInitialDefense() { return 19; }
+    @Override public int getBaseAttack() { return 19; }
+    @Override public int getBaseDefense() { return 19; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 28; }
+    @Override public int getBaseGoldDefense() { return 29; }
 }

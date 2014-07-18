@@ -25,8 +25,10 @@ public class OrangeSlimey extends AbstractSwampCreature {
         mDescription = "Deal 4 Damage to creature in the opposing lane and Discard this creature";
     }
 
-    @Override public int getInitialAttack() { return 3; }
-    @Override public int getInitialDefense() { return 4; }
+    @Override public int getBaseAttack() { return 3; }
+    @Override public int getBaseDefense() { return 4; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 4; }
+    @Override public int getBaseGoldDefense() { return 6; }
 }

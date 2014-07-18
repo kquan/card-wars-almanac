@@ -25,8 +25,10 @@ public class FreezyJ extends AbstractRainbowCreature {
         mDescription = "Gain +4 Defense";
     }
 
-    @Override public int getInitialAttack() { return 4; }
-    @Override public int getInitialDefense() { return 6; }
+    @Override public int getBaseAttack() { return 4; }
+    @Override public int getBaseDefense() { return 6; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 6; }
+    @Override public int getBaseGoldDefense() { return 9; }
 }

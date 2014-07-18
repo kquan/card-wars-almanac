@@ -25,8 +25,8 @@ public class YellowGnome extends AbstractCornCreature {
         mDescription = "Lower opposing creature's Attack by 4 and raise this creature's Attack by 4";
     }
 
-    @Override public int getInitialAttack() { return 0; }
-    @Override public int getInitialDefense() { return 30; }
+    @Override public int getBaseAttack() { return 0; }
+    @Override public int getBaseDefense() { return 30; }
     @Override public int getFloopCost() { return 1; }
 
 }

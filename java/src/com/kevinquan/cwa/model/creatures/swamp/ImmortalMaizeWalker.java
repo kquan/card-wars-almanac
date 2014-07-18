@@ -25,8 +25,10 @@ public class ImmortalMaizeWalker extends AbstractSwampCreature {
         mDescription = "Deal 33 Damage to any opposing Corn creature";
     }
 
-    @Override public int getInitialAttack() { return 11; }
-    @Override public int getInitialDefense() { return 36; }
+    @Override public int getBaseAttack() { return 11; }
+    @Override public int getBaseDefense() { return 36; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 16; }
+    @Override public int getBaseGoldDefense() { return 54; }
 }

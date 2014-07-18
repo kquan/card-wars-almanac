@@ -25,8 +25,8 @@ public class CameraDude extends AbstractPlainsCreature {
         mDescription = "Lower enemy Hero's MAgic Points by 3 next turn";
     }
 
-    @Override public int getInitialAttack() { return 18; }
-    @Override public int getInitialDefense() { return 12; }
+    @Override public int getBaseAttack() { return 18; }
+    @Override public int getBaseDefense() { return 12; }
     @Override public int getFloopCost() { return 1; }
 
 }

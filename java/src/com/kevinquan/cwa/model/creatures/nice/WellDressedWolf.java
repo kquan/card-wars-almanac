@@ -25,8 +25,10 @@ public class WellDressedWolf extends AbstractNiceCreature {
         mDescription = "Heal all Damage from this creature"; // Check
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 18; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 18; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 27; }
 }

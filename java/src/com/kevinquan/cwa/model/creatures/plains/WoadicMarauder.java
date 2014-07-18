@@ -25,8 +25,10 @@ public class WoadicMarauder extends AbstractPlainsCreature {
         mDescription = "Choose an opposing Building and send it back to your opponent's hand"; // Check
     }
 
-    @Override public int getInitialAttack() { return 22; }
-    @Override public int getInitialDefense() { return 12; }
+    @Override public int getBaseAttack() { return 22; }
+    @Override public int getBaseDefense() { return 12; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 33; }
+    @Override public int getBaseGoldDefense() { return 18; }
 }

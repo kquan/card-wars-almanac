@@ -21,12 +21,14 @@ public class LadyMary extends AbstractSandyCreature {
     private static final String TAG = LadyMary.class.getSimpleName();
     
     public LadyMary() {
-        super("Lady Mary", 5, Rarity.AlgebraicRare);
+        super("Lady Mary", 4, Rarity.VeryRare);
         mDescription = "Increase the Defense of all of your creatures by 2 for every Building you control"; // Check
     }
 
-    @Override public int getInitialAttack() { return 18; }
-    @Override public int getInitialDefense() { return 20; }
-    @Override public int getFloopCost() { return 2; } // Check
+    @Override public int getBaseAttack() { return 18; }
+    @Override public int getBaseDefense() { return 20; }
+    @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 27; }
+    @Override public int getBaseGoldDefense() { return 30; }
 }

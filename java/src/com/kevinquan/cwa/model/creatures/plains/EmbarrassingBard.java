@@ -25,8 +25,10 @@ public class EmbarrassingBard extends AbstractPlainsCreature {
         mDescription = "Choose an opponent creature.  It cannot use its Floop ability next turn"; // Check
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 34; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 34; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 51; }
 }

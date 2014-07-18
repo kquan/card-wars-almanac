@@ -25,8 +25,10 @@ public class AncientScholar extends AbstractPlainsCreature {
         mDescription = "Return a creature from the Discard Pile to your hand";
     }
 
-    @Override public int getInitialAttack() { return 3; }
-    @Override public int getInitialDefense() { return 13; }
+    @Override public int getBaseAttack() { return 3; }
+    @Override public int getBaseDefense() { return 13; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 4; }
+    @Override public int getBaseGoldDefense() { return 20; }
 }

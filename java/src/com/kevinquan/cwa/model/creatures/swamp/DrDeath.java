@@ -25,8 +25,10 @@ public class DrDeath extends AbstractSwampCreature {
         mDescription = "Deal 7 Damage to the creature in the opposing lane and heal this creature 7 points"; // Check
     }
 
-    @Override public int getInitialAttack() { return 35; }
-    @Override public int getInitialDefense() { return 10; }
+    @Override public int getBaseAttack() { return 35; }
+    @Override public int getBaseDefense() { return 10; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 52; }
+    @Override public int getBaseGoldDefense() { return 15; }
 }

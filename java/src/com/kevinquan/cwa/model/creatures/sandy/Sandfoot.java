@@ -25,8 +25,10 @@ public class Sandfoot extends AbstractSandyCreature {
         mDescription = "Gain +4 Defense for each of your creatures"; // Check
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 17; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 17; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 26; }
 }

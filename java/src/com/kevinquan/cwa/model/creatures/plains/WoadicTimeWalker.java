@@ -25,8 +25,10 @@ public class WoadicTimeWalker extends AbstractPlainsCreature {
         mDescription = "Damage done to opposing creature next Battle Phase is transferred to Hero";
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 5; }
-    @Override public int getFloopCost() { return 1; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 5; }
+    @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 8; }
 }

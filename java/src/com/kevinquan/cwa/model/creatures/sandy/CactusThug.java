@@ -25,8 +25,10 @@ public class CactusThug extends AbstractSandyCreature {
         mDescription = "Deal damage to creature in opposing lane equal to this creature's Defense"; // Check
     }
 
-    @Override public int getInitialAttack() { return 24; } // Check
-    @Override public int getInitialDefense() { return 12; } // Check
-    @Override public int getFloopCost() { return 2; } // Check
+    @Override public int getBaseAttack() { return 25; }
+    @Override public int getBaseDefense() { return 12; }
+    @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 37; }
+    @Override public int getBaseGoldDefense() { return 18; }
 }

@@ -27,18 +27,6 @@ import com.kevinquan.cwa.model.creatures.nice.FatGoat;
 import com.kevinquan.cwa.model.creatures.nice.Fatapillar;
 import com.kevinquan.cwa.model.creatures.nice.Fluffantry;
 import com.kevinquan.cwa.model.creatures.nice.Fluffapillar;
-import com.kevinquan.cwa.model.creatures.nice.GoldAngelHeart;
-import com.kevinquan.cwa.model.creatures.nice.GoldCottonsaurusRex;
-import com.kevinquan.cwa.model.creatures.nice.GoldDogBoy;
-import com.kevinquan.cwa.model.creatures.nice.GoldFatGoat;
-import com.kevinquan.cwa.model.creatures.nice.GoldFluffantry;
-import com.kevinquan.cwa.model.creatures.nice.GoldFluffapillar;
-import com.kevinquan.cwa.model.creatures.nice.GoldNicelandsEyeBat;
-import com.kevinquan.cwa.model.creatures.nice.GoldSackOPain;
-import com.kevinquan.cwa.model.creatures.nice.GoldSgtMushroom;
-import com.kevinquan.cwa.model.creatures.nice.GoldSnuggleTree;
-import com.kevinquan.cwa.model.creatures.nice.GoldSoftEyeling;
-import com.kevinquan.cwa.model.creatures.nice.GoldTheCow;
 import com.kevinquan.cwa.model.creatures.nice.GoodKingWonderful;
 import com.kevinquan.cwa.model.creatures.nice.MotherFluffBucket;
 import com.kevinquan.cwa.model.creatures.nice.NicelandsCutie;
@@ -92,20 +80,6 @@ public class NiceCardStore extends AbstractCardStore {
         addCard(new GoodKingWonderful());
         addCard(new MotherFluffBucket());
         addCard(new NicelandsCutie());
-        
-        // Gold
-        addCard(new GoldAngelHeart());
-        addCard(new GoldFluffapillar());
-        addCard(new GoldSoftEyeling());
-        addCard(new GoldSnuggleTree());
-        addCard(new GoldFatGoat());
-        addCard(new GoldNicelandsEyeBat());
-        addCard(new GoldDogBoy());
-        addCard(new GoldTheCow());
-        addCard(new GoldSackOPain());
-        addCard(new GoldSgtMushroom());
-        addCard(new GoldCottonsaurusRex());
-        addCard(new GoldFluffantry());
     }
 
 }

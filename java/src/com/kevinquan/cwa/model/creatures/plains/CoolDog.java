@@ -25,8 +25,10 @@ public class CoolDog extends AbstractPlainsCreature {
         mDescription = "Creature in opposing lane cannot use its Floop ability next turn";
     }
 
-    @Override public int getInitialAttack() { return 3; }
-    @Override public int getInitialDefense() { return 7; }
+    @Override public int getBaseAttack() { return 3; }
+    @Override public int getBaseDefense() { return 7; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 4; }
+    @Override public int getBaseGoldDefense() { return 11; }
 }

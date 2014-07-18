@@ -25,8 +25,10 @@ public class DetectiveSally extends AbstractRainbowCreature {
         mDescription = "This creature and adjacent creatures gain +6 Defense";
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 23; }
 }

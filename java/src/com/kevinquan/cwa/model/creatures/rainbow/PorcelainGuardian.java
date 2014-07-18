@@ -25,8 +25,10 @@ public class PorcelainGuardian extends AbstractRainbowCreature {
         mDescription = "Inflict 2 Damage on this creature and lower the Defense of the opposing creature by 10"; // Check
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 23; }
 }

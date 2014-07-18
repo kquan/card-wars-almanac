@@ -25,8 +25,10 @@ public class LostGolem extends AbstractSandyCreature {
         mDescription = "Gain +8 Defense";
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 36; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 36; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 54; }
 }

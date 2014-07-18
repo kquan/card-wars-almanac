@@ -25,8 +25,11 @@ public class SackOPain extends AbstractNiceCreature {
         mDescription = "Heal adjacent creatures equal to the Damage on this creature"; // Check
     }
 
-    @Override public int getInitialAttack() { return 3; }
-    @Override public int getInitialDefense() { return 33; }
+    @Override public int getBaseAttack() { return 3; }
+    @Override public int getBaseDefense() { return 33; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 4; }
+    @Override public int getBaseGoldDefense() { return 50; }
 
 }

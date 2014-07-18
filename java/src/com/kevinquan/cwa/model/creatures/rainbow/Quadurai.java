@@ -25,8 +25,10 @@ public class Quadurai extends AbstractRainbowCreature {
         mDescription = "Deal 8 Damage to the creature in the opposing lane";
     }
 
-    @Override public int getInitialAttack() { return 15; }
-    @Override public int getInitialDefense() { return 5; }
+    @Override public int getBaseAttack() { return 15; }
+    @Override public int getBaseDefense() { return 5; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 22; }
+    @Override public int getBaseGoldDefense() { return 8; }
 }

@@ -25,8 +25,10 @@ public class MaceStump extends AbstractSwampCreature {
         mDescription = "Deal 3 Damage to creature in the opposing lane";
     }
 
-    @Override public int getInitialAttack() { return 6; }
-    @Override public int getInitialDefense() { return 3; }
+    @Override public int getBaseAttack() { return 6; }
+    @Override public int getBaseDefense() { return 3; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 9; }
+    @Override public int getBaseGoldDefense() { return 5; }
 }

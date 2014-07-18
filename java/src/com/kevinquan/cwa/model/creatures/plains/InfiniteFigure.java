@@ -25,8 +25,10 @@ public class InfiniteFigure extends AbstractPlainsCreature {
         mDescription = "Increase enemy's Flooping cost by 1 next turn";
     }
 
-    @Override public int getInitialAttack() { return 8; }
-    @Override public int getInitialDefense() { return 22; }
+    @Override public int getBaseAttack() { return 8; }
+    @Override public int getBaseDefense() { return 22; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 0; }
+    @Override public int getBaseGoldDefense() { return 0; }
 }

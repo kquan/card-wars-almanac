@@ -36,14 +36,24 @@ public interface Card {
         AlgebraicRare(5),
         ;
         
+        public static final String STAR = "\u2605";
+        
         protected int mNumberOfStars;
         
         private Rarity(int stars) {
             mNumberOfStars = stars;
         }
         
-        public int getStars() {
+        public int getStarsCount() {
             return mNumberOfStars;
+        }
+        
+        public String getStars() {
+            String stars = STAR;
+            for (int i = 1; i < mNumberOfStars; i++) { 
+                stars += STAR;
+            }
+            return stars;
         }
     }
 

@@ -25,8 +25,10 @@ public class DarkAngel extends AbstractSwampCreature {
         mDescription = "Deal 5 Damage to all opposing creatures"; // Check
     }
 
-    @Override public int getInitialAttack() { return 20; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 20; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 30; }
+    @Override public int getBaseGoldDefense() { return 23; }
 }

@@ -25,8 +25,10 @@ public class GreenCactaball extends AbstractSandyCreature {
         mDescription = "Gain +2 Defense";
     }
 
-    @Override public int getInitialAttack() { return 4; }
-    @Override public int getInitialDefense() { return 3; }
+    @Override public int getBaseAttack() { return 4; }
+    @Override public int getBaseDefense() { return 3; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 6; }
+    @Override public int getBaseGoldDefense() { return 5; }
 }

@@ -25,8 +25,11 @@ public class LegionOfEarlings extends AbstractCornCreature {
         mDescription = "All your creatures gain +5 Attack"; // Check
     }
 
-    @Override public int getInitialAttack() { return 23; }
-    @Override public int getInitialDefense() { return 23; }
+    @Override public int getBaseAttack() { return 23; }
+    @Override public int getBaseDefense() { return 23; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 34; }
+    @Override public int getBaseGoldDefense() { return 35; }
 
 }

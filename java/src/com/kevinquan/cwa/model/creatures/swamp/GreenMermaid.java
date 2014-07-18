@@ -25,8 +25,10 @@ public class GreenMermaid extends AbstractSwampCreature {
         mDescription = "Deal 3 Damage for each of your buildings to the creature in the opposing lane";
     }
 
-    @Override public int getInitialAttack() { return 11; }
-    @Override public int getInitialDefense() { return 17; }
+    @Override public int getBaseAttack() { return 11; }
+    @Override public int getBaseDefense() { return 17; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 16; }
+    @Override public int getBaseGoldDefense() { return 26; }
 }

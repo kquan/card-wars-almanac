@@ -25,8 +25,11 @@ public class DetectiveBobby extends AbstractNiceCreature {
         mDescription = "Adjacent Creatures heal 6 points"; // Check
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 21; }
-    @Override public int getFloopCost() { return 3; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 21; }
+    @Override public int getFloopCost() { return 2; }
+    
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 32; }
 
 }

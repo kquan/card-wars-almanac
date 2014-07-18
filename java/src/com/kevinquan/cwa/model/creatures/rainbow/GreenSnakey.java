@@ -25,8 +25,10 @@ public class GreenSnakey extends AbstractRainbowCreature {
         mDescription = "Lower the Attack of the creature in opposing lane by 2 for each of your opponent's creatures";
     }
 
-    @Override public int getInitialAttack() { return 6; }
-    @Override public int getInitialDefense() { return 4; }
+    @Override public int getBaseAttack() { return 6; }
+    @Override public int getBaseDefense() { return 4; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 9; }
+    @Override public int getBaseGoldDefense() { return 6; }
 }

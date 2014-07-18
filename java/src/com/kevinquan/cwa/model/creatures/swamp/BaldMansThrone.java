@@ -21,12 +21,12 @@ public class BaldMansThrone extends AbstractSwampCreature {
     private static final String TAG = BaldMansThrone.class.getSimpleName();
     
     public BaldMansThrone() {
-        super("Bald Man's Throne", 5, Rarity.AlgebraicRare);
+        super("Bald Man's Throne", 0, Rarity.AlgebraicRare);
         mDescription = "Deal 5 Damage to the opposing creature for every creature you Flooped this turn";
     }
 
-    @Override public int getInitialAttack() { return 15; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 15; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 2; }
 
 }

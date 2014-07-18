@@ -25,8 +25,10 @@ public class NiceIceBaby extends AbstractRainbowCreature {
         mDescription = "Creature in opposing lane cannot Attack next Battle Phase";
     }
 
-    @Override public int getInitialAttack() { return 2; }
-    @Override public int getInitialDefense() { return 3; }
+    @Override public int getBaseAttack() { return 2; }
+    @Override public int getBaseDefense() { return 3; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 3; }
+    @Override public int getBaseGoldDefense() { return 5; }
 }

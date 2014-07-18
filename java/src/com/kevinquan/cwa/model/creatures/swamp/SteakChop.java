@@ -25,8 +25,10 @@ public class SteakChop extends AbstractSwampCreature {
         mDescription = "Deal 2 Damage to the opposing creature for each of your opponent's Discarded creatures"; // Check
     }
 
-    @Override public int getInitialAttack() { return 30; } // Check
-    @Override public int getInitialDefense() { return 23; }  // Check
+    @Override public int getBaseAttack() { return 20; } // Check
+    @Override public int getBaseDefense() { return 15; }  // Check
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 30; }
+    @Override public int getBaseGoldDefense() { return 23; }
 }

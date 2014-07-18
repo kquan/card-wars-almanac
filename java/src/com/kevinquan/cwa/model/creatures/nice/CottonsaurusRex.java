@@ -25,8 +25,11 @@ public class CottonsaurusRex extends AbstractNiceCreature {
         mDescription = "Heal your Hero equal to this creature's Attack"; // Check
     }
 
-    @Override public int getInitialAttack() { return 7; }
-    @Override public int getInitialDefense() { return 40; }
+    @Override public int getBaseAttack() { return 7; }
+    @Override public int getBaseDefense() { return 40; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 10; }
+    @Override public int getBaseGoldDefense() { return 60; }
 
 }

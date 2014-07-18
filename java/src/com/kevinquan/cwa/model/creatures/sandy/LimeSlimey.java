@@ -25,8 +25,10 @@ public class LimeSlimey extends AbstractSandyCreature {
         mDescription = "This creature and adjacent creatures gain +3 Defense";
     }
 
-    @Override public int getInitialAttack() { return 8; }
-    @Override public int getInitialDefense() { return 8; }
+    @Override public int getBaseAttack() { return 8; }
+    @Override public int getBaseDefense() { return 8; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 12; }
+    @Override public int getBaseGoldDefense() { return 12; }
 }

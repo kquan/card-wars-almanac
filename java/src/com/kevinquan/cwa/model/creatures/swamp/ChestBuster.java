@@ -25,8 +25,11 @@ public class ChestBuster extends AbstractSwampCreature {
         mDescription = "Deal 2 Damage to the opposing Hero for every card in your hand"; // Check
     }
 
-    @Override public int getInitialAttack() { return 12; }
-    @Override public int getInitialDefense() { return 28; }
-    @Override public int getFloopCost() { return 2; } // Check
+    @Override public int getBaseAttack() { return 12; }
+    @Override public int getBaseDefense() { return 28; }
+    @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 18; }
+    @Override public int getBaseGoldDefense() { return 42; }
 
 }

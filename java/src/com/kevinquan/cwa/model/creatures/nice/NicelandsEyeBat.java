@@ -25,8 +25,10 @@ public class NicelandsEyeBat extends AbstractNiceCreature {
         mDescription = "Choose one of your creatures and heal it 4 points for each card in your hand";
     }
 
-    @Override public int getInitialAttack() { return 7; }
-    @Override public int getInitialDefense() { return 10; }
+    @Override public int getBaseAttack() { return 7; }
+    @Override public int getBaseDefense() { return 10; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 10; }
+    @Override public int getBaseGoldDefense() { return 15; }
 }

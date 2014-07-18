@@ -25,8 +25,10 @@ public class MayonaiseAngel extends AbstractSandyCreature {
         mDescription = "Choose one of your creatures and give it +4 Defense";
     }
 
-    @Override public int getInitialAttack() { return 4; }
-    @Override public int getInitialDefense() { return 12; }
+    @Override public int getBaseAttack() { return 4; }
+    @Override public int getBaseDefense() { return 12; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 6; }
+    @Override public int getBaseGoldDefense() { return 18; }
 }

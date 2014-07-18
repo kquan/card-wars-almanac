@@ -25,8 +25,11 @@ public class TheSludger extends AbstractCornCreature {
         mDescription = "Lower the Defense of adjacent creatures by 2 and increase their Attack by 4"; // Check
     }
 
-    @Override public int getInitialAttack() { return 15; }
-    @Override public int getInitialDefense() { return 15; }
-    @Override public int getFloopCost() { return 3; }
+    @Override public int getBaseAttack() { return 15; }
+    @Override public int getBaseDefense() { return 15; }
+    @Override public int getFloopCost() { return 1; }
+    
+    @Override public int getBaseGoldAttack() { return 22; }
+    @Override public int getBaseGoldDefense() { return 23; }
 
 }

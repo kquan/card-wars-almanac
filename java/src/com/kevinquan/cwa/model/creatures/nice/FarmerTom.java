@@ -25,8 +25,11 @@ public class FarmerTom extends AbstractNiceCreature {
         mDescription = "Choose one of your Creatures and heal it 6 points for each of your Buildings"; // Check
     }
 
-    @Override public int getInitialAttack() { return 12; }
-    @Override public int getInitialDefense() { return 21; }
+    @Override public int getBaseAttack() { return 12; }
+    @Override public int getBaseDefense() { return 21; }
     @Override public int getFloopCost() { return 2; }
+    
+    @Override public int getBaseGoldAttack() { return 18; }
+    @Override public int getBaseGoldDefense() { return 32; }
 
 }

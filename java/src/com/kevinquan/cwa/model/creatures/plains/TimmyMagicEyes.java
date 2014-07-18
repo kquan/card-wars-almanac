@@ -25,8 +25,8 @@ public class TimmyMagicEyes extends AbstractPlainsCreature {
         mDescription = "Lower the cost of Flooping creatures by 1 this turn";
     }
 
-    @Override public int getInitialAttack() { return 15; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 15; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 1; }
 
 }

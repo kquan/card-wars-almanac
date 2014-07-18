@@ -25,8 +25,10 @@ public class DiamondDan extends AbstractPlainsCreature {
         mDescription = "Destroy this creature and gain 6 Magic Points this turn"; // Check
     }
 
-    @Override public int getInitialAttack() { return 1; }
-    @Override public int getInitialDefense() { return 47; }
+    @Override public int getBaseAttack() { return 1; }
+    @Override public int getBaseDefense() { return 47; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 1; }
+    @Override public int getBaseGoldDefense() { return 71; }
 }

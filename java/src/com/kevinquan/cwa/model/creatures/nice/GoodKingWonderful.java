@@ -25,8 +25,11 @@ public class GoodKingWonderful extends AbstractNiceCreature {
         mDescription = "Choose one of your creatures and heal all Damage from it"; // Check
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 40; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 40; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 60; }
 
 }

@@ -29,17 +29,46 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
         mIsGold = false;
     }
     
-    public String getFloopDescription() {
-        return getDescription();
-    }
-
     @Override
     public String getId() {
         return super.getId()+(mIsGold ? "|GOLD" : "");
     }
     
     @Override
-    public boolean isGold() {
-        return mIsGold;
+    public String getFloopDescription() {
+        return getDescription();
     }
+    
+    @Override
+    public boolean hasGoldVersion() {
+        return getBaseGoldDefense() > 0 || getBaseAttack() > 0;
+    }
+    
+    @Override
+    public Creature setGold(boolean isGoldVersion) {
+        mIsGold = true;
+        return this;
+    }
+    
+    @Override public boolean isGold() { return mIsGold; }
+    
+    @Override public int getBaseGoldAttack() { return 0; }
+    @Override public int getBaseGoldDefense() { return 0; }
+    
+    @Override 
+    public int getAttack() { 
+        if (mIsGold) {
+            return getBaseGoldAttack();
+        }
+        return getBaseAttack();
+    }
+    
+    @Override 
+    public int getDefense() { 
+        if (mIsGold) {
+            return getBaseGoldDefense();
+        }
+        return getBaseDefense();
+    }
+    
 }

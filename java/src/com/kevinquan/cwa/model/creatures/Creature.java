@@ -19,11 +19,19 @@ import com.kevinquan.cwa.model.Card;
 
 public interface Creature extends Card {
 
-    int getInitialAttack();
-    int getInitialDefense();
+    int getBaseAttack();
+    int getBaseDefense();
     
     String getFloopDescription();
     int getFloopCost();
     
+    Creature setGold(boolean isGoldVersion);
     boolean isGold();
+    
+    boolean hasGoldVersion();
+    int getBaseGoldAttack();
+    int getBaseGoldDefense();
+    
+    int getAttack();
+    int getDefense();
 }

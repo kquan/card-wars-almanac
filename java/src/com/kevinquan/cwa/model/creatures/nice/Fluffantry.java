@@ -25,8 +25,11 @@ public class Fluffantry extends AbstractNiceCreature {
         mDescription = "Heal your Hero 2 points for each of your creatures on the field"; // Check
     }
 
-    @Override public int getInitialAttack() { return 20; }
-    @Override public int getInitialDefense() { return 25; }
+    @Override public int getBaseAttack() { return 20; }
+    @Override public int getBaseDefense() { return 25; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 30; }
+    @Override public int getBaseGoldDefense() { return 38; }
 
 }

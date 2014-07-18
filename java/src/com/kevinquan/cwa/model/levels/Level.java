@@ -52,6 +52,8 @@ public class Level {
     protected static final int MAXIMUM_NUMBER_OF_QUESTS = 3;
     public static final int MAXIMUM_LEVEL = 120;
     
+    public static final String COST_HEART = "\u2665";
+    
     protected int mLevelNumber;
     protected int mCost;
     protected Hero mOpponent;

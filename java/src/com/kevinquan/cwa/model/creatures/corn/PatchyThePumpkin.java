@@ -25,8 +25,11 @@ public class PatchyThePumpkin extends AbstractCornCreature {
         mDescription = "Lower the Attack of creature in opposing lane by 5"; // Check
     }
 
-    @Override public int getInitialAttack() { return 22; }
-    @Override public int getInitialDefense() { return 5; }
+    @Override public int getBaseAttack() { return 22; }
+    @Override public int getBaseDefense() { return 5; }
     @Override public int getFloopCost() { return 2; }
+    
+    @Override public int getBaseGoldAttack() { return 33; }
+    @Override public int getBaseGoldDefense() { return 8; }
 
 }

@@ -25,8 +25,8 @@ public class SunKing extends AbstractCornCreature {
         mDescription = "Choose a creature and raise its Attack 4 points for each Building you control"; // Check
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 25; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 25; }
     @Override public int getFloopCost() { return 3; }
 
 }

@@ -25,8 +25,10 @@ public class DroolingDude extends AbstractRainbowCreature {
         mDescription = "Gain +7 Attack and +3 Defense"; // Check
     }
 
-    @Override public int getInitialAttack() { return 14; }
-    @Override public int getInitialDefense() { return 11; }
+    @Override public int getBaseAttack() { return 14; }
+    @Override public int getBaseDefense() { return 11; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 21; }
+    @Override public int getBaseGoldDefense() { return 17; }
 }

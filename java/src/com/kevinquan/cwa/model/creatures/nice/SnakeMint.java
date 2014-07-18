@@ -25,8 +25,10 @@ public class SnakeMint extends AbstractNiceCreature {
         mDescription = "Deal 2 Damage to creature in opposing lane and heal this creature 4 points";
     }
 
-    @Override public int getInitialAttack() { return 9; }
-    @Override public int getInitialDefense() { return 9; }
+    @Override public int getBaseAttack() { return 9; }
+    @Override public int getBaseDefense() { return 9; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 13; }
+    @Override public int getBaseGoldDefense() { return 14; }
 }

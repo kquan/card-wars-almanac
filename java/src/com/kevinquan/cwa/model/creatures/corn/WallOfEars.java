@@ -25,8 +25,11 @@ public class WallOfEars extends AbstractCornCreature {
         mDescription = "Inflict 2 Damage to this creature and gain +2 Attack";
     }
 
-    @Override public int getInitialAttack() { return 0; }
-    @Override public int getInitialDefense() { return 18; }
+    @Override public int getBaseAttack() { return 0; }
+    @Override public int getBaseDefense() { return 18; }
     @Override public int getFloopCost() { return 1; }
+    
+    @Override public int getBaseGoldAttack() { return 0; }
+    @Override public int getBaseGoldDefense() { return 27; }
 
 }

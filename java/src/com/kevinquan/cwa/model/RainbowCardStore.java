@@ -43,20 +43,6 @@ import com.kevinquan.cwa.model.creatures.rainbow.FisherFish;
 import com.kevinquan.cwa.model.creatures.rainbow.FreezyJ;
 import com.kevinquan.cwa.model.creatures.rainbow.FutureScholar;
 import com.kevinquan.cwa.model.creatures.rainbow.GhostNinja;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldBrainGooey;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldDroolingDude;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldEvilEye;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldFisherFish;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldFreezyJ;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldGreenSnakey;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldMouthball;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldPeachDjini;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldPhyllis;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldPorcelainGuardian;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldQuadurai;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldThePickler;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldThePig;
-import com.kevinquan.cwa.model.creatures.rainbow.GoldWhiteNinja;
 import com.kevinquan.cwa.model.creatures.rainbow.GreenSnakey;
 import com.kevinquan.cwa.model.creatures.rainbow.IcePaladin;
 import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
@@ -154,22 +140,6 @@ public class RainbowCardStore extends AbstractCardStore {
         addCard(new FisherFish());
         addCard(new PorcelainGuardian());
         addCard(new TheMariachi());
-        
-        // Gold cards
-        addCard(new GoldMouthball());
-        addCard(new GoldThePig());
-        addCard(new GoldEvilEye());
-        addCard(new GoldFreezyJ());
-        addCard(new GoldGreenSnakey());
-        addCard(new GoldPeachDjini());
-        addCard(new GoldWhiteNinja());
-        addCard(new GoldPhyllis());
-        addCard(new GoldQuadurai());
-        addCard(new GoldThePickler());
-        addCard(new GoldBrainGooey());
-        addCard(new GoldDroolingDude());
-        addCard(new GoldFisherFish());
-        addCard(new GoldPorcelainGuardian());
         
         // Buildings
         addCard(new AstralFortress());

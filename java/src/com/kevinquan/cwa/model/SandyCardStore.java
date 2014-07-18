@@ -19,19 +19,6 @@ import com.kevinquan.cwa.model.creatures.sandy.BeachMum;
 import com.kevinquan.cwa.model.creatures.sandy.BurningHand;
 import com.kevinquan.cwa.model.creatures.sandy.CactusThug;
 import com.kevinquan.cwa.model.creatures.sandy.Fummy;
-import com.kevinquan.cwa.model.creatures.sandy.GoldBeachMum;
-import com.kevinquan.cwa.model.creatures.sandy.GoldBurningHand;
-import com.kevinquan.cwa.model.creatures.sandy.GoldCactusThug;
-import com.kevinquan.cwa.model.creatures.sandy.GoldFummy;
-import com.kevinquan.cwa.model.creatures.sandy.GoldGreenCactaball;
-import com.kevinquan.cwa.model.creatures.sandy.GoldLostGolem;
-import com.kevinquan.cwa.model.creatures.sandy.GoldMsMummy;
-import com.kevinquan.cwa.model.creatures.sandy.GoldPieclops;
-import com.kevinquan.cwa.model.creatures.sandy.GoldSandAngel;
-import com.kevinquan.cwa.model.creatures.sandy.GoldSandEyebat;
-import com.kevinquan.cwa.model.creatures.sandy.GoldSandJackal;
-import com.kevinquan.cwa.model.creatures.sandy.GoldSandy;
-import com.kevinquan.cwa.model.creatures.sandy.GoldWallOfSand;
 import com.kevinquan.cwa.model.creatures.sandy.GreenCactaball;
 import com.kevinquan.cwa.model.creatures.sandy.GreenPartyOgre;
 import com.kevinquan.cwa.model.creatures.sandy.LadyMary;
@@ -91,21 +78,6 @@ public class SandyCardStore extends AbstractCardStore {
         addCard(new Pieclops());
         addCard(new SandasaurusRex());
         addCard(new Sandy());
-        
-        // Gold cards
-        addCard(new GoldBurningHand());
-        addCard(new GoldGreenCactaball());
-        addCard(new GoldMsMummy());
-        addCard(new GoldSandAngel());
-        addCard(new GoldSandEyebat());
-        addCard(new GoldBeachMum());
-        addCard(new GoldWallOfSand());
-        addCard(new GoldSandJackal());
-        addCard(new GoldFummy());
-        addCard(new GoldCactusThug());
-        addCard(new GoldLostGolem());
-        addCard(new GoldPieclops());
-        addCard(new GoldSandy());
     }
 
 }

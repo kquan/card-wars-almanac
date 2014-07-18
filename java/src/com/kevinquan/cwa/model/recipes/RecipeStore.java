@@ -20,11 +20,11 @@ import java.util.List;
 
 import com.kevinquan.cwa.model.Card;
 import com.kevinquan.cwa.model.buildings.AstralFortress;
+import com.kevinquan.cwa.model.buildings.CornCastle;
 import com.kevinquan.cwa.model.buildings.CornDome;
 import com.kevinquan.cwa.model.buildings.Pyramidia;
 import com.kevinquan.cwa.model.buildings.SandCastle;
 import com.kevinquan.cwa.model.buildings.WoadMobileHome;
-import com.kevinquan.cwa.model.creatures.Creature;
 import com.kevinquan.cwa.model.creatures.corn.ArcherDan;
 import com.kevinquan.cwa.model.creatures.corn.CornDog;
 import com.kevinquan.cwa.model.creatures.corn.Cornball;
@@ -48,6 +48,8 @@ import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Poultrygeist;
 import com.kevinquan.cwa.model.creatures.plains.WoadicTimeWalker;
+import com.kevinquan.cwa.model.creatures.rainbow.BigFoot;
+import com.kevinquan.cwa.model.creatures.rainbow.Earl;
 import com.kevinquan.cwa.model.creatures.rainbow.EvilEye;
 import com.kevinquan.cwa.model.creatures.rainbow.GreenSnakey;
 import com.kevinquan.cwa.model.creatures.rainbow.ImprovedSugarImp;
@@ -70,12 +72,15 @@ import com.kevinquan.cwa.model.creatures.swamp.Herculeye;
 import com.kevinquan.cwa.model.creatures.swamp.HotEyebat;
 import com.kevinquan.cwa.model.creatures.swamp.MaceStump;
 import com.kevinquan.cwa.model.creatures.swamp.OrangeSlimey;
+import com.kevinquan.cwa.model.creatures.swamp.SnappyDresser;
 import com.kevinquan.cwa.model.creatures.swamp.TeethLeaf;
 import com.kevinquan.cwa.model.creatures.swamp.WanderingBaldMan;
 import com.kevinquan.cwa.model.spells.BoneWand;
 import com.kevinquan.cwa.model.spells.CerebralBloodstorm;
 import com.kevinquan.cwa.model.spells.CornScepter;
 import com.kevinquan.cwa.model.spells.CrystalBall;
+import com.kevinquan.cwa.model.spells.DarkPortal;
+import com.kevinquan.cwa.model.spells.FallingStar;
 import com.kevinquan.cwa.model.spells.FountainOfForgiveness;
 import com.kevinquan.cwa.model.spells.GrapeButt;
 import com.kevinquan.cwa.model.spells.PsychicTempest;
@@ -120,10 +125,6 @@ public class RecipeStore {
     
     public List<Recipe> getRecipesThatUse(Card card) {
         List<Recipe> recipes = new ArrayList<Recipe>();
-        if (card instanceof Creature && ((Creature)card).isGold()) {
-            // Can't use gold cards
-            return recipes; 
-        }
         for (Recipe recipe : mRecipies) {
             if (recipe.uses(card)) {
                 recipes.add(recipe);
@@ -134,10 +135,6 @@ public class RecipeStore {
     
     public List<Recipe> getRecipeThatCreates(Card card) {
         List<Recipe> recipes = new ArrayList<Recipe>();
-        if (card instanceof Creature && ((Creature)card).isGold()) {
-            // Can't use gold cards
-            return recipes; 
-        }
         for (Recipe recipe : mRecipies) {
             if (recipe.getResult().getClass().isInstance(card)) {
                 recipes.add(recipe);
@@ -187,5 +184,10 @@ public class RecipeStore {
         addRecipe(new Recipe(new GreenSnakey(), new SandSnake(), new ScrollOfFreshBreath(), 10000, new SnakeMint()));
         addRecipe(new Recipe(1000, new CornDog()).addIngredient(new CoolDog()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()));
         addRecipe(new Recipe(9500, new WallOfEars()).addIngredient(new Cornball(),3 ).addIngredient(new HuskerWorm(), 3).addIngredient(new CornScepter()));
+        addRecipe(new Recipe(new CornDome(), new AstralFortress(), new CornScepter(), 9700, new CornCastle()));
+        addRecipe(new Recipe(new Teleport(), new BoneWand(), new AncientScholar(), 11000, new DarkPortal()));
+        addRecipe(new Recipe(new WanderingBaldMan(), new Axey(), 17000, new BigFoot()).addIngredient(new WoadBlood(), 5));
+        addRecipe(new Recipe(21000, new Earl()).addIngredient(new SnappyDresser()).addIngredient(new UfoAbduction(), 3).addIngredient(new Teleport(), 3));
+        addRecipe(new Recipe(new AncientScholar(), new Pyramidia(), new WizardMigrane(), 24000, new FallingStar()));
     }
 }

@@ -25,8 +25,8 @@ public class AppleTree extends AbstractNiceCreature {
         mDescription = "Fully heal all of your creatures and destroy this creature";
     }
 
-    @Override public int getInitialAttack() { return 9; }
-    @Override public int getInitialDefense() { return 21; }
+    @Override public int getBaseAttack() { return 9; }
+    @Override public int getBaseDefense() { return 21; }
     @Override public int getFloopCost() { return 1; }
 
 }

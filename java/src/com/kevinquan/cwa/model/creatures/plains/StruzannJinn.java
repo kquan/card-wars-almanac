@@ -25,8 +25,10 @@ public class StruzannJinn extends AbstractPlainsCreature {
         mDescription = "Send Creature in the opposing lane back to opponent's hand"; // Check
     }
 
-    @Override public int getInitialAttack() { return 15; }
-    @Override public int getInitialDefense() { return 25; }
+    @Override public int getBaseAttack() { return 15; }
+    @Override public int getBaseDefense() { return 25; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 22; }
+    @Override public int getBaseGoldDefense() { return 38; }
 }

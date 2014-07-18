@@ -31,6 +31,7 @@ import org.junit.Test;
 import com.kevinquan.cwa.Blueprints;
 import com.kevinquan.cwa.NameTranslater;
 import com.kevinquan.cwa.model.Card;
+import com.kevinquan.cwa.model.creatures.Creature;
 import com.kevinquan.cwa.model.levels.Level;
 import com.kevinquan.cwa.model.levels.LevelStore;
 import com.kevinquan.cwa.model.levels.LootDropStore;
@@ -74,7 +75,7 @@ public class LootDropsTestCase extends BaseJUnit4Test {
         }
     }
     
-    @Test
+    //@Test
     public void generateLoopDropStoreCode() {
         Hashtable<Integer, Hashtable<String, LootDropDetails>> dropData = parseLootDrops();
         for (int i = 1; i < Level.MAXIMUM_LEVEL; i++) {
@@ -87,7 +88,11 @@ public class LootDropsTestCase extends BaseJUnit4Test {
             Collections.sort(dropList, new LootDropPriorityComparator());
             for (LootDropDetails drop : dropList) {
                 System.out.print("addDropDetails(new LootDropDetails(new ");
-                System.out.print(drop.getCard().getClass().getSimpleName()+"(), ");
+                System.out.print(drop.getCard().getClass().getSimpleName()+"()");
+                if (drop.getCard() instanceof Creature && ((Creature)drop.getCard()).isGold()) {
+                    System.out.print(".setGold(true)");
+                }
+                System.out.print(", ");
                 System.out.print("levelStore.getLevel("+drop.getLevel().getLevelNumber()+"), ");
                 System.out.print(drop.getDropChance()+", ");
                 System.out.print(drop.getStaticWeight());

@@ -25,8 +25,10 @@ public class SoftEyeling extends AbstractNiceCreature {
         mDescription = "Choose a creature and heal 3 points for each of your different landscapes";
     }
 
-    @Override public int getInitialAttack() { return 2; }
-    @Override public int getInitialDefense() { return 6; }
+    @Override public int getBaseAttack() { return 2; }
+    @Override public int getBaseDefense() { return 6; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 3; }
+    @Override public int getBaseGoldDefense() { return 9; }
 }

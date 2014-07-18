@@ -25,8 +25,10 @@ public class DogBoy extends AbstractNiceCreature {
         mDescription = "Deal 5 Damage to creature in the opposing lane and heal this creature 5 points"; // Check
     }
 
-    @Override public int getInitialAttack() { return 13; }
-    @Override public int getInitialDefense() { return 17; }
+    @Override public int getBaseAttack() { return 13; }
+    @Override public int getBaseDefense() { return 17; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 19; }
+    @Override public int getBaseGoldDefense() { return 26; }
 }

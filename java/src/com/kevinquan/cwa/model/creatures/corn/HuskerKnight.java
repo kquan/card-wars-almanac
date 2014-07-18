@@ -25,8 +25,11 @@ public class HuskerKnight extends AbstractCornCreature {
         mDescription = "Adjacent creatures gain +2 Attack";
     }
 
-    @Override public int getInitialAttack() { return 6; }
-    @Override public int getInitialDefense() { return 3; }
+    @Override public int getBaseAttack() { return 6; }
+    @Override public int getBaseDefense() { return 3; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 9; }
+    @Override public int getBaseGoldDefense() { return 5; }
 
 }

@@ -25,8 +25,11 @@ public class Cornataur extends AbstractCornCreature {
         mDescription = "This creature and adjacent creatures gain +5 Attack"; // Check
     }
 
-    @Override public int getInitialAttack() { return 17; }
-    @Override public int getInitialDefense() { return 19; }
+    @Override public int getBaseAttack() { return 17; }
+    @Override public int getBaseDefense() { return 19; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 25; }
+    @Override public int getBaseGoldDefense() { return 29; }
 
 }

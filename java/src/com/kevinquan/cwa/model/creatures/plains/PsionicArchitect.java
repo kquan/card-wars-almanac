@@ -25,8 +25,10 @@ public class PsionicArchitect extends AbstractPlainsCreature {
         mDescription = "Return a spell from your Discard Pile to your hand"; // Check
     }
 
-    @Override public int getInitialAttack() { return 17; }
-    @Override public int getInitialDefense() { return 8; }
+    @Override public int getBaseAttack() { return 17; }
+    @Override public int getBaseDefense() { return 8; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 25; }
+    @Override public int getBaseGoldDefense() { return 12; }
 }

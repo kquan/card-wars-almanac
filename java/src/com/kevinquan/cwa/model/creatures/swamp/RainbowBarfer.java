@@ -25,8 +25,10 @@ public class RainbowBarfer extends AbstractSwampCreature {
         mDescription = "Deal 5 Damage to creature in opposing lane for each of your different landscapes"; // Check
     }
 
-    @Override public int getInitialAttack() { return 16; }
-    @Override public int getInitialDefense() { return 36; }
+    @Override public int getBaseAttack() { return 16; }
+    @Override public int getBaseDefense() { return 34; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 24; }
+    @Override public int getBaseGoldDefense() { return 51; }
 }

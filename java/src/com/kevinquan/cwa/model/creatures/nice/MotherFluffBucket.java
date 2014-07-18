@@ -25,8 +25,11 @@ public class MotherFluffBucket extends AbstractNiceCreature {
         mDescription = "Heal your Hero 5 points"; // Check
     }
 
-    @Override public int getInitialAttack() { return 13; }
-    @Override public int getInitialDefense() { return 30; }
+    @Override public int getBaseAttack() { return 13; }
+    @Override public int getBaseDefense() { return 30; }
     @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 19; }
+    @Override public int getBaseGoldDefense() { return 45; }
 
 }

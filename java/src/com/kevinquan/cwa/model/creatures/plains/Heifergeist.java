@@ -25,8 +25,10 @@ public class Heifergeist extends AbstractPlainsCreature {
         mDescription = "Negate all Damage, Defense, and Attack modifiers on this creature";
     }
 
-    @Override public int getInitialAttack() { return 13; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 13; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 19; }
+    @Override public int getBaseGoldDefense() { return 23; }
 }

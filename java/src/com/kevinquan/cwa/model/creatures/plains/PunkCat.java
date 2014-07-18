@@ -25,8 +25,10 @@ public class PunkCat extends AbstractPlainsCreature {
         mDescription = "Activate an adjacent creature's Floop ability if acceptable"; // Check
     }
 
-    @Override public int getInitialAttack() { return 8; }
-    @Override public int getInitialDefense() { return 22; }
-    @Override public int getFloopCost() { return 1; } // Check
+    @Override public int getBaseAttack() { return 8; }
+    @Override public int getBaseDefense() { return 22; }
+    @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 12; }
+    @Override public int getBaseGoldDefense() { return 33; }
 }

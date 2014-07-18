@@ -25,8 +25,10 @@ public class Axey extends AbstractPlainsCreature {
         mDescription = "Send Building in opposing lane back to opponent's hand";
     }
 
-    @Override public int getInitialAttack() { return 13; }
-    @Override public int getInitialDefense() { return 5; }
+    @Override public int getBaseAttack() { return 13; }
+    @Override public int getBaseDefense() { return 5; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 19; }
+    @Override public int getBaseGoldDefense() { return 8; }
 }

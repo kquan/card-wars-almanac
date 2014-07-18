@@ -25,8 +25,11 @@ public class FisherFish extends AbstractRainbowCreature {
         mDescription = "Select a random card from the Discard Pile and put it in your hand"; // Check
     }
 
-    @Override public int getInitialAttack() { return 0; }
-    @Override public int getInitialDefense() { return 18; }
+    // This only exists in gold version
+    @Override public int getBaseAttack() { return 0; }
+    @Override public int getBaseDefense() { return 0; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 0; }
+    @Override public int getBaseGoldDefense() { return 25; }
 }

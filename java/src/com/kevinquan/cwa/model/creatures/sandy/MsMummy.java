@@ -25,8 +25,10 @@ public class MsMummy extends AbstractSandyCreature {
         mDescription = "Adjacent creature gain +3 Defense";
     }
 
-    @Override public int getInitialAttack() { return 3; }
-    @Override public int getInitialDefense() { return 6; }
+    @Override public int getBaseAttack() { return 3; }
+    @Override public int getBaseDefense() { return 6; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 4; }
+    @Override public int getBaseGoldDefense() { return 9; }
 }

@@ -25,8 +25,10 @@ public class TemporalWisp extends AbstractPlainsCreature {
         mDescription = "Opposing creature cannot attack on opponent's next Battle Phase"; // Check
     }
 
-    @Override public int getInitialAttack() { return 9; }
-    @Override public int getInitialDefense() { return 17; }
+    @Override public int getBaseAttack() { return 9; }
+    @Override public int getBaseDefense() { return 17; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 13; }
+    @Override public int getBaseGoldDefense() { return 26; }
 }

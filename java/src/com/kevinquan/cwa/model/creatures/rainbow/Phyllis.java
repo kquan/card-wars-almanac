@@ -25,8 +25,10 @@ public class Phyllis extends AbstractRainbowCreature {
         mDescription = "This creature and adjacent creatures gain +4 Attack";
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 15; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 15; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 23; }
 }

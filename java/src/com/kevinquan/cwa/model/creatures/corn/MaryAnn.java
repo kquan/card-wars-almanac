@@ -13,19 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.kevinquan.cwa.model.creatures.plains;
+package com.kevinquan.cwa.model.creatures.corn;
 
-public class GoldPsionicArchitect extends PsionicArchitect {
+public class MaryAnn extends AbstractCornCreature {
 
     @SuppressWarnings("unused")
-    private static final String TAG = GoldPsionicArchitect.class.getSimpleName();
+    private static final String TAG = MaryAnn.class.getSimpleName();
     
-    public GoldPsionicArchitect() {
-        super();
-        mIsGold = true;
+    public MaryAnn() {
+        super("Mary-Ann", 4, Rarity.VeryRare);
+        mDescription = "Deal 5 Damage to the opposing creature and lower its Attack by 5";
     }
 
-    @Override public int getInitialAttack() { return 25; }
-    @Override public int getInitialDefense() { return 12; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 27; }
+    @Override public int getFloopCost() { return 2; }
+    
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 41; }
 
 }

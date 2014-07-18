@@ -51,23 +51,39 @@ public class CreaturesTestCase extends BaseJUnit4Test {
     
     @Test
     public void testCreaturesBlueprint() {
-        // Re-enable once all creatures are translated
-        //assertThat("Incorrect creature count", mBlueprint.length(), is(mNameTranslater.getCardCount("Creature_")));
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject creature = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
             String creatureName = JSONUtils.safeGetString(creature, Blueprints.FIELD_ID); 
             Card card = mNameTranslater.getCardByName(creatureName);
+            boolean isGold = creatureName.indexOf("_GL_") > 0;
             if (!(card instanceof Creature)) {
+                // For code generation
+                System.out.println("mCards.put(\""+creatureName+"\", new "+(isGold ? ".setGold(true)" : "")+");");
+                //System.out.println("Faction: "+NameTranslater.getFaction(creature)+", Rarity: "+NameTranslater.getRarity(creature));
+                //continue;
                 fail("Card was not a creature for "+creatureName);
             }
             Creature creatureCard = (Creature)card;
             assertThat("Incorrect cost for "+creatureName, JSONUtils.safeGetInt(creature, Blueprints.FIELD_COST, Integer.MAX_VALUE), is(creatureCard.getCost()));
             assertThat("Incorrect faction for "+creatureName, NameTranslater.getFaction(creature), is(creatureCard.getFaction()));
             assertThat("Incorrect rarity for "+creatureName, NameTranslater.getRarity(creature), is(creatureCard.getRarity()));
-            assertThat("Incorrect attack for "+creatureName, JSONUtils.safeGetInt(creature, Blueprints.FIELD_ATTACK, -1), is(creatureCard.getInitialAttack()));
-            assertThat("Incorrect defense for "+creatureName, JSONUtils.safeGetInt(creature, Blueprints.FIELD_DEFENSE, -1), is(creatureCard.getInitialDefense()));
+            /*
+            if (JSONUtils.safeGetInt(creature, Blueprints.FIELD_ATTACK, -1) != creatureCard.getAttack()) {
+                System.out.println("Attack for "+(isGold ? "Gold ": "")+creatureCard.getClass().getSimpleName()+" should be "+JSONUtils.safeGetInt(creature, Blueprints.FIELD_ATTACK, -1));
+            }
+            if (JSONUtils.safeGetInt(creature, Blueprints.FIELD_DEFENSE, -1) != creatureCard.getDefense()) {
+                System.out.println("Defense for "+(isGold ? "Gold ": "")+creatureCard.getClass().getSimpleName()+" should be "+JSONUtils.safeGetInt(creature, Blueprints.FIELD_DEFENSE, -1));
+            }
+            if (JSONUtils.safeGetInt(creature, Blueprints.FIELD_FLOOP_COST, -1) != creatureCard.getFloopCost()) {
+                System.out.println("Floop cost for "+(isGold ? "Gold ": "")+creatureCard.getClass().getSimpleName()+" should be "+JSONUtils.safeGetInt(creature, Blueprints.FIELD_FLOOP_COST, -1));
+            }
+            */
+            assertThat("Incorrect attack for "+creatureName, JSONUtils.safeGetInt(creature, Blueprints.FIELD_ATTACK, -1), is(creatureCard.getAttack()));
+            assertThat("Incorrect defense for "+creatureName, JSONUtils.safeGetInt(creature, Blueprints.FIELD_DEFENSE, -1), is(creatureCard.getDefense()));
             assertThat("Incorrect floop cost for "+creatureName, JSONUtils.safeGetInt(creature, Blueprints.FIELD_FLOOP_COST, -1), is(creatureCard.getFloopCost()));
         }
+        // Re-enable once all creatures are translated
+        assertThat("Incorrect creature count", mBlueprint.length(), is(mNameTranslater.getCardCount("Creature_")));
     }
 
 }

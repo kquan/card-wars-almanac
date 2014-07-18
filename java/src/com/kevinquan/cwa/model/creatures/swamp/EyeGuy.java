@@ -21,12 +21,12 @@ public class EyeGuy extends AbstractSwampCreature {
     private static final String TAG = EyeGuy.class.getSimpleName();
     
     public EyeGuy() {
-        super("Eye Guy", 5, Rarity.AlgebraicRare);
+        super("Eye Guy", 0, Rarity.AlgebraicRare);
         mDescription = "Deal 3 Damage to the opposing creature for every creature you Flooped this turn";
     }
 
-    @Override public int getInitialAttack() { return 12; }
-    @Override public int getInitialDefense() { return 18; }
+    @Override public int getBaseAttack() { return 12; }
+    @Override public int getBaseDefense() { return 18; }
     @Override public int getFloopCost() { return 3; }
 
 }

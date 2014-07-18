@@ -25,8 +25,11 @@ public class BrainGooey extends AbstractRainbowCreature {
         mDescription = "Lower Attack of all enemy creatures by 12 and destroy this creature";
     }
 
-    @Override public int getInitialAttack() { return 3; } // Check
-    @Override public int getInitialDefense() { return 12; } // Check
+    // This only exists in gold version
+    @Override public int getBaseAttack() { return 0; }
+    @Override public int getBaseDefense() { return 0; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 5; }
+    @Override public int getBaseGoldDefense() { return 20; }
 }

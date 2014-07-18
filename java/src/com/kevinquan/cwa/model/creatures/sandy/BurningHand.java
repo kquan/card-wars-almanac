@@ -25,8 +25,10 @@ public class BurningHand extends AbstractSandyCreature {
         mDescription = "Lower the Defense of creature in opposite lane by 2";
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 2; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 2; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 3; }
 }

@@ -25,8 +25,10 @@ public class XLargeSpiritSoldier extends AbstractPlainsCreature {
         mDescription = "Return this creature to your hand and draw 1 card"; // Check
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 40; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 40; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 60; }
 }

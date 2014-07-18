@@ -25,8 +25,10 @@ public class TreeOfUnderneath extends AbstractSwampCreature {
         mDescription = "Deal 2 Damage to all opposing creatures and heal all of your creatures 4 points";
     }
 
-    @Override public int getInitialAttack() { return 20; }
-    @Override public int getInitialDefense() { return 10; }
-    @Override public int getFloopCost() { return 1; } // Check
+    @Override public int getBaseAttack() { return 20; }
+    @Override public int getBaseDefense() { return 10; }
+    @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 30; }
+    @Override public int getBaseGoldDefense() { return 15; }
 }

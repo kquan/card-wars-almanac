@@ -25,8 +25,8 @@ public class SandasaurusRex extends AbstractSandyCreature {
         mDescription = "Choose an enemy creature and lower its Defense by 5 for every creature you Flooped this turn";
     }
 
-    @Override public int getInitialAttack() { return 14; }
-    @Override public int getInitialDefense() { return 16; }
+    @Override public int getBaseAttack() { return 14; }
+    @Override public int getBaseDefense() { return 16; }
     @Override public int getFloopCost() { return 3; }
 
 }

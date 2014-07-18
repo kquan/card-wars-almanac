@@ -24,18 +24,6 @@ import com.kevinquan.cwa.model.creatures.plains.DragonClaw;
 import com.kevinquan.cwa.model.creatures.plains.DragonFoot;
 import com.kevinquan.cwa.model.creatures.plains.EmbarrassingBard;
 import com.kevinquan.cwa.model.creatures.plains.GhostHag;
-import com.kevinquan.cwa.model.creatures.plains.GoldAncientScholar;
-import com.kevinquan.cwa.model.creatures.plains.GoldCoolDog;
-import com.kevinquan.cwa.model.creatures.plains.GoldDiamondDan;
-import com.kevinquan.cwa.model.creatures.plains.GoldDragonFoot;
-import com.kevinquan.cwa.model.creatures.plains.GoldGhostHag;
-import com.kevinquan.cwa.model.creatures.plains.GoldGrapeSlimey;
-import com.kevinquan.cwa.model.creatures.plains.GoldHeavenlyGazer;
-import com.kevinquan.cwa.model.creatures.plains.GoldPsionicArchitect;
-import com.kevinquan.cwa.model.creatures.plains.GoldPunkCat;
-import com.kevinquan.cwa.model.creatures.plains.GoldStruzannJinn;
-import com.kevinquan.cwa.model.creatures.plains.GoldWoadicTimeWalker;
-import com.kevinquan.cwa.model.creatures.plains.GoldXLargeSpiritSoldier;
 import com.kevinquan.cwa.model.creatures.plains.GrapeSlimey;
 import com.kevinquan.cwa.model.creatures.plains.HeavenlyGazer;
 import com.kevinquan.cwa.model.creatures.plains.Heifergeist;
@@ -90,20 +78,6 @@ public class PlainsCardStore extends AbstractCardStore {
         addCard(new TimmyMagicEyes());
         addCard(new WoadicChief());
         addCard(new XLargeSpiritSoldier());
-        
-        // Gold cards
-        addCard(new GoldCoolDog());
-        addCard(new GoldGrapeSlimey());
-        addCard(new GoldHeavenlyGazer());
-        addCard(new GoldWoadicTimeWalker());
-        addCard(new GoldAncientScholar());
-        addCard(new GoldPsionicArchitect());
-        addCard(new GoldPunkCat());
-        addCard(new GoldDragonFoot());
-        addCard(new GoldStruzannJinn());
-        addCard(new GoldDiamondDan());
-        addCard(new GoldGhostHag());
-        addCard(new GoldXLargeSpiritSoldier());
     }
 
 }

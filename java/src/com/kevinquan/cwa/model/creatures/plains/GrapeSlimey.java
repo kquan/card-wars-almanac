@@ -25,8 +25,10 @@ public class GrapeSlimey extends AbstractPlainsCreature {
         mDescription = "Draw 1 card and send this creature to the Discard Pile";
     }
 
-    @Override public int getInitialAttack() { return 2; }
-    @Override public int getInitialDefense() { return 5; }
+    @Override public int getBaseAttack() { return 2; }
+    @Override public int getBaseDefense() { return 5; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 3; }
+    @Override public int getBaseGoldDefense() { return 8; }
 }

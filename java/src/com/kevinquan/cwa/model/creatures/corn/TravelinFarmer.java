@@ -25,8 +25,11 @@ public class TravelinFarmer extends AbstractCornCreature {
         mDescription = "Gain +1 Attack for each adjacent empty lane";
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 5; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 5; }
     @Override public int getFloopCost() { return 1; }
+    
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 8; }
 
 }

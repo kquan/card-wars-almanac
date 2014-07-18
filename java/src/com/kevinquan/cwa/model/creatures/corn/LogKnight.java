@@ -25,8 +25,11 @@ public class LogKnight extends AbstractCornCreature {
         mDescription = "Raise this creature's Attack by 4 for every creature you Flooped this turn";
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 20; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 20; }
     @Override public int getFloopCost() { return 2; }
+    
+    @Override public int getBaseGoldAttack() { return 0; }
+    @Override public int getBaseGoldDefense() { return 0; }
 
 }

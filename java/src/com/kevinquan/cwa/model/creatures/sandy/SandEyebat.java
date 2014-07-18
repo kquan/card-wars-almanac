@@ -25,8 +25,10 @@ public class SandEyebat extends AbstractSandyCreature {
         mDescription = "Choose an opposing creature and lower its Defense by 2";
     }
 
-    @Override public int getInitialAttack() { return 4; }
-    @Override public int getInitialDefense() { return 4; }
+    @Override public int getBaseAttack() { return 4; }
+    @Override public int getBaseDefense() { return 4; }
     @Override public int getFloopCost() { return 1; }
 
+    @Override public int getBaseGoldAttack() { return 6; }
+    @Override public int getBaseGoldDefense() { return 6; }
 }

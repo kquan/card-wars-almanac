@@ -25,8 +25,11 @@ public class DaveyBear extends AbstractSwampCreature {
         mDescription = "Deal 5 Damage to the opposing creature and Hero"; // Check
     }
 
-    @Override public int getInitialAttack() { return 17; }
-    @Override public int getInitialDefense() { return 28; }
-    @Override public int getFloopCost() { return 2; } // Check
+    @Override public int getBaseAttack() { return 17; }
+    @Override public int getBaseDefense() { return 28; }
+    @Override public int getFloopCost() { return 3; }
+    
+    @Override public int getBaseGoldAttack() { return 25; }
+    @Override public int getBaseGoldDefense() { return 42; }
 
 }

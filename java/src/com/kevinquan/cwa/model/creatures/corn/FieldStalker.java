@@ -25,8 +25,11 @@ public class FieldStalker extends AbstractCornCreature {
         mDescription = "Make the Attack of the creature in the opposing lane equal to this creature's Attack"; // Check
     }
 
-    @Override public int getInitialAttack() { return 5; }
-    @Override public int getInitialDefense() { return 34; }
+    @Override public int getBaseAttack() { return 5; }
+    @Override public int getBaseDefense() { return 34; }
     @Override public int getFloopCost() { return 2; }
+    
+    @Override public int getBaseGoldAttack() { return 7; }
+    @Override public int getBaseGoldDefense() { return 51; }
 
 }

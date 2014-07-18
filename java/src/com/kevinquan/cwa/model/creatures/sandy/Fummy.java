@@ -25,8 +25,10 @@ public class Fummy extends AbstractSandyCreature {
         mDescription = "This creature and adjacent creatures gain +6 Defense"; // Check
     }
 
-    @Override public int getInitialAttack() { return 10; }
-    @Override public int getInitialDefense() { return 24; }
+    @Override public int getBaseAttack() { return 10; }
+    @Override public int getBaseDefense() { return 24; }
     @Override public int getFloopCost() { return 2; }
 
+    @Override public int getBaseGoldAttack() { return 15; }
+    @Override public int getBaseGoldDefense() { return 36; }
 }

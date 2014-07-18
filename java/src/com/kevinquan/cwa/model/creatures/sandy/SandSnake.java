@@ -25,8 +25,10 @@ public class SandSnake extends AbstractSandyCreature {
         mDescription = "Lower the Defense of creature in the opposite lane by 5";
     }
 
-    @Override public int getInitialAttack() { return 12; }
-    @Override public int getInitialDefense() { return 7; }
+    @Override public int getBaseAttack() { return 12; }
+    @Override public int getBaseDefense() { return 7; }
     @Override public int getFloopCost() { return 3; }
 
+    @Override public int getBaseGoldAttack() { return 18; }
+    @Override public int getBaseGoldDefense() { return 11; }
 }
