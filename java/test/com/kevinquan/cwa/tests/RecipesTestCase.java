@@ -27,6 +27,7 @@ import org.junit.Test;
 
 import com.kevinquan.cwa.Blueprints;
 import com.kevinquan.cwa.model.Card;
+import com.kevinquan.cwa.model.creatures.Creature;
 import com.kevinquan.cwa.model.recipes.Recipe;
 import com.kevinquan.cwa.model.recipes.Recipe.Ingredient;
 import com.kevinquan.cwa.model.recipes.RecipeStore;
@@ -53,8 +54,8 @@ public class RecipesTestCase extends BaseJUnit4Test {
     
     @Test
     public void testRecipesBlueprint() {
-        // Cannot test for this yet as current recipe list is incomplete
-        //assertThat("Incorrect recipe count", mBlueprint.length(), is(mRecipeStore.getCount()));
+        // There is an invalid ChestBurster recipe
+        assertThat("Incorrect recipe count", mBlueprint.length()-1, is(mRecipeStore.getCount()));
         for (int i = 0; i < mBlueprint.length(); i++) {
             JSONObject recipe = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
             String resultName = JSONUtils.safeGetString(recipe, Blueprints.FIELD_RESULT_CARD);
@@ -64,12 +65,17 @@ public class RecipesTestCase extends BaseJUnit4Test {
                 System.out.println("No known card for result "+resultName);
                 continue;
             }
+            String costAsString = JSONUtils.safeGetString(recipe, Blueprints.FIELD_COST);
+            if (costAsString == null || costAsString.trim().isEmpty()) {
+                System.err.println("Could not retrieve cost from: "+recipe);
+                continue;
+            }
+            int cost = JSONUtils.safeGetInt(recipe, Blueprints.FIELD_COST, -1);
             List<Recipe> forgeRecipes = mRecipeStore.getRecipeThatCreates(resultCard);
             if (forgeRecipes == null || forgeRecipes.isEmpty()) {
                 fail("Could not find recipe for "+resultCard.getName());
             }
             Recipe forgeRecipe = forgeRecipes.get(0);
-            int cost = JSONUtils.safeGetInt(recipe, Blueprints.FIELD_COST, -1);
             assertThat("Incorrect cost to forge "+resultCard.getName(), cost, is(forgeRecipe.getCost()));
             
             List<Ingredient> expectedIngredients = forgeRecipe.getIngredients();
@@ -95,7 +101,61 @@ public class RecipesTestCase extends BaseJUnit4Test {
             }
             // We already increment j to catch the break case
             assertThat("Incorrect number of ingredients to create "+resultCard.getName(), j, is(expectedIngredients.size()));
+        }
+        
+    }
+    
+    public void generateRecipesCode() {
+        for (int i = 0; i < mBlueprint.length(); i++) {
+            JSONObject recipe = JSONUtils.safeGetJSONObjectFromArray(mBlueprint, i);
+            String resultName = JSONUtils.safeGetString(recipe, Blueprints.FIELD_RESULT_CARD);
+            Card resultCard = mNameTranslater.getCardByName(resultName);
+            if (resultCard == null) {
+                // Temporary.  This should fail later once all recipes are added
+                System.out.println("No known card for result "+resultName);
+                continue;
+            }
+            String costAsString = JSONUtils.safeGetString(recipe, Blueprints.FIELD_COST);
+            if (costAsString == null || costAsString.trim().isEmpty()) {
+                System.err.println("Could not retrieve cost from: "+recipe);
+                continue;
+            }
+            int cost = JSONUtils.safeGetInt(recipe, Blueprints.FIELD_COST, -1);
+            System.out.print("addRecipe(new Recipe("+cost+", new "+resultCard.getClass().getSimpleName()+"()");
+            if (resultCard instanceof Creature && ((Creature)resultCard).isGold()) {
+                System.out.print(".setGold(true)");
+            }
+            System.out.print(")");
             
+            int j = 0;
+            for (j = 0; j < CARD_NAMES.length; j++) {
+                String ingredientName = JSONUtils.safeGetString(recipe, CARD_NAMES[j]);
+                if (ingredientName == null || ingredientName.trim().isEmpty()) {
+                    // No more ingredients, says the blueprint
+                    break;
+                }
+                Card ingredient = mNameTranslater.getCardByName(ingredientName);
+                if (ingredient == null) {
+                    fail("Could not translate ingredient with name "+ingredientName);
+                }
+                // There is a bug in the blueprint where sometimes the card name is present but the count is not.  In this case, 1 is assumed.
+                String ingredientNumberTest = JSONUtils.safeGetString(recipe, CARD_COUNTS[j]);
+                int ingredientNumber = 1;
+                if (ingredientNumberTest != null && !ingredientNumberTest.trim().isEmpty()) {
+                    ingredientNumber = JSONUtils.safeGetInt(recipe, CARD_COUNTS[j], -1);
+                }
+                System.out.println();
+                System.out.print("\t\t\t.addIngredient(new "+ingredient.getClass().getSimpleName()+"()");
+                if (ingredient instanceof Creature && ((Creature)ingredient).isGold()) {
+                    System.out.print(".setGold(true)");
+                }
+                if (ingredientNumber == 1) {
+                    System.out.print(")");
+                } else {
+                    System.out.print(", "+ingredientNumber+")");
+                }
+            }
+            System.out.println(");");            
         }
         
     }

@@ -22,7 +22,7 @@ public class CameraDude extends AbstractPlainsCreature {
     
     public CameraDude() {
         super("Camera Dude", 0, Rarity.AlgebraicRare);
-        mDescription = "Lower enemy Hero's MAgic Points by 3 next turn";
+        mDescription = "Lower enemy Hero's Magic Points by 3 next turn";
     }
 
     @Override public int getBaseAttack() { return 18; }

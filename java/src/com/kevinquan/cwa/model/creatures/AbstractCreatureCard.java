@@ -15,12 +15,16 @@
  */
 package com.kevinquan.cwa.model.creatures;
 
+import java.lang.reflect.Constructor;
+
 import com.kevinquan.cwa.model.AbstractCard;
 
 public abstract class AbstractCreatureCard extends AbstractCard implements Creature {
 
     @SuppressWarnings("unused")
     private static final String TAG = AbstractCreatureCard.class.getSimpleName();
+    
+    public static final String GOLD_ID_SUFFIX = "|GOLD";
     
     protected boolean mIsGold;
     
@@ -31,7 +35,7 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
     
     @Override
     public String getId() {
-        return super.getId()+(mIsGold ? "|GOLD" : "");
+        return super.getId()+(mIsGold ? GOLD_ID_SUFFIX : "");
     }
     
     @Override
@@ -69,6 +73,26 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
             return getBaseGoldDefense();
         }
         return getBaseDefense();
+    }
+    
+    public static Creature getGoldVersionOf(Creature creature) {
+        Constructor<? extends Creature> constructor = null; 
+        try {
+            constructor = creature.getClass().getConstructor();
+        } catch (NoSuchMethodException nsme) {
+            System.err.println("No default constructor available for "+creature.getClass().getName());
+            nsme.printStackTrace(System.err);
+        }
+        if (constructor != null) {
+            try {
+                Creature clonedCreature = constructor.newInstance();
+                return clonedCreature.setGold(true);
+            } catch (Exception e) {
+                System.err.println("Could not instantiate default instance of "+creature.getClass().getName());
+                e.printStackTrace(System.err);    
+            }
+        }
+        return null;
     }
     
 }

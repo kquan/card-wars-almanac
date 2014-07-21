@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.kevinquan.cwa.model.Card;
+import com.kevinquan.cwa.model.creatures.Creature;
 
 public class Recipe {
 
@@ -108,6 +109,9 @@ public class Recipe {
     public boolean uses(Card ingredient) {
         for (Ingredient component : mIngredients) {
             if (component.getCard().getClass().isInstance(ingredient)) {
+                if (ingredient instanceof Creature && ((Creature)component.getCard()).isGold() != ((Creature)ingredient).isGold()) {
+                    return false;
+                }
                 return true;
             }
         }

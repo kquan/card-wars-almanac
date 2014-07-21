@@ -19,6 +19,9 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
+import com.kevinquan.cwa.model.creatures.AbstractCreatureCard;
+import com.kevinquan.cwa.model.creatures.Creature;
+
 public abstract class AbstractCardStore implements CardStore {
 
     @SuppressWarnings("unused")
@@ -42,6 +45,9 @@ public abstract class AbstractCardStore implements CardStore {
     public Card getCardById(String id) {
         if (id == null || id.trim().isEmpty()) {
             return null;
+        }
+        if (id.endsWith(AbstractCreatureCard.GOLD_ID_SUFFIX)) {
+            return AbstractCreatureCard.getGoldVersionOf((Creature)mCards.get(id.replace(AbstractCreatureCard.GOLD_ID_SUFFIX, "")));
         }
         return mCards.get(id);
     }
