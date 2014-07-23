@@ -40,27 +40,27 @@ public class Quest {
     public static final Quest NO_SPELLS = new Quest("Beat the opponent without using Spell cards");
     
     public static final Quest ONLY_SPELLS = new Quest("TBA");
-    public static final Quest ONLY_CREATURES = new Quest("TBA");
+    public static final Quest ONLY_CREATURES = new Quest("Beat the opponent using only Creature cards"); // Check
     
     public static final Quest LANDSCAPES_TWO_DIFFERENT = new Quest("Use two different landscapes"); // Check
     public static final Quest LANDSCAPES_THREE_DIFFERENT = new Quest("Use three different landscapes");
     public static final Quest LANDSCAPES_FOUR_DIFFERENT = new Quest("Use four different landscapes");
     
     public static final Quest LOSE_5HP_MAX = new Quest("Don't lose more than 5 HP on your Hero");
-    public static final Quest LOSE_10HP_MAX = new Quest("Don't lose more than 10 HP on your Hero"); // Check
+    public static final Quest LOSE_10HP_MAX = new Quest("Don't lose more than 10 HP on your Hero");
     public static final Quest LOSE_25HP_MAX = new Quest("Don't lose more than 25 HP on your Hero"); // Check
     public static final Quest LOSE_50HP_MAX = new Quest("Don't lose more than 50 HP on your Hero"); // Check
     public static final Quest LOSE_100HP_MAX = new Quest("Don't lose more than 100 HP on your Hero"); // Check
     
-    public static final Quest LOSE_2_CREATURES_MAX = new Quest("TBA");
-    public static final Quest LOSE_3_CREATURES_MAX = new Quest("TBA");
-    public static final Quest LOSE_5_CREATURES_MAX = new Quest("TBA");
-    public static final Quest LOSE_10_CREATURES_MAX = new Quest("TBA");
+    public static final Quest LOSE_2_CREATURES_MAX = new Quest("Don't lose more than 2 creatures");
+    public static final Quest LOSE_3_CREATURES_MAX = new Quest("Don't lose more than 3 creatures"); // Check
+    public static final Quest LOSE_5_CREATURES_MAX = new Quest("Don't lose more than 5 creatures"); // Check
+    public static final Quest LOSE_10_CREATURES_MAX = new Quest("Don't lose more than 10 creatures"); // Check
     
-    public static final Quest WIN_IN_3_TURNS = new Quest("TBA");
-    public static final Quest WIN_IN_5_TURNS = new Quest("TBA");
-    public static final Quest WIN_IN_7_TURNS = new Quest("TBA");
-    public static final Quest WIN_IN_10_TURNS = new Quest("TBA");
+    public static final Quest WIN_IN_3_TURNS = new Quest("Beat the opponent in 3 turns or less"); // Check
+    public static final Quest WIN_IN_5_TURNS = new Quest("Beat the opponent in 5 turns or less");
+    public static final Quest WIN_IN_7_TURNS = new Quest("Beat the opponent in 7 turns or less"); // Check
+    public static final Quest WIN_IN_10_TURNS = new Quest("Beat the opponent in 10 turns or less"); // Check
     
     public static final Quest DEFEAT_2_CREATURES = new Quest("TBA");
     public static final Quest DEFEAT_5_CREATURES = new Quest("TBA");

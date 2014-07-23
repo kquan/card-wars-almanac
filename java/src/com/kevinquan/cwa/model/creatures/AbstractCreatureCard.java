@@ -50,7 +50,7 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
     
     @Override
     public Creature setGold(boolean isGoldVersion) {
-        mIsGold = true;
+        mIsGold = isGoldVersion;
         return this;
     }
     
@@ -76,6 +76,10 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
     }
     
     public static Creature getGoldVersionOf(Creature creature) {
+        return getCloneOf(creature).setGold(true);
+    }
+    
+    public static Creature getCloneOf(Creature creature) {
         Constructor<? extends Creature> constructor = null; 
         try {
             constructor = creature.getClass().getConstructor();
@@ -86,7 +90,10 @@ public abstract class AbstractCreatureCard extends AbstractCard implements Creat
         if (constructor != null) {
             try {
                 Creature clonedCreature = constructor.newInstance();
-                return clonedCreature.setGold(true);
+                if (creature.isGold()) {
+                    clonedCreature.setGold(true);
+                }
+                return clonedCreature;
             } catch (Exception e) {
                 System.err.println("Could not instantiate default instance of "+creature.getClass().getName());
                 e.printStackTrace(System.err);    

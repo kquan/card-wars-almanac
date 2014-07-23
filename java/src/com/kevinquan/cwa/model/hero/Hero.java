@@ -24,19 +24,19 @@ public class Hero {
     @SuppressWarnings("unused")
     private static final String TAG = Hero.class.getSimpleName();
     
-    public static final Hero JAKE = new Hero("Jake", 3, "All your corn creatures gain +3 Attack");
-    public static final Hero FINN = new Hero("Finn", 5, "Gain 2 extra Magic Points for 1 turn");
+    public static final Hero JAKE = new Hero("Jake", 3, "All your corn creatures gain +3 Attack").setBackgroundColor(0xFF6BDFFF);
+    public static final Hero FINN = new Hero("Finn", 5, "Gain 2 extra Magic Points for 1 turn").setBackgroundColor(0xFFB5DB31);
     public static final Hero BMO = new Hero("BMO", 3, "Gain 2 extra Magic Points for 1 turn");
     public static final Hero MARCELINE = new Hero("Marceline", 3, "All of your creatures gain +2 Attack");
-    public static final Hero PRINCESS_BUBBLEGUM = new Hero("Princess Bubblegum", 4, "Fully heal all of your creatures");
+    public static final Hero PRINCESS_BUBBLEGUM = new Hero("Princess Bubblegum", 4, "Fully heal all of your creatures").setBackgroundColor(0xFFBD45CE);
     public static final Hero FLAME_PRINCESS = new Hero("Flame Princess", 4, "Draw 2 cards");
-    public static final Hero LADY_RAINICORN = new Hero("Lady Rainicorn", 3, "Choose a creature and fully heal it");
+    public static final Hero LADY_RAINICORN = new Hero("Lady Rainicorn", 3, "Choose a creature and fully heal it").setBackgroundColor(0xFF00CA6B);
     public static final Hero LUMPY_SPACE_PRINCESS = new Hero("Lumpy Space Princess", 3, "Fully heal all of your Plains creatures");
     public static final Hero ASH = new Hero("Ash", 4, "Return any card from the Discard Pile back to your hand");
     public static final Hero RICARDIO = new Hero("Ricardio", 3, "Draw 1 card");
-    public static final Hero DR_DONUT = new Hero("Dr Donut", 5, "Return any Creature from the Discard Pile back to your hand");
+    public static final Hero DR_DONUT = new Hero("Dr Donut", 5, "Return any Creature from the Discard Pile back to your hand").setBackgroundColor(0xFF5A9A21);
     
-    public static final Hero EARL_OF_LEMONGRAB = new Hero("Earl of Lemongrab", 3, ""); // Check
+    public static final Hero EARL_OF_LEMONGRAB = new Hero("Earl of Lemongrab", 3, "All creatures summoned this turn cost 1 less Magic Point");
     public static final Hero ICE_KING = new Hero("Ice King", 4, ""); // Check
     public static final Hero HUNSON_ABADEER = new Hero("Hunson Abadeer", 4, ""); // Check
     public static final Hero GUNTER = new Hero("Gunter", 3, ""); // Check
@@ -76,6 +76,7 @@ public class Hero {
     }
     
     protected String mName;
+    protected int mBackgroundColor;
     protected String mAbility;
     protected int mAbilityPeriod;
     
@@ -93,8 +94,17 @@ public class Hero {
         return mAbilityPeriod;
     }
 
+    public int getBackgroundColor() {
+        return mBackgroundColor;
+    }
+
     public String getName() {
         return mName;
+    }
+
+    public Hero setBackgroundColor(int backgroundColor) {
+        mBackgroundColor = backgroundColor;
+        return this;
     }
 
 }
