@@ -77,6 +77,8 @@ public class RecipesTestCase extends BaseJUnit4Test {
             }
             Recipe forgeRecipe = forgeRecipes.get(0);
             assertThat("Incorrect cost to forge "+resultCard.getName(), cost, is(forgeRecipe.getCost()));
+            int unlockLevel = JSONUtils.safeGetInt(recipe, Blueprints.FIELD_RECIPE_UNLOCK_LEVEL, -1);
+            assertThat("Incorrect unlock level "+resultCard.getName(), unlockLevel, is(forgeRecipe.getUnlockedLevel()));
             
             List<Ingredient> expectedIngredients = forgeRecipe.getIngredients();
             int j = 0;
@@ -155,6 +157,9 @@ public class RecipesTestCase extends BaseJUnit4Test {
                     System.out.print(", "+ingredientNumber+")");
                 }
             }
+            System.out.println();
+            int unlockLevel = JSONUtils.safeGetInt(recipe, Blueprints.FIELD_RECIPE_UNLOCK_LEVEL, -1);
+            System.out.print("\t\t\t.unlocksAt("+unlockLevel+")");
             System.out.println(");");            
         }
         

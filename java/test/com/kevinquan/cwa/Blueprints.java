@@ -50,6 +50,7 @@ public interface Blueprints {
     public static final String FIELD_WEIGHT = "StaticWeight";
     
     // Recipes
+    public static final String FIELD_RECIPE_UNLOCK_LEVEL = "Quest_Unlock";
     public static final String FIELD_RESULT_CARD = "Card_ID";
     public static final String FIELD_RECIPE_CARD1 = "C1_Name";
     public static final String FIELD_RECIPE_CARD1_COUNT = "C1_Count";

@@ -247,509 +247,650 @@ public class RecipeStore {
     }
     
     protected void init() {
-        addRecipe(new Recipe(new CornDome(), new CerebralBloodstorm(), 95, new AstralFortress()));
-        addRecipe(new Recipe(new Cornball(), new WanderingBaldMan(), 50, new TravelinFarmer()));
-        addRecipe(new Recipe(new AngelHeart(), new HeavenlyGazer(), 165, new SandAngel()));
-        addRecipe(new Recipe(new GrapeSlimey(), new WizardMigrane(), 200, new Poultrygeist()));
-        addRecipe(new Recipe(new SandEyebat(), new OrangeSlimey(), 275, new GrayEyebat()));
-        addRecipe(new Recipe(new TeethLeaf(), new GrapeSlimey(), 300, new MaceStump()));
-        addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), 325, new Teleport()));
-        addRecipe(new Recipe(new StrawberryButt(), new EthanAllfire(), 350, new ImprovedSugarImp()));
-        addRecipe(new Recipe(new Teleport(), new CornDome(), new AstralFortress(), 350, new UfoAbduction()));
-        addRecipe(new Recipe(new CrystalBall(), new StrawberryButt(), new Teleport(), 400, new BlueberryDjini()));
-        addRecipe(new Recipe(new TravelinFarmer(), new CerebralBloodstorm(), 450, new HuskerKnight()));
-        addRecipe(new Recipe(new AstralFortress(), new SandAngel(), 525, new SandCastle()));
-        addRecipe(new Recipe(new WanderingBaldMan(), new WoadBlood(), 600, new WoadicTimeWalker()));
-        addRecipe(new Recipe(new Fluffapillar(), new AngelHeart(), 700, new NiceIceBaby()));
-        addRecipe(new Recipe(new GreenCactaball(), new HeavenlyGazer(), 750, new SandEyebat()));
-        addRecipe(new Recipe(new WanderingBaldMan(), new AngelHeart(), new WizardMigrane(), 800, new FairyShepard()));
-        addRecipe(new Recipe(new BurningHand(), new UfoAbduction(), 900, new TravelinSkeleton()));
-        addRecipe(new Recipe(new WoadicTimeWalker(), new MsMummy(), 925, new OrdinaryNinja()));
-        addRecipe(new Recipe(1000, new GrapeButt()).addIngredient(new StrawberryButt()).addIngredient(new GrapeSlimey(), 2).addIngredient(new WizardMigrane()));
-        addRecipe(new Recipe(new WanderingBaldMan(), new FountainOfForgiveness(), new BoneWand(), 1700, new GreenMerman()));
-        addRecipe(new Recipe(new WizardMigrane(), new BoneWand(), new HeavenlyGazer(), 2300, new EvilEye()));
-        addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), new Teleport(), 3800, new PsychicTempest()));
-        addRecipe(new Recipe(3300, new AncientScholar()).addIngredient(new TomeOfAnkhs(), 3).addIngredient(new WizardMigrane(), 3).addIngredient(new WanderingBaldMan()));
-        addRecipe(new Recipe(4500, new LimeSlimey()).addIngredient(new GrapeSlimey(), 3).addIngredient(new TomeOfAnkhs()).addIngredient(new Teleport()));
-        addRecipe(new Recipe(5000, new SandSnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()));
-        addRecipe(new Recipe(new BurningHand(), new PumaClaw(), 5500, new DragonClaw()).addIngredient(new GrapeSlimey(), 3));
-        addRecipe(new Recipe(6000, new WoadMobileHome()).addIngredient(new CornDome()).addIngredient(new WoadicTimeWalker(), 2).addIngredient(new PumaClaw()));
-        addRecipe(new Recipe(6100, new WhiteNinja()).addIngredient(new OrdinaryNinja()).addIngredient(new Fluffapillar(), 3).addIngredient(new ScrollOfFreshBreath()));
-        addRecipe(new Recipe(2000, new MayonaiseAngel()).addIngredient(new SandAngel()).addIngredient(new Fluffapillar(), 3).addIngredient(new FountainOfForgiveness(), 2));
-        addRecipe(new Recipe(6300, new ArcherDan()).addIngredient(new TravelinFarmer()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()));
-        addRecipe(new Recipe(6100, new Axey()).addIngredient(new MaceStump(), 3).addIngredient(new TeethLeaf(), 3).addIngredient(new BoneWand()));
-        addRecipe(new Recipe(7000, new NicelandsEyeBat()).addIngredient(new GrayEyebat()).addIngredient(new SandEyebat()).addIngredient(new SuperHug(), 2));
-        addRecipe(new Recipe(7500, new HotEyebat()).addIngredient(new NicelandsEyeBat()).addIngredient(new HeavenlyGazer()).addIngredient(new EthanAllfire(), 3));
-        addRecipe(new Recipe(new EvilEye(), new BoneWand(), new SuperHug(), 8000, new Herculeye()));
-        addRecipe(new Recipe(new SandCastle(), new TomeOfAnkhs(), new AstralFortress(), 8200, new Pyramidia()));
-        addRecipe(new Recipe(8700, new SnuggleTree()).addIngredient(new Axey()).addIngredient(new MaceStump(), 2).addIngredient(new SuperHug()));
-        addRecipe(new Recipe(new BlueberryDjini(), new FountainOfForgiveness(), new ScrollOfFreshBreath(), 9000, new PeachDjini()));
-        addRecipe(new Recipe(new GreenSnakey(), new SandSnake(), new ScrollOfFreshBreath(), 10000, new SnakeMint()));
-        addRecipe(new Recipe(1000, new CornDog()).addIngredient(new CoolDog()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()));
-        addRecipe(new Recipe(9500, new WallOfEars()).addIngredient(new Cornball(),3 ).addIngredient(new HuskerWorm(), 3).addIngredient(new CornScepter()));
-        addRecipe(new Recipe(new CornDome(), new AstralFortress(), new CornScepter(), 9700, new CornCastle()));
-        addRecipe(new Recipe(new Teleport(), new BoneWand(), new AncientScholar(), 11000, new DarkPortal()));
-        addRecipe(new Recipe(new WanderingBaldMan(), new Axey(), 17000, new BigFoot()).addIngredient(new WoadBlood(), 5));
-        addRecipe(new Recipe(21000, new Earl()).addIngredient(new SnappyDresser()).addIngredient(new UfoAbduction(), 3).addIngredient(new Teleport(), 3));
-        addRecipe(new Recipe(new AncientScholar(), new Pyramidia(), new WizardMigrane(), 24000, new FallingStar()));
+        addRecipe(new Recipe(new CornDome(), new CerebralBloodstorm(), 95, new AstralFortress()).unlocksAt(0));
+        addRecipe(new Recipe(new Cornball(), new WanderingBaldMan(), 50, new TravelinFarmer()).unlocksAt(4));
+        addRecipe(new Recipe(new AngelHeart(), new HeavenlyGazer(), 165, new SandAngel()).unlocksAt(5));
+        addRecipe(new Recipe(new GrapeSlimey(), new WizardMigrane(), 200, new Poultrygeist()).unlocksAt(6));
+        addRecipe(new Recipe(new SandEyebat(), new OrangeSlimey(), 275, new GrayEyebat()).unlocksAt(7));
+        addRecipe(new Recipe(new TeethLeaf(), new GrapeSlimey(), 300, new MaceStump()).unlocksAt(8));
+        addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), 325, new Teleport()).unlocksAt(9));
+        addRecipe(new Recipe(new StrawberryButt(), new EthanAllfire(), 350, new ImprovedSugarImp()).unlocksAt(10));
+        addRecipe(new Recipe(new Teleport(), new CornDome(), new AstralFortress(), 350, new UfoAbduction()).unlocksAt(11));
+        addRecipe(new Recipe(new CrystalBall(), new StrawberryButt(), new Teleport(), 400, new BlueberryDjini()).unlocksAt(12));
+        addRecipe(new Recipe(new TravelinFarmer(), new CerebralBloodstorm(), 450, new HuskerKnight()).unlocksAt(13));
+        addRecipe(new Recipe(new AstralFortress(), new SandAngel(), 525, new SandCastle()).unlocksAt(14));
+        addRecipe(new Recipe(new WanderingBaldMan(), new WoadBlood(), 600, new WoadicTimeWalker()).unlocksAt(15));
+        addRecipe(new Recipe(new Fluffapillar(), new AngelHeart(), 700, new NiceIceBaby()).unlocksAt(16));
+        addRecipe(new Recipe(new GreenCactaball(), new HeavenlyGazer(), 750, new SandEyebat()).unlocksAt(17));
+        addRecipe(new Recipe(new WanderingBaldMan(), new AngelHeart(), new WizardMigrane(), 800, new FairyShepard()).unlocksAt(18));
+        addRecipe(new Recipe(new BurningHand(), new UfoAbduction(), 900, new TravelinSkeleton()).unlocksAt(19));
+        addRecipe(new Recipe(new WoadicTimeWalker(), new MsMummy(), 925, new OrdinaryNinja()).unlocksAt(20));
+        addRecipe(new Recipe(1000, new GrapeButt()).addIngredient(new StrawberryButt()).addIngredient(new GrapeSlimey(), 2).addIngredient(new WizardMigrane()).unlocksAt(21));
+        addRecipe(new Recipe(new WanderingBaldMan(), new FountainOfForgiveness(), new BoneWand(), 1700, new GreenMerman()).unlocksAt(22));
+        addRecipe(new Recipe(new WizardMigrane(), new BoneWand(), new HeavenlyGazer(), 2300, new EvilEye()).unlocksAt(23));
+        addRecipe(new Recipe(new CerebralBloodstorm(), new WizardMigrane(), new Teleport(), 3800, new PsychicTempest()).unlocksAt(24));
+        addRecipe(new Recipe(3300, new AncientScholar()).addIngredient(new TomeOfAnkhs(), 3).addIngredient(new WizardMigrane(), 3).addIngredient(new WanderingBaldMan()).unlocksAt(25));
+        addRecipe(new Recipe(4500, new LimeSlimey()).addIngredient(new GrapeSlimey(), 3).addIngredient(new TomeOfAnkhs()).addIngredient(new Teleport()).unlocksAt(26));
+        addRecipe(new Recipe(5000, new SandSnake()).addIngredient(new HuskerWorm()).addIngredient(new MsMummy(), 2).addIngredient(new TomeOfAnkhs()).unlocksAt(27));
+        addRecipe(new Recipe(new BurningHand(), new PumaClaw(), 5500, new DragonClaw()).addIngredient(new GrapeSlimey(), 3).unlocksAt(28));
+        addRecipe(new Recipe(6000, new WoadMobileHome()).addIngredient(new CornDome()).addIngredient(new WoadicTimeWalker(), 2).addIngredient(new PumaClaw()).unlocksAt(29));
+        addRecipe(new Recipe(6100, new WhiteNinja()).addIngredient(new OrdinaryNinja()).addIngredient(new Fluffapillar(), 3).addIngredient(new ScrollOfFreshBreath()).unlocksAt(30));
+        addRecipe(new Recipe(2000, new MayonaiseAngel()).addIngredient(new SandAngel()).addIngredient(new Fluffapillar(), 3).addIngredient(new FountainOfForgiveness(), 2).unlocksAt(31));
+        addRecipe(new Recipe(6300, new ArcherDan()).addIngredient(new TravelinFarmer()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()).unlocksAt(32));
+        addRecipe(new Recipe(6100, new Axey()).addIngredient(new MaceStump(), 3).addIngredient(new TeethLeaf(), 3).addIngredient(new BoneWand()).unlocksAt(33));
+        addRecipe(new Recipe(7000, new NicelandsEyeBat()).addIngredient(new GrayEyebat()).addIngredient(new SandEyebat()).addIngredient(new SuperHug(), 2).unlocksAt(34));
+        addRecipe(new Recipe(7500, new HotEyebat()).addIngredient(new NicelandsEyeBat()).addIngredient(new HeavenlyGazer()).addIngredient(new EthanAllfire(), 3).unlocksAt(35));
+        addRecipe(new Recipe(new EvilEye(), new BoneWand(), new SuperHug(), 8000, new Herculeye()).unlocksAt(36));
+        addRecipe(new Recipe(new SandCastle(), new TomeOfAnkhs(), new AstralFortress(), 8200, new Pyramidia()).unlocksAt(37));
+        addRecipe(new Recipe(8700, new SnuggleTree()).addIngredient(new Axey()).addIngredient(new MaceStump(), 2).addIngredient(new SuperHug()).unlocksAt(38));
+        addRecipe(new Recipe(new BlueberryDjini(), new FountainOfForgiveness(), new ScrollOfFreshBreath(), 9000, new PeachDjini()).unlocksAt(39));
+        addRecipe(new Recipe(new GreenSnakey(), new SandSnake(), new ScrollOfFreshBreath(), 10000, new SnakeMint()).unlocksAt(40));
+        addRecipe(new Recipe(1000, new CornDog()).addIngredient(new CoolDog()).addIngredient(new Cornball(), 3).addIngredient(new CornScepter()).unlocksAt(41));
+        addRecipe(new Recipe(9500, new WallOfEars()).addIngredient(new Cornball(),3 ).addIngredient(new HuskerWorm(), 3).addIngredient(new CornScepter()).unlocksAt(42));
+        addRecipe(new Recipe(new CornDome(), new AstralFortress(), new CornScepter(), 9700, new CornCastle()).unlocksAt(43));
+        addRecipe(new Recipe(new Teleport(), new BoneWand(), new AncientScholar(), 11000, new DarkPortal()).unlocksAt(44));
+        addRecipe(new Recipe(new WanderingBaldMan(), new Axey(), 17000, new BigFoot()).addIngredient(new WoadBlood(), 5).unlocksAt(45));
+        addRecipe(new Recipe(21000, new Earl()).addIngredient(new SnappyDresser()).addIngredient(new UfoAbduction(), 3).addIngredient(new Teleport(), 3).unlocksAt(46));
+        addRecipe(new Recipe(new AncientScholar(), new Pyramidia(), new WizardMigrane(), 24000, new FallingStar()).unlocksAt(47));
         
         addRecipe(new Recipe(29000, new PalaceOfBone())
                 .addIngredient(new TravelinSkeleton())
                 .addIngredient(new MaceStump())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(48));
         addRecipe(new Recipe(35000, new WallOfSand())
                 .addIngredient(new WallOfEars(), 3)
                 .addIngredient(new SandCastle(), 3)
-                .addIngredient(new TomeOfAnkhs(), 3));
+                .addIngredient(new TomeOfAnkhs(), 3)
+                .unlocksAt(49));
         addRecipe(new Recipe(40000, new PsionicArchitect())
                 .addIngredient(new AncientScholar())
                 .addIngredient(new FallingStar())
-                .addIngredient(new WoadBlood()));
+                .addIngredient(new WoadBlood())
+                .unlocksAt(50));
         addRecipe(new Recipe(57000, new GreenMermaid())
                 .addIngredient(new GreenMerman())
                 .addIngredient(new FallingStar(), 3)
-                .addIngredient(new WizardMigrane(), 3));
+                .addIngredient(new WizardMigrane(), 3)
+                .unlocksAt(51));
         addRecipe(new Recipe(63000, new Sandfoot())
                 .addIngredient(new BigFoot())
                 .addIngredient(new SandSnake(), 5)
-                .addIngredient(new TomeOfAnkhs(), 2));
+                .addIngredient(new TomeOfAnkhs(), 2)
+                .unlocksAt(52));
         addRecipe(new Recipe(69000, new IcePaladin())
                 .addIngredient(new HuskerKnight())
                 .addIngredient(new FreezyJ(), 4)
-                .addIngredient(new DetectiveBobby(), 3));
+                .addIngredient(new DetectiveBobby(), 3)
+                .unlocksAt(53));
         addRecipe(new Recipe(71000, new TheSludger())
                 .addIngredient(new IcePaladin())
                 .addIngredient(new MaceStump())
-                .addIngredient(new CornScepter(), 5));
+                .addIngredient(new CornScepter(), 5)
+                .unlocksAt(54));
         addRecipe(new Recipe(74000, new SandPyramid())
                 .addIngredient(new Pyramidia())
                 .addIngredient(new SandCastle())
-                .addIngredient(new WallOfSand()));
+                .addIngredient(new WallOfSand())
+                .unlocksAt(55));
         addRecipe(new Recipe(80000, new TheCow())
                 .addIngredient(new FatGoat(), 2)
                 .addIngredient(new FairyShepard(), 3)
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(56));
         addRecipe(new Recipe(81000, new PatchyThePumpkin())
                 .addIngredient(new OrangeSlimey(), 6)
                 .addIngredient(new FieldOfNightmares())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(57));
         addRecipe(new Recipe(83000, new RedEyeling())
                 .addIngredient(new SoftEyeling(), 2)
                 .addIngredient(new FieldOfNightmares(), 2)
-                .addIngredient(new DarkPortal(), 2));
+                .addIngredient(new DarkPortal(), 2)
+                .unlocksAt(58));
         addRecipe(new Recipe(91000, new ComfyCave())
                 .addIngredient(new CornDome())
                 .addIngredient(new SuperHug())
-                .addIngredient(new FountainOfForgiveness()));
+                .addIngredient(new FountainOfForgiveness())
+                .unlocksAt(59));
         addRecipe(new Recipe(100000, new TemporalWisp())
                 .addIngredient(new HuskerKnight())
                 .addIngredient(new FieldOfNightmares())
-                .addIngredient(new ClairvoyantDaggerstorm(), 3));
+                .addIngredient(new ClairvoyantDaggerstorm(), 3)
+                .unlocksAt(60));
         addRecipe(new Recipe(110000, new Cornataur())
                 .addIngredient(new CornDog(), 3)
                 .addIngredient(new IcePaladin())
-                .addIngredient(new DarkPortal(), 3));
+                .addIngredient(new DarkPortal(), 3)
+                .unlocksAt(61));
         addRecipe(new Recipe(150000, new DarkAngel())
                 .addIngredient(new MayonaiseAngel(), 3)
                 .addIngredient(new FieldOfNightmares())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(62));
         addRecipe(new Recipe(225000, new FarmerTom())
                 .addIngredient(new FairyShepard())
                 .addIngredient(new TheCow(), 3)
-                .addIngredient(new FatGoat(), 5));
+                .addIngredient(new FatGoat(), 5)
+                .unlocksAt(63));
         addRecipe(new Recipe(300000, new DragonFoot())
                 .addIngredient(new BigFoot())
                 .addIngredient(new DragonClaw())
-                .addIngredient(new FallingStar(), 3));
+                .addIngredient(new FallingStar(), 3)
+                .unlocksAt(64));
         addRecipe(new Recipe(375000, new Fummy())
                 .addIngredient(new BeachMum(), 3)
                 .addIngredient(new TomeOfAnkhs(), 5)
-                .addIngredient(new SandPyramid(), 2));
+                .addIngredient(new SandPyramid(), 2)
+                .unlocksAt(65));
         addRecipe(new Recipe(450000, new BananaButt())
                 .addIngredient(new BubblegumButt(), 2)
                 .addIngredient(new GrapeButt(), 2)
-                .addIngredient(new StrawberryButt(), 2));
+                .addIngredient(new StrawberryButt(), 2)
+                .unlocksAt(66));
         addRecipe(new Recipe(500000, new SandSphinx())
                 .addIngredient(new SandPyramid())
                 .addIngredient(new TheCow(), 2)
-                .addIngredient(new DarkPortal(), 2));
+                .addIngredient(new DarkPortal(), 2)
+                .unlocksAt(67));
         addRecipe(new Recipe(525000, new WoadicMarauder())
                 .addIngredient(new PsionicArchitect(), 3)
                 .addIngredient(new WoadicTimeWalker(), 3)
-                .addIngredient(new WoadBlood(), 3));
+                .addIngredient(new WoadBlood(), 3)
+                .unlocksAt(68));
         addRecipe(new Recipe(600000, new MamaSpider())
                 .addIngredient(new DetectiveSally())
                 .addIngredient(new SnakeMint(), 5)
-                .addIngredient(new BoneWand(), 3));
+                .addIngredient(new BoneWand(), 3)
+                .unlocksAt(69));
         addRecipe(new Recipe(650000, new FieldReaper())
                 .addIngredient(new TheSludger(), 3)
                 .addIngredient(new FieldOfNightmares(), 3)
-                .addIngredient(new Axey(), 3));
+                .addIngredient(new Axey(), 3)
+                .unlocksAt(70));
         addRecipe(new Recipe(700000, new Sandwitch())
                 .addIngredient(new PsionicArchitect())
                 .addIngredient(new PeachDjini(), 3)
-                .addIngredient(new TomeOfAnkhs(), 3));
+                .addIngredient(new TomeOfAnkhs(), 3)
+                .unlocksAt(71));
         addRecipe(new Recipe(800000, new TravelinWizard())
                 .addIngredient(new TravelinSkeleton())
                 .addIngredient(new PsionicArchitect(), 3)
-                .addIngredient(new WitchWay(), 2));
+                .addIngredient(new WitchWay(), 2)
+                .unlocksAt(72));
         addRecipe(new Recipe(900000, new Quadurai())
                 .addIngredient(new GhostNinja(), 4)
                 .addIngredient(new WhiteNinja(), 4)
-                .addIngredient(new FallingStar(), 4));
+                .addIngredient(new FallingStar(), 4)
+                .unlocksAt(73));
         addRecipe(new Recipe(950000, new ThroneOfGloom())
                 .addIngredient(new ComfyCave())
                 .addIngredient(new DarkPortal(), 3)
-                .addIngredient(new PortalToNowhere(), 3));
+                .addIngredient(new PortalToNowhere(), 3)
+                .unlocksAt(74));
         addRecipe(new Recipe(1000000, new SpiritTorch())
                 .addIngredient(new Volcano(), 5)
                 .addIngredient(new PsionicArchitect(), 3)
-                .addIngredient(new EthanAllfire()));
+                .addIngredient(new EthanAllfire())
+                .unlocksAt(75));
         addRecipe(new Recipe(1250000, new CaveOfSolitude())
                 .addIngredient(new ComfyCave())
                 .addIngredient(new FallingStar(), 3)
-                .addIngredient(new BoneWand(), 3));
+                .addIngredient(new BoneWand(), 3)
+                .unlocksAt(76));
         addRecipe(new Recipe(2000000, new DrDeath())
                 .addIngredient(new TravelinSkeleton())
                 .addIngredient(new DarkPortal(), 7)
-                .addIngredient(new UltimateMagicHands()));
+                .addIngredient(new UltimateMagicHands())
+                .unlocksAt(77));
         addRecipe(new Recipe(2500000, new ImmortalMaizeWalker())
                 .addIngredient(new TravelinWizard(), 2)
                 .addIngredient(new FieldOfNightmares(), 5)
-                .addIngredient(new UfoAbduction(), 10));
+                .addIngredient(new UfoAbduction(), 10)
+                .unlocksAt(78));
         addRecipe(new Recipe(3000000, new LostGolem())
                 .addIngredient(new CaveOfSolitude())
                 .addIngredient(new ZaZosMagicSeeds())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(79));
         addRecipe(new Recipe(3500000, new Fluffantry())
                 .addIngredient(new FatGoat(), 10)
                 .addIngredient(new FarmerTom(), 5)
-                .addIngredient(new BriefPower(), 2));
+                .addIngredient(new BriefPower(), 2)
+                .unlocksAt(80));
         addRecipe(new Recipe(4000000, new EmbarrassingBard())
                 .addIngredient(new SnappyDresser())
                 .addIngredient(new ScrollOfFreshBreath(), 10)
-                .addIngredient(new SchoolHouse()));
+                .addIngredient(new SchoolHouse())
+                .unlocksAt(81));
         addRecipe(new Recipe(4500000, new PorcelainGuardian())
                 .addIngredient(new ThroneOfDoom(), 3)
                 .addIngredient(new PortalToNowhere(), 3)
-                .addIngredient(new ThroneOfGloom(), 5));
+                .addIngredient(new ThroneOfGloom(), 5)
+                .unlocksAt(82));
         addRecipe(new Recipe(5000000, new DroolingDude())
                 .addIngredient(new ThePickler())
                 .addIngredient(new BriefPower())
-                .addIngredient(new ZaZosMagicSeeds()));
+                .addIngredient(new ZaZosMagicSeeds())
+                .unlocksAt(83));
         addRecipe(new Recipe(6000000, new ObelisxOfVengence())
                 .addIngredient(new SiloOfTruth())
                 .addIngredient(new SandSphinx(), 3)
-                .addIngredient(new WallOfSand(), 8));
+                .addIngredient(new WallOfSand(), 8)
+                .unlocksAt(84));
         addRecipe(new Recipe(7000000, new HuskerGiant())
                 .addIngredient(new ArcherDan(), 10)
                 .addIngredient(new FieldOfNightmares(), 5)
-                .addIngredient(new ZaZosMagicSeeds()));
+                .addIngredient(new ZaZosMagicSeeds())
+                .unlocksAt(85));
         addRecipe(new Recipe(8000000, new GoodKingWonderful())
                 .addIngredient(new FairyShepard())
                 .addIngredient(new FallingStar(), 10)
-                .addIngredient(new NicelandsTower(), 4));
+                .addIngredient(new NicelandsTower(), 4)
+                .unlocksAt(86));
         addRecipe(new Recipe(9000000, new XLargeSpiritSoldier())
                 .addIngredient(new IcePaladin())
                 .addIngredient(new PieStorm(), 5)
-                .addIngredient(new ThePickler(), 5));
+                .addIngredient(new ThePickler(), 5)
+                .unlocksAt(87));
         addRecipe(new Recipe(9500000, new LegionOfEarlings())
                 .addIngredient(new HuskerGiant())
                 .addIngredient(new Cornataur())
-                .addIngredient(new HuskerKnight()));
+                .addIngredient(new HuskerKnight())
+                .unlocksAt(88));
         addRecipe(new Recipe(9500000, new Sandy())
                 .addIngredient(new Sandwitch(), 3)
                 .addIngredient(new BriefPower(), 3)
-                .addIngredient(new ZaZosMagicSeeds(), 3));
+                .addIngredient(new ZaZosMagicSeeds(), 3)
+                .unlocksAt(89));
         addRecipe(new Recipe(9999999, new PuffyCastle())
                 .addIngredient(new CornCastle(), 3)
                 .addIngredient(new NicelandsTower(), 5)
-                .addIngredient(new DoorOfStrength()));
+                .addIngredient(new DoorOfStrength())
+                .unlocksAt(90));
         addRecipe(new Recipe(110000, new ThePig().setGold(true))
-                .addIngredient(new ThePig(), 10));
+                .addIngredient(new ThePig(), 10)
+                .unlocksAt(91));
         addRecipe(new Recipe(125000, new HeavenlyGazer().setGold(true))
-                .addIngredient(new HeavenlyGazer(), 10));
+                .addIngredient(new HeavenlyGazer(), 10)
+                .unlocksAt(92));
         addRecipe(new Recipe(150000, new Heifergeist())
                 .addIngredient(new TheCow(), 5)
                 .addIngredient(new Sandwitch(), 3)
-                .addIngredient(new ObelisxOfVengence()));
+                .addIngredient(new ObelisxOfVengence())
+                .unlocksAt(93));
         addRecipe(new Recipe(200000, new MsMummy().setGold(true))
-                .addIngredient(new MsMummy(), 10));
+                .addIngredient(new MsMummy(), 10)
+                .unlocksAt(94));
         addRecipe(new Recipe(225000, new WanderingBaldMan().setGold(true))
-                .addIngredient(new WanderingBaldMan(), 10));
+                .addIngredient(new WanderingBaldMan(), 10)
+                .unlocksAt(95));
         addRecipe(new Recipe(275000, new Mouthball().setGold(true))
-                .addIngredient(new Mouthball(), 10));
+                .addIngredient(new Mouthball(), 10)
+                .unlocksAt(96));
         addRecipe(new Recipe(300000, new Cornball().setGold(true))
-                .addIngredient(new Cornball(), 10));
+                .addIngredient(new Cornball(), 10)
+                .unlocksAt(97));
         addRecipe(new Recipe(350000, new CoolDog().setGold(true))
-                .addIngredient(new CoolDog(), 10));
+                .addIngredient(new CoolDog(), 10)
+                .unlocksAt(98));
         addRecipe(new Recipe(375000, new Huskerbat())
                 .addIngredient(new RedEyeling(), 5)
                 .addIngredient(new EvilEye(), 5)
-                .addIngredient(new Cornball(), 5));
+                .addIngredient(new Cornball(), 5)
+                .unlocksAt(99));
         addRecipe(new Recipe(425000, new GrapeSlimey().setGold(true))
-                .addIngredient(new GrapeSlimey(), 10));
+                .addIngredient(new GrapeSlimey(), 10)
+                .unlocksAt(100));
         addRecipe(new Recipe(450000, new Fluffapillar().setGold(true))
-                .addIngredient(new Fluffapillar(), 10));
+                .addIngredient(new Fluffapillar(), 10)
+                .unlocksAt(101));
         addRecipe(new Recipe(475000, new GreenCactaball().setGold(true))
-                .addIngredient(new GreenCactaball(), 10));
+                .addIngredient(new GreenCactaball(), 10)
+                .unlocksAt(102));
         addRecipe(new Recipe(500000, new TeethLeaf().setGold(true))
-                .addIngredient(new TeethLeaf(), 10));
+                .addIngredient(new TeethLeaf(), 10)
+                .unlocksAt(103));
         addRecipe(new Recipe(515000, new OrangeSlimey().setGold(true))
-                .addIngredient(new OrangeSlimey(), 10));
+                .addIngredient(new OrangeSlimey(), 10)
+                .unlocksAt(104));
         addRecipe(new Recipe(525000, new SandJackal())
                 .addIngredient(new Sandfoot(), 5)
                 .addIngredient(new Sandwitch(), 3)
-                .addIngredient(new SandSphinx()));
+                .addIngredient(new SandSphinx())
+                .unlocksAt(105));
         addRecipe(new Recipe(275000, new EthanAllfire().setGold(true))
-                .addIngredient(new EthanAllfire(), 10));
+                .addIngredient(new EthanAllfire(), 10)
+                .unlocksAt(106));
         addRecipe(new Recipe(600000, new AngelHeart().setGold(true))
-                .addIngredient(new AngelHeart(), 10));
+                .addIngredient(new AngelHeart(), 10)
+                .unlocksAt(107));
         addRecipe(new Recipe(625000, new HuskerWorm().setGold(true))
-                .addIngredient(new HuskerWorm(), 10));
+                .addIngredient(new HuskerWorm(), 10)
+                .unlocksAt(108));
         addRecipe(new Recipe(650000, new GreenSnakey().setGold(true))
-                .addIngredient(new GreenSnakey(), 10));
+                .addIngredient(new GreenSnakey(), 10)
+                .unlocksAt(109));
         addRecipe(new Recipe(675000, new BurningHand().setGold(true))
-                .addIngredient(new BurningHand(), 10));
+                .addIngredient(new BurningHand(), 10)
+                .unlocksAt(110));
         addRecipe(new Recipe(700000, new SoftEyeling().setGold(true))
-                .addIngredient(new SoftEyeling(), 10));
+                .addIngredient(new SoftEyeling(), 10)
+                .unlocksAt(111));
         addRecipe(new Recipe(750000, new BeachMum().setGold(true))
-                .addIngredient(new BeachMum(), 10));
+                .addIngredient(new BeachMum(), 10)
+                .unlocksAt(112));
         addRecipe(new Recipe(800000, new FatGoat().setGold(true))
-                .addIngredient(new FatGoat(), 10));
+                .addIngredient(new FatGoat(), 10)
+                .unlocksAt(113));
         addRecipe(new Recipe(850000, new FreezyJ().setGold(true))
-                .addIngredient(new FreezyJ(), 10));
+                .addIngredient(new FreezyJ(), 10)
+                .unlocksAt(114));
         addRecipe(new Recipe(900000, new WellDressedWolf())
                 .addIngredient(new SnappyDresser(), 5)
                 .addIngredient(new FallingStar(), 3)
-                .addIngredient(new GrapeButt(), 3));
+                .addIngredient(new GrapeButt(), 3)
+                .unlocksAt(115));
         addRecipe(new Recipe(925000, new SnappyDresser().setGold(true))
-                .addIngredient(new SnappyDresser(), 10));
+                .addIngredient(new SnappyDresser(), 10)
+                .unlocksAt(116));
         addRecipe(new Recipe(950000, new WhiteNinja().setGold(true))
-                .addIngredient(new WhiteNinja(), 10));
+                .addIngredient(new WhiteNinja(), 10)
+                .unlocksAt(117));
         addRecipe(new Recipe(975000, new EvilEye().setGold(true))
-                .addIngredient(new EvilEye(), 10));
+                .addIngredient(new EvilEye(), 10)
+                .unlocksAt(118));
         addRecipe(new Recipe(1000000, new PeachDjini().setGold(true))
-                .addIngredient(new PeachDjini(), 10));
+                .addIngredient(new PeachDjini(), 10)
+                .unlocksAt(119));
         addRecipe(new Recipe(1250000, new RecordThug())
                 .addIngredient(new EmbarrassingBard())
                 .addIngredient(new DarkPortal(), 3)
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(120));
         addRecipe(new Recipe(30, new HuskerWorm())
                 .addIngredient(new Cornball())
-                .addIngredient(new CerebralBloodstorm()));
+                .addIngredient(new CerebralBloodstorm())
+                .unlocksAt(666));
         addRecipe(new Recipe(625, new SoftEyeling())
                 .addIngredient(new Fluffapillar())
-                .addIngredient(new HeavenlyGazer()));
+                .addIngredient(new HeavenlyGazer())
+                .unlocksAt(666));
         addRecipe(new Recipe(120, new CoolDog())
                 .addIngredient(new GrapeSlimey())
                 .addIngredient(new ThePig())
-                .addIngredient(new WizardMigrane()));
+                .addIngredient(new WizardMigrane())
+                .unlocksAt(666));
         addRecipe(new Recipe(700, new MsMummy())
                 .addIngredient(new GreenCactaball())
-                .addIngredient(new Fluffapillar()));
+                .addIngredient(new Fluffapillar())
+                .unlocksAt(666));
         addRecipe(new Recipe(140, new TeethLeaf())
                 .addIngredient(new GreenCactaball())
-                .addIngredient(new Mouthball()));
+                .addIngredient(new Mouthball())
+                .unlocksAt(666));
         addRecipe(new Recipe(1000, new CerebralBloodstorm())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(300, new Volcano())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(400, new WoadBlood())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(525, new WizardMigrane())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(600, new StrawberryButt())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(675, new CrystalBall())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(900, new CornDome())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(5000, new BeachMum())
                 .addIngredient(new MsMummy())
                 .addIngredient(new GreenCactaball(), 2)
-                .addIngredient(new TomeOfAnkhs()));
+                .addIngredient(new TomeOfAnkhs())
+                .unlocksAt(666));
         addRecipe(new Recipe(1000, new FatGoat())
                 .addIngredient(new ThePig())
                 .addIngredient(new Fluffapillar(), 3)
-                .addIngredient(new SuperHug()));
+                .addIngredient(new SuperHug())
+                .unlocksAt(666));
         addRecipe(new Recipe(2000, new FreezyJ())
                 .addIngredient(new NiceIceBaby())
                 .addIngredient(new ImprovedSugarImp(), 3)
-                .addIngredient(new ScrollOfFreshBreath()));
+                .addIngredient(new ScrollOfFreshBreath())
+                .unlocksAt(666));
         addRecipe(new Recipe(4000, new GreenSnakey())
                 .addIngredient(new HuskerWorm())
                 .addIngredient(new PsychicTempest())
-                .addIngredient(new LimeSlimey(), 2));
+                .addIngredient(new LimeSlimey(), 2)
+                .unlocksAt(666));
         addRecipe(new Recipe(1000, new SnappyDresser())
                 .addIngredient(new WanderingBaldMan())
                 .addIngredient(new Fluffapillar(), 3)
-                .addIngredient(new ScrollOfFreshBreath()));
+                .addIngredient(new ScrollOfFreshBreath())
+                .unlocksAt(666));
         addRecipe(new Recipe(4000, new CornScepter())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(5600, new ScrollOfFreshBreath())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(4500, new BoneWand())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(6200, new TomeOfAnkhs())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(7800, new PumaClaw())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(8900, new SuperHug())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(10000, new FountainOfForgiveness())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(10000, new GhostNinja())
                 .addIngredient(new WhiteNinja())
                 .addIngredient(new FallingStar(), 4)
-                .addIngredient(new ComfyCave()));
+                .addIngredient(new ComfyCave())
+                .unlocksAt(666));
         addRecipe(new Recipe(30000, new DetectiveBobby())
                 .addIngredient(new FreezyJ(), 5)
                 .addIngredient(new ScrollOfFreshBreath())
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(666));
         addRecipe(new Recipe(10000, new FieldOfNightmares())
                 .addIngredient(new WallOfEars())
                 .addIngredient(new WoadBlood())
-                .addIngredient(new BoneWand()));
+                .addIngredient(new BoneWand())
+                .unlocksAt(666));
         addRecipe(new Recipe(20000, new WitchWay())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(40000, new ClairvoyantDaggerstorm())
                 .addIngredient(new CerebralBloodstorm())
                 .addIngredient(new PsychicTempest())
-                .addIngredient(new WizardMigrane()));
+                .addIngredient(new WizardMigrane())
+                .unlocksAt(666));
         addRecipe(new Recipe(50000, new HotDogRain())
                 .addIngredient(new CerebralBloodstorm())
                 .addIngredient(new PsychicTempest())
-                .addIngredient(new ClairvoyantDaggerstorm()));
+                .addIngredient(new ClairvoyantDaggerstorm())
+                .unlocksAt(666));
         addRecipe(new Recipe(70000, new BubblegumButt())
                 .addIngredient(new GrapeButt())
                 .addIngredient(new StrawberryButt())
-                .addIngredient(new ImprovedSugarImp()));
+                .addIngredient(new ImprovedSugarImp())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new ThePickler())
                 .addIngredient(new GreenMerman())
                 .addIngredient(new ScrollOfBadBreath())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new DetectiveSally())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new ScrollOfBadBreath())
                 .addIngredient(new ScrollOfFreshBreath())
                 .addIngredient(new HotDogRain())
-                .addIngredient(new HotDogRain()));
+                .addIngredient(new HotDogRain())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new SnakeEyeRing())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new PortalToNowhere())
                 .addIngredient(new DarkPortal())
                 .addIngredient(new Teleport())
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new UnemptyCoffin())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new PieStorm())
                 .addIngredient(new HotDogRain())
                 .addIngredient(new ImprovedSugarImp())
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new CornParthenon())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new ZaZosMagicSeeds())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new UltimateMagicHands())
                 .addIngredient(new BurningHand(), 2)
                 .addIngredient(new DoorOfStrength(), 4)
-                .addIngredient(new FallingStar(), 7));
+                .addIngredient(new FallingStar(), 7)
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new ThroneOfDoom())
                 .addIngredient(new ThroneOfGloom())
                 .addIngredient(new PortalToNowhere())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new BriefPower())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new DoorOfStrength())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(100, new SchoolHouse())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(666));
         addRecipe(new Recipe(10000, new CornRonin())
                 .addIngredient(new WhiteNinja(), 2)
                 .addIngredient(new CornScepter(), 3)
-                .addIngredient(new FieldOfNightmares()));
+                .addIngredient(new FieldOfNightmares())
+                .unlocksAt(9999));
         addRecipe(new Recipe(30000, new DogBoy())
                 .addIngredient(new CoolDog())
                 .addIngredient(new SnappyDresser())
-                .addIngredient(new DarkPortal(), 5));
+                .addIngredient(new DarkPortal(), 5)
+                .unlocksAt(9999));
         addRecipe(new Recipe(50000, new FutureScholar())
                 .addIngredient(new AncientScholar())
                 .addIngredient(new TomeOfAnkhs(), 5)
-                .addIngredient(new SiloOfTruth()));
+                .addIngredient(new SiloOfTruth())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100000, new MudAngel())
                 .addIngredient(new MayonaiseAngel())
                 .addIngredient(new WallOfSand(), 3)
-                .addIngredient(new HotDogRain(), 3));
+                .addIngredient(new HotDogRain(), 3)
+                .unlocksAt(9999));
         addRecipe(new Recipe(40000, new PunkCat())
                 .addIngredient(new CornDog())
                 .addIngredient(new DarkPortal(), 2)
-                .addIngredient(new WoadBlood(), 3));
+                .addIngredient(new WoadBlood(), 3)
+                .unlocksAt(9999));
         addRecipe(new Recipe(80000, new TreeOfUnderneath())
                 .addIngredient(new SnuggleTree())
                 .addIngredient(new ClairvoyantDaggerstorm(), 3)
-                .addIngredient(new FieldOfNightmares(), 3));
+                .addIngredient(new FieldOfNightmares(), 3)
+                .unlocksAt(9999));
         addRecipe(new Recipe(60000, new CoughSyrup())
                 .addIngredient(new FountainOfForgiveness())
                 .addIngredient(new MayonaiseAngel())
-                .addIngredient(new ScrollOfFreshBreath()));
+                .addIngredient(new ScrollOfFreshBreath())
+                .unlocksAt(9999));
         addRecipe(new Recipe(20000, new SiloOfTruth())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new FieldStalker())
                 .addIngredient(new TemporalWisp())
                 .addIngredient(new FieldOfNightmares())
-                .addIngredient(new DarkPortal()));
+                .addIngredient(new DarkPortal())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new Phyllis())
                 .addIngredient(new Earl())
                 .addIngredient(new SnakeEyeRing())
-                .addIngredient(new Sandwitch()));
+                .addIngredient(new Sandwitch())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new SandKnight())
                 .addIngredient(new HuskerKnight())
                 .addIngredient(new WallOfSand())
-                .addIngredient(new Sandwitch()));
+                .addIngredient(new Sandwitch())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new SgtMushroom())
                 .addIngredient(new SnuggleTree())
                 .addIngredient(new TreeOfUnderneath())
-                .addIngredient(new ThePig()));
+                .addIngredient(new ThePig())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new StruzannJinn())
                 .addIngredient(new IcePaladin())
                 .addIngredient(new ClairvoyantDaggerstorm())
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new WizardRawk())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new NicelandsTower())
-                .addIngredient(new Teleport()));
+                .addIngredient(new Teleport())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new CornLord())
                 .addIngredient(new GoodKingWonderful())
                 .addIngredient(new LegionOfEarlings())
-                .addIngredient(new ThroneOfDoom()));
+                .addIngredient(new ThroneOfDoom())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new WoadicChief())
                 .addIngredient(new WoadicMarauder(), 10)
                 .addIngredient(new PsionicArchitect(), 10)
-                .addIngredient(new WoadBlood(), 10));
+                .addIngredient(new WoadBlood(), 10)
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new MotherFluffBucket())
                 .addIngredient(new SnuggleTree(), 10)
                 .addIngredient(new SgtMushroom(), 3)
-                .addIngredient(new SuperHug()));
+                .addIngredient(new SuperHug())
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new Pieclops())
                 .addIngredient(new PieStorm(), 7)
                 .addIngredient(new StruzannJinn())
-                .addIngredient(new MayonaiseAngel(), 10));
+                .addIngredient(new MayonaiseAngel(), 10)
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new RainbowBarfer())
                 .addIngredient(new ThePickler(), 5)
                 .addIngredient(new PieStorm(), 5)
-                .addIngredient(new BananaButt(), 5));
+                .addIngredient(new BananaButt(), 5)
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new TheMariachi())
                 .addIngredient(new EmbarrassingBard())
                 .addIngredient(new WizardRawk(), 4)
-                .addIngredient(new DarkPortal(), 5));
+                .addIngredient(new DarkPortal(), 5)
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new SkullJuice())
                 .addIngredient(new CoughSyrup(), 5)
                 .addIngredient(new HotDogRain(), 5)
-                .addIngredient(new Sandwitch(), 3));
+                .addIngredient(new Sandwitch(), 3)
+                .unlocksAt(9999));
         addRecipe(new Recipe(100, new SpiritTower())
                 .addIngredient(new NicelandsTower())
                 .addIngredient(new SpiritTorch())
-                .addIngredient(new FallingStar()));
+                .addIngredient(new FallingStar())
+                .unlocksAt(9999));
     }
 }

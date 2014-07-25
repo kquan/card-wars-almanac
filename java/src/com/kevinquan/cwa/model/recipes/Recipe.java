@@ -54,6 +54,8 @@ public class Recipe {
     
     protected List<Ingredient> mIngredients;
     protected Card mResult;
+    
+    protected int mUnlocksAt;
 
     protected Recipe() {
         mIngredients = new ArrayList<Ingredient>();
@@ -95,6 +97,10 @@ public class Recipe {
     public Card getResult() {
         return mResult;
     }
+    
+    public int getUnlockedLevel() {
+        return mUnlocksAt;
+    }
 
     public Recipe setCost(int cost) {
         mCost = cost;
@@ -103,6 +109,11 @@ public class Recipe {
 
     public Recipe setResult(Card card) {
         mResult = card;
+        return this;
+    }
+    
+    public Recipe unlocksAt(int levelNumber) {
+        mUnlocksAt = levelNumber;
         return this;
     }
 
