@@ -15,14 +15,14 @@
  */
 package com.kevinquan.cwa.model.creatures.swamp;
 
-public class ChestBuster extends AbstractSwampCreature {
+public class ChestBurster extends AbstractSwampCreature {
 
     @SuppressWarnings("unused")
-    private static final String TAG = ChestBuster.class.getSimpleName();
+    private static final String TAG = ChestBurster.class.getSimpleName();
     
-    public ChestBuster() {
-        super("Chest Buster", 4, Rarity.VeryRare);
-        mDescription = "Deal 2 Damage to the opposing Hero for every card in your hand"; // Check
+    public ChestBurster() {
+        super("Chest Burster", 4, Rarity.VeryRare);
+        mDescription = "Deal 2 Damage to the opposing Hero for every card in your hand";
     }
 
     @Override public int getBaseAttack() { return 12; }

@@ -16,7 +16,7 @@
 package com.kevinquan.cwa.model;
 
 import com.kevinquan.cwa.model.creatures.swamp.BaldMansThrone;
-import com.kevinquan.cwa.model.creatures.swamp.ChestBuster;
+import com.kevinquan.cwa.model.creatures.swamp.ChestBurster;
 import com.kevinquan.cwa.model.creatures.swamp.DarkAngel;
 import com.kevinquan.cwa.model.creatures.swamp.DaveyBear;
 import com.kevinquan.cwa.model.creatures.swamp.DrDeath;
@@ -67,7 +67,7 @@ public class SwampCardStore extends AbstractCardStore {
         addCard(new TreeOfUnderneath());
         
         // Very Rare cards
-        addCard(new ChestBuster());
+        addCard(new ChestBurster());
         addCard(new DarkAngel());
         addCard(new MamaSpider());
         addCard(new SteakChop());

@@ -163,7 +163,7 @@ import com.kevinquan.cwa.model.creatures.sandy.Sandwitch;
 import com.kevinquan.cwa.model.creatures.sandy.Sandy;
 import com.kevinquan.cwa.model.creatures.sandy.WallOfSand;
 import com.kevinquan.cwa.model.creatures.swamp.BaldMansThrone;
-import com.kevinquan.cwa.model.creatures.swamp.ChestBuster;
+import com.kevinquan.cwa.model.creatures.swamp.ChestBurster;
 import com.kevinquan.cwa.model.creatures.swamp.DarkAngel;
 import com.kevinquan.cwa.model.creatures.swamp.DaveyBear;
 import com.kevinquan.cwa.model.creatures.swamp.DrDeath;
@@ -298,7 +298,7 @@ public class NameTranslater {
         mCards.put("Creature_CactusThug", new CactusThug());
         mCards.put("Creature_CaptainTaco", new CaptainTaco());
         mCards.put("Creature_CareCrow", new TravelinFarmer());
-        mCards.put("Creature_ChestBurster", new ChestBuster());
+        mCards.put("Creature_ChestBurster", new ChestBurster());
         mCards.put("Creature_CoolDog", new CoolDog());
         mCards.put("Creature_Cornataur", new Cornataur());
         mCards.put("Creature_Cornball", new Cornball());
@@ -352,7 +352,7 @@ public class NameTranslater {
         mCards.put("Creature_GL_CactusThug", new CactusThug().setGold(true));
         mCards.put("Creature_GL_CaptainTaco", new CaptainTaco().setGold(true));
         mCards.put("Creature_GL_CareCrow", new TravelinFarmer().setGold(true));
-        mCards.put("Creature_GL_ChestBurster", new ChestBuster().setGold(true));
+        mCards.put("Creature_GL_ChestBurster", new ChestBurster().setGold(true));
         mCards.put("Creature_GL_CoolDog", new CoolDog().setGold(true));
         mCards.put("Creature_GL_Cornataur", new Cornataur().setGold(true));
         mCards.put("Creature_GL_Cornball", new Cornball().setGold(true));
