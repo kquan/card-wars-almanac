@@ -22,7 +22,7 @@ public class CornRonin extends AbstractCornCreature {
     
     public CornRonin() {
         super("Corn Ronin", 3, Rarity.Rare);
-        mDescription = "+3 Attack for every card in your hand"; // Check
+        mDescription = "+3 Attack for every card in your hand";
     }
 
     @Override public int getBaseAttack() { return 18; }

@@ -22,7 +22,7 @@ public class PatchyThePumpkin extends AbstractCornCreature {
     
     public PatchyThePumpkin() {
         super("Patchy the Pumpkin", 3, Rarity.Rare);
-        mDescription = "Lower the Attack of creature in opposing lane by 5"; // Check
+        mDescription = "Lower the Attack of creature in opposing lane by 5";
     }
 
     @Override public int getBaseAttack() { return 22; }

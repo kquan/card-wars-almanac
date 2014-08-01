@@ -22,7 +22,7 @@ public class FieldReaper extends AbstractCornCreature {
     
     public FieldReaper() {
         super("Field Reaper", 4, Rarity.VeryRare);
-        mDescription = "Lower the Attack of all opposing creatures by 4"; // Check
+        mDescription = "Lower the Attack of all opposing creatures by 4";
     }
 
     @Override public int getBaseAttack() { return 25; }
