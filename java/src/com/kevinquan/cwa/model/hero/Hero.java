@@ -39,8 +39,8 @@ public class Hero {
     public static final Hero HUNSON_ABADEER = new Hero("Hunson Abadeer", 4, "All cards cast this turn cost 1 less magic point").setBackgroundColor(0xFF009866);
     public static final Hero ICE_KING = new Hero("Ice King", 4, "Send all of your opponent's Buildings back to their hand");
     public static final Hero GUNTER = new Hero("Gunter", 3, "Return any Spell card from the Discard Pile to your hand");
-    public static final Hero FINN_DOCTOR = new Hero("Doctor Finn", 3, "All Spells cast this turn cost 1 less Magic Point");
-    public static final Hero FINN_PAJAMA = new Hero("Pajama Finn", 3, "All your Universal creatures gain +4 Defense");
+    public static final Hero FINN_DOCTOR = new Hero("Doctor Finn", 3, "All Spells cast this turn cost 1 less Magic Point").setBackgroundColor(0xFFA5AACE);
+    public static final Hero FINN_PAJAMA = new Hero("Pajama Finn", 3, "All your Universal creatures gain +4 Defense").setBackgroundColor(0xFF21355A);
     public static final Hero MAGIC_MAN = new Hero("Magic Man", 2, "Gain 1 extra Magic Point this turn");
     public static final Hero PEPPERMINT_BUTLER = new Hero("Peppermint Butler", 2, "Return any Building card from the Discard Pile to your hand");
     public static final Hero CINAMON_BUNN = new Hero("Cinamon Bunn", 3, "All your Nicelands creatures gain +3 Attack");
